@@ -153,7 +153,7 @@ Avantages :
 
 ---
 
-On penait à une IA locale légère, qui pourrait interfacer durant 3 secondes pour prépare le codage.
+Utiliser une IA locale légère, elle pourrait interfacer durant 3 secondes pour prépare le codage.
 
 Une IA légère locale comme pré-processeur. Architecture en deux étapes :
 

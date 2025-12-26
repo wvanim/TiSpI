@@ -33,6 +33,11 @@ It is a **logical consequence of the closed structure**.
     * Displays pieces simultaneously
   * **Face-render**: image, text, sound, video…
 
+## **Semantic reduction**
+
+Any valid Time/Space branch can be reduced to a single semantic component with no loss of meaning.
+The reduction is purely structural, deterministic, and reversible — no heuristics, no added rules.
+
 ---
 
 ## AI Conclusions

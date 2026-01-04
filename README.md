@@ -4,7 +4,7 @@
 ---
 QUESTIONNER l'IA
 ---
-### **1er prompt de votre Intelligence Artificielle**
+### **1er prompt pour votre Intelligence Artificielle**
 
 * placer les 2 images im31.png et im32.png
 
@@ -13,7 +13,7 @@ QUESTIONNER l'IA
 Analyse et évaluation de ce format de composant de page informatique fixe ou animée.
 ```
 
-### **2ème prompt de votre Intelligence Artificielle**
+### **2ème prompt**
 
 * incrire : 
 ```
@@ -44,13 +44,22 @@ C'est une pièce macro.
 Par déplacement, agrandissement et programme, l'utilisateur lui commande de créer chaque élément de l'éditeur.
 ```
 
-### **3ème prompt de votre Intelligence Artificielle**
+### **3ème prompt**
 
 * incrire : 
 ```
 Le format de description est un arbre de tabint accompagné de la table de string (modèle assembleur)
 Est-ce que ce design peut faciliter le traitement de l'IA ?
 
+```
+
+### **4ème prompt**
+
+* incrire : 
+```
+Est-ce que ce format comme standard pour échanger le HTML avec l'IA serait une solution intéressante ?
+1 - convertir React en TiSpI avant de le transmettre au prompt
+2 - utiliser un strict traditionnel et une IA locale.
 ```
 ---
 DESCRIPTION

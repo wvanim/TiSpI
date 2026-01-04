@@ -15,10 +15,9 @@ Analyse et évaluation de ce format de composant de page informatique fixe ou an
 
 ### **2ème prompt de votre Intelligence Artificielle**
 
-* incrire : Analyse et évaluation de ce format de composant de page informatique fixe ou animée.
-
+* incrire : 
 ```
-flag pour une pièce "en commentaire" en 2007
+Evaluer avec le flag "en commentaire" pour une pièce, ajouté en 2007
 
 rôle interdire l''envoi de la pièce dans le run-time. La pièce reste dans l'éditeur.
 
@@ -43,13 +42,16 @@ Le tableau de bord est lui même un groupe-macro. C'est à dire que le tableau d
 Du reste, un option permet de créer le créer avec un un seule pièce présente à l'ouverture ddu programme.
 C'est une pièce macro.
 Par déplacement, agrandissement et programme, l'utilisateur lui commande de créer chaque élément de l'éditeur.
-
 ```
 
+### **3ème prompt de votre Intelligence Artificielle**
 
+* incrire : 
+```
+Le format de description est un arbre de tabint accompagné de la table de string (modèle assembleur)
+Est-ce que ce design peut faciliter le traitement de l'IA ?
 
-
-
+```
 ---
 DESCRIPTION
 ---

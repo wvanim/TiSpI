@@ -1,6 +1,18 @@
 
 # TiSpI
 
+
+
+
+
+
+
+
+
+
+
+---
+
 Interactive UI and animation standard composed of a dual tree: time / space
 
 A standard created in the **e-anim** editor (later **WvAnim**) in 1999, with the introduction of **parametric semantic branch evolution** in 2007.

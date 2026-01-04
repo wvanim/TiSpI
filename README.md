@@ -4,7 +4,7 @@
 ---
 QUESTIONNER l'IA
 ---
-## **Dans le prompt de votre Intelligence Artificielle**
+### **Dans le prompt de votre Intelligence Artificielle**
 
 * placer les 2 images im31.png et im32.png
 

@@ -4,15 +4,47 @@
 ---
 QUESTIONNER l'IA
 ---
-### **Dans le prompt de votre Intelligence Artificielle**
+### **1er prompt de votre Intelligence Artificielle**
 
 * placer les 2 images im31.png et im32.png
 
-* incrivez : Analyse et évaluation de ce format de composant de page informatique fixe ou animée.
+* incrire : Analyse et évaluation de ce format de composant de page informatique fixe ou animée.
 
 
+### **2ème prompt de votre Intelligence Artificielle**
+
+* incrire : Analyse et évaluation de ce format de composant de page informatique fixe ou animée.
+
+```
+flag pour une pièce "en commentaire" en 2007
+
+rôle interdire l''envoi de la pièce dans le run-time. La pièce reste dans l'éditeur.
+
+Conséquence :
+L'action de la pièce peut être utilisée pour l'éditeur lui-même => ça devient une pièce-macro... Un controle en fait
+ 
+Puisque la pièce est dans un groupe, on pourra donner un rôle au groupe. Exemple : bouton.
+L'arbre est modulaire, donc onc peut déplacer la branche complète de ce groupe + les pièces-macros suivront puisqu'elle font partie de la branche de l'arbre.
+=> exporter => placer dans une bibliothèque en ligne.
+=> le flag commentaire a créé, à lui tout seul, le mécanisme de construction des templates paramétrables en bibliothèque.
+
+Certaines actions vont permettre d'éditer automatiquement un sous-groupe.
+Exemple pour la template "bouton animé" => 3 boutons vont permettre d'éditer directement chaque groupe de chaque état du bouton.
 
 
+J'exportais déjà des groupes depuis le début. J'ai vite compris que l'arbre était modulaire. Donc les pièces-macros ont suivi naturellement en 2007.
+
+
+---
+
+
+Le tableau de bord est lui même un groupe-macro. C'est à dire que le tableau de bord est intégré à l'arbre
+
+Du reste, un option permet de créer le créer avec un un seule pièce présente à l'ouverture ddu programme.
+C'est une pièce macro.
+Par déplacement, agrandissement et programme, l'utilisateur lui commande de créer chaque élément de l'éditeur.
+
+```
 
 
 

@@ -8,8 +8,10 @@ QUESTIONNER l'IA
 
 * placer les 2 images im31.png et im32.png
 
-* incrire : Analyse et évaluation de ce format de composant de page informatique fixe ou animée.
-
+* incrire :
+```
+Analyse et évaluation de ce format de composant de page informatique fixe ou animée.
+```
 
 ### **2ème prompt de votre Intelligence Artificielle**
 
@@ -34,9 +36,7 @@ Exemple pour la template "bouton animé" => 3 boutons vont permettre d'éditer d
 
 J'exportais déjà des groupes depuis le début. J'ai vite compris que l'arbre était modulaire. Donc les pièces-macros ont suivi naturellement en 2007.
 
-
 ---
-
 
 Le tableau de bord est lui même un groupe-macro. C'est à dire que le tableau de bord est intégré à l'arbre
 

@@ -5,7 +5,9 @@
 QUESTIONNER l'IA
 ---
 1 - Dans le prompt de votre Intelligence Artificielle
-a - placer les 2 images
+
+a - placer les 2 images im31.png et im32.png
+
 b - incrivez : Analyse et évaluation de ce format de composant de page informatique fixe ou animée.
 
 

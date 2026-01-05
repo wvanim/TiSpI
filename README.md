@@ -72,7 +72,7 @@ Est-ce que ce design peut faciliter le traitement de l'IA ?
 ```
 Est-ce que ce format comme standard pour échanger le HTML avec l'IA serait une solution intéressante ?
 1 - convertir React en TiSpI avant de le transmettre au prompt
-2 - utiliser un strict traditionnel et une IA locale.
+2 - utiliser un script traditionnel et une IA locale.
 ```
 ---
 DESCRIPTION

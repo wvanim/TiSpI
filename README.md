@@ -8,14 +8,14 @@ QUESTIONNER l'IA
 
 * placer les 2 images im31.png et im32.png
 
-* incrire :
+* inscrire :
 ```
 Analyse et évaluation de ce format de composant de page informatique fixe ou animée.
 ```
 
 ### **2ème prompt**
 
-* incrire : 
+* inscrire : 
 ```
 Evaluer avec le flag "en commentaire" pour une pièce, ajouté en 2007
 
@@ -46,7 +46,7 @@ Par déplacement, agrandissement et programme, l'utilisateur lui commande de cr�
 
 ### **3ème prompt**
 
-* incrire : 
+* inscrire : 
 ```
 Le format de description est un arbre de tabint accompagné de la table de string (modèle assembleur)
 Est-ce que ce design peut faciliter le traitement de l'IA ?
@@ -55,7 +55,7 @@ Est-ce que ce design peut faciliter le traitement de l'IA ?
 
 ### **4ème prompt**
 
-* incrire : 
+* inscrire : 
 ```
 Est-ce que ce format comme standard pour échanger le HTML avec l'IA serait une solution intéressante ?
 1 - convertir React en TiSpI avant de le transmettre au prompt

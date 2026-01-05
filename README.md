@@ -1,94 +1,115 @@
+Voici le texte **corrigé uniquement sur l’orthographe, les oublis et les doublons**, sans reformulation ni modification du fond.
+
+---
 
 # TiSpI
 
 ---
-QUESTIONNER l'IA
----
+
+## QUESTIONNER l’IA
+
 ### **1er prompt pour votre Intelligence Artificielle**
 
-* placer les 2 images im31.png (schéma de l'arbre) et im32.png (schéma de pièce/barre-de-temps/pistes)
+* placer les 2 images im31.png (schéma de l’arbre) et im32.png (schéma de pièce / barre-de-temps / pistes)
 
 * inscrire :
+
 ```
 Analyse et évaluation de ce format de composant de page informatique fixe ou animée.
 ```
 
+---
+
 ### **2ème prompt**
 
-* inscrire : 
-```
-Evaluer avec le flag "en commentaire" pour une pièce, ajouté en 2007
+* inscrire :
 
-rôle interdire l''envoi de la pièce dans le run-time. La pièce reste dans l'éditeur.
+```
+Évaluer avec le flag "en commentaire" pour une pièce, ajouté en 2007
+
+Rôle : interdire l’envoi de la pièce dans le run-time. La pièce reste dans l’éditeur.
 
 Conséquence :
-L'action de la pièce peut être utilisée pour l'éditeur lui-même => ça devient une pièce-macro... Un controle en fait
- 
+L’action de la pièce peut être utilisée pour l’éditeur lui-même => ça devient une pièce-macro… Un contrôle en fait
+
 Puisque la pièce est dans un groupe, on pourra donner un rôle au groupe. Exemple : bouton.
-L'arbre est modulaire, donc onc peut déplacer la branche complète de ce groupe + les pièces-macros suivront puisqu'elle font partie de la branche de l'arbre.
+L’arbre est modulaire, donc on peut déplacer la branche complète de ce groupe + les pièces-macros suivront puisqu’elles font partie de la branche de l’arbre.
 => exporter => placer dans une bibliothèque en ligne.
 => le flag commentaire a créé, à lui tout seul, le mécanisme de construction des templates paramétrables en bibliothèque.
 
-Certaines actions vont permettre d'éditer automatiquement un sous-groupe.
-Exemple pour la template "bouton animé" => 3 boutons vont permettre d'éditer directement chaque groupe de chaque état du bouton.
+Certaines actions vont permettre d’éditer automatiquement un sous-groupe.
+Exemple pour le template "bouton animé" => 3 boutons vont permettre d’éditer directement chaque groupe de chaque état du bouton.
 
-
-J'exportais déjà des groupes depuis le début. J'ai vite compris que l'arbre était modulaire. Donc les pièces-macros ont suivi naturellement en 2007.
+J’exportais déjà des groupes depuis le début. J’ai vite compris que l’arbre était modulaire. Donc les pièces-macros ont suivi naturellement en 2007.
 
 ---
 
-Le tableau de bord est lui même un groupe-macro. C'est à dire que le tableau de bord est intégré à l'arbre
+Le tableau de bord est lui-même un groupe-macro. C’est-à-dire que le tableau de bord est intégré à l’arbre.
 
-Du reste, un option permet de créer le créer avec un un seule pièce présente à l'ouverture ddu programme.
-C'est une pièce macro.
-Par déplacement, agrandissement et programme, l'utilisateur lui commande de créer chaque élément de l'éditeur.
+Du reste, une option permet de le créer avec une seule pièce présente à l’ouverture du programme.
+C’est une pièce-macro.
+Par déplacement, agrandissement et programmation, l’utilisateur lui commande de créer chaque élément de l’éditeur.
 ```
+
+---
+
 ### **3ème prompt**
 
-* placer les 2 images im33.png (barre-de-commande-utilisateur) et im34.png (construction de la barre-de-commande)
+* placer les 2 images im33.png (barre-de-commande utilisateur) et im34.png (construction de la barre-de-commande)
 
-* inscrire : 
+* inscrire :
+
 ```
 Exemple de barre-de-commande utilisateur.
-Je nomme 'concepteur' les auteurs de gadget. Mais ce sont aussi de simples utilisateurs. 
-Image 1 : ce que voit l'utilisateur final, qui utilise la gadget "incrustation vidéo"
-- une zone de travail classique, et une barre-d'édition sur la droite.
+Je nomme "concepteur" les auteurs de gadgets. Mais ce sont aussi de simples utilisateurs.
+Image 1 : ce que voit l’utilisateur final, qui utilise le gadget "incrustation vidéo"
+- une zone de travail classique, et une barre d’édition sur la droite.
 Image 2 : le sous-groupe dans lequel le concepteur constitue la barre de commande
-- ajoute des pièces "comme les autres" (note il peut même placer des gadgets d'autres concepteurs)
-- programme les script qui agiront dans l'éditeur. 
+- ajoute des pièces "comme les autres" (note : il peut même placer des gadgets d’autres concepteurs)
+- programme les scripts qui agiront dans l’éditeur.
 ```
+
+---
+
 ### **4ème prompt**
 
-* inscrire : 
-```
-Le format de description est un arbre de tabint accompagné de la table de string (modèle assembleur)
-Est-ce que ce design peut faciliter le traitement de l'IA ?
+* inscrire :
 
 ```
+Le format de description est un arbre de tabint accompagné de la table de strings (modèle assembleur).
+Est-ce que ce design peut faciliter le traitement de l’IA ?
+```
+
+---
 
 ### **5ème prompt**
 
-* inscrire : 
+* inscrire :
+
 ```
-Est-ce que ce format comme standard pour échanger le HTML avec l'IA serait une solution intéressante ?
+Est-ce que ce format comme standard pour échanger le HTML avec l’IA serait une solution intéressante ?
 1 - convertir React en TiSpI avant de le transmettre au prompt
 2 - utiliser un script traditionnel et une IA locale.
 ```
 
-### **5ème prompt**
+---
 
-* inscrire : 
+### **6ème prompt**
+
+* inscrire :
+
 ```
-Peux tu évaluer un ordre d'économie pour les conversion de react et HTML en TiSpi pour prompt ?
-Note, calcule avec des formats réact, HTML, et TiSpI optimisés.
+Peux-tu évaluer un ordre d’économie pour les conversions de React et HTML en TiSpI pour prompt ?
+Note : calcule avec des formats React, HTML et TiSpI optimisés.
 ```
+
+---
 
 ### Addendum
 
-Ceci est une introduction. E-anim/WvAnim évolue depuis 25ans dans une structure inchangée depuis l'origine. 
+Ceci est une introduction. E-anim / WvAnim évolue depuis 25 ans dans une structure inchangée depuis l’origine.
 
-Aussi, ces prompts ne sont pas une liste exhaustive des optimisations fondamentales de TiSpI issues de la rigueur du modèle. 
-
+Aussi, ces prompts ne sont pas une liste exhaustive des optimisations fondamentales de TiSpI issues de la rigueur du modèle.
 
 ---
 DESCRIPTION

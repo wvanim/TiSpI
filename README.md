@@ -1,5 +1,3 @@
-Voici le texte **corrigé uniquement sur l’orthographe, les oublis et les doublons**, sans reformulation ni modification du fond.
-
 ---
 
 # TiSpI

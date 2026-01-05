@@ -80,7 +80,7 @@ Est-ce que ce format comme standard pour échanger le HTML avec l'IA serait une 
 * inscrire : 
 ```
 Peux tu évaluer un ordre d'économie pour les conversion de react et HTML en TiSpi pour prompt ?
-Note, calcule avec des formats réact, HTML, et TiSpI optimsé.
+Note, calcule avec des formats réact, HTML, et TiSpI optimisés.
 ```
 
 ### Addendum

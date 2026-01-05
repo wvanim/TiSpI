@@ -1,113 +1,115 @@
 ---
 
-# TiSpI
+# TiSpI - Time/Space Invariant
 
 ---
 
-## QUESTIONNER l’IA
+Interactive UI and animation standard composed of a dual tree: time / space
 
-### **1er prompt pour votre Intelligence Artificielle**
+## QUESTIONING THE AI
 
-* placer les 2 images im31.png (schéma de l’arbre) et im32.png (schéma de pièce / barre-de-temps / pistes)
+### **1st prompt for your Artificial Intelligence**
 
-* inscrire :
+* place the 2 images im31.png (tree diagram) and im32.png (room / timeline / tracks diagram)
 
-```
-Analyse et évaluation de ce format de composant de page informatique fixe ou animée.
-```
-
----
-
-### **2ème prompt**
-
-* inscrire :
+* write:
 
 ```
-Évaluer avec le flag "en commentaire" pour une pièce, ajouté en 2007
-
-Rôle : interdire l’envoi de la pièce dans le run-time. La pièce reste dans l’éditeur.
-
-Conséquence :
-L’action de la pièce peut être utilisée pour l’éditeur lui-même => ça devient une pièce-macro… Un contrôle en fait
-
-Puisque la pièce est dans un groupe, on pourra donner un rôle au groupe. Exemple : bouton.
-L’arbre est modulaire, donc on peut déplacer la branche complète de ce groupe + les pièces-macros suivront puisqu’elles font partie de la branche de l’arbre.
-=> exporter => placer dans une bibliothèque en ligne.
-=> le flag commentaire a créé, à lui tout seul, le mécanisme de construction des templates paramétrables en bibliothèque.
-
-Certaines actions vont permettre d’éditer automatiquement un sous-groupe.
-Exemple pour le template "bouton animé" => 3 boutons vont permettre d’éditer directement chaque groupe de chaque état du bouton.
-
-J’exportais déjà des groupes depuis le début. J’ai vite compris que l’arbre était modulaire. Donc les pièces-macros ont suivi naturellement en 2007.
-
----
-
-Le tableau de bord est lui-même un groupe-macro. C’est-à-dire que le tableau de bord est intégré à l’arbre.
-
-Du reste, une option permet de le créer avec une seule pièce présente à l’ouverture du programme.
-C’est une pièce-macro.
-Par déplacement, agrandissement et programmation, l’utilisateur lui commande de créer chaque élément de l’éditeur.
+Analyze and evaluate this format for a fixed or animated software page component.
 ```
 
 ---
 
-### **3ème prompt**
+### **2nd prompt**
 
-* placer les 2 images im33.png (barre-de-commande utilisateur) et im34.png (construction de la barre-de-commande)
-
-* inscrire :
+* write:
 
 ```
-Exemple de barre-de-commande utilisateur.
-Je nomme "concepteur" les auteurs de gadgets. Mais ce sont aussi de simples utilisateurs.
-Image 1 : ce que voit l’utilisateur final, qui utilise le gadget "incrustation vidéo"
-- une zone de travail classique, et une barre d’édition sur la droite.
-Image 2 : le sous-groupe dans lequel le concepteur constitue la barre de commande
-- ajoute des pièces "comme les autres" (note : il peut même placer des gadgets d’autres concepteurs)
-- programme les scripts qui agiront dans l’éditeur.
+Evaluate with the "comment" flag for a room, added in 2007
+
+Role: prevent the room from being sent to the run-time. The room stays in the editor.
+
+Consequence:
+The room's action can be used for the editor itself => it becomes a macro-room... A control, in fact.
+
+Since the room is in a group, we can assign a role to the group. Example: button.
+The tree is modular, so we can move the entire branch of this group + the macro-rooms will follow since they are part of the tree branch.
+=> export => place in an online library.
+=> the comment flag, by itself, created the mechanism for building parameterizable library templates.
+
+Some actions will allow automatic editing of a sub-group.
+Example for the "animated button" template => 3 buttons will allow direct editing of each group for each button state.
+
+I was already exporting groups from the start. I quickly understood the tree was modular. So macro-rooms followed naturally in 2007.
+
+---
+
+The dashboard is itself a macro-group. Meaning the dashboard is integrated into the tree.
+
+Furthermore, an option allows creating it with only one room present when the program opens.
+It is a macro-room.
+Through moving, resizing, and programming, the user commands it to create each element of the editor.
 ```
 
 ---
 
-### **4ème prompt**
+### **3rd prompt**
 
-* inscrire :
+* place the 2 images im33.png (user command bar) and im34.png (command bar construction)
 
-```
-Le format de description est un arbre de tabint accompagné de la table de strings (modèle assembleur).
-Est-ce que ce design peut faciliter le traitement de l’IA ?
-```
-
----
-
-### **5ème prompt**
-
-* inscrire :
+* write:
 
 ```
-Est-ce que ce format comme standard pour échanger le HTML avec l’IA serait une solution intéressante ?
-1 - convertir React en TiSpI avant de le transmettre au prompt
-2 - utiliser un script traditionnel et une IA locale.
+Example of a user command bar.
+I call gadget authors "designers". But they are also simple users.
+Image 1: what the end user sees, who uses the "video overlay" gadget
+- a classic work area, and an editing bar on the right.
+Image 2: the sub-group where the designer builds the command bar
+- adds rooms "like the others" (note: they can even place gadgets from other designers)
+- programs the scripts that will act in the editor.
 ```
 
 ---
 
-### **6ème prompt**
+### **4th prompt**
 
-* inscrire :
+* write:
 
 ```
-Peux-tu évaluer un ordre d’économie pour les conversions de React et HTML en TiSpI pour prompt ?
-Note : calcule avec des formats React, HTML et TiSpI optimisés.
+The description format is a tabint tree accompanied by the string table (assembler model).
+Could this design facilitate AI processing?
+```
+
+---
+
+### **5th prompt**
+
+* write:
+
+```
+Could this format be an interesting solution as a standard for exchanging HTML with the AI?
+1 - convert React to TiSpI before sending it to the prompt
+2 - use a traditional script and a local AI.
+```
+
+---
+
+### **6th prompt**
+
+* write:
+
+```
+Can you estimate an order of magnitude for the economy in conversions from React and HTML to TiSpI for prompts?
+Note: calculate with optimized React, HTML, and TiSpI formats.
 ```
 
 ---
 
 ### Addendum
 
-Ceci est une introduction. E-anim / WvAnim évolue depuis 25 ans dans une structure inchangée depuis l’origine.
+This is an introduction. E-anim / WvAnim has been evolving for 25 years within a structure unchanged since its origin.
 
-Aussi, ces prompts ne sont pas une liste exhaustive des optimisations fondamentales de TiSpI issues de la rigueur du modèle.
+Also, these prompts are not an exhaustive list of the fundamental TiSpI optimizations resulting from the rigor of the model.
 
 ---
 DESCRIPTION

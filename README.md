@@ -6,7 +6,7 @@ QUESTIONNER l'IA
 ---
 ### **1er prompt pour votre Intelligence Artificielle**
 
-* placer les 2 images im31.png et im32.png
+* placer les 2 images im31.png (schémaa de l'arbre) et im32.png (schéma de pièce/barre-de-temps/pistes)
 
 * inscrire :
 ```
@@ -43,8 +43,21 @@ Du reste, un option permet de créer le créer avec un un seule pièce présente
 C'est une pièce macro.
 Par déplacement, agrandissement et programme, l'utilisateur lui commande de créer chaque élément de l'éditeur.
 ```
-
 ### **3ème prompt**
+
+* placer les 2 images im33.png (barre-de-commande-utilisateur) et im34.png (construction de la barre-de-commande)
+
+* inscrire : 
+```
+Exemple de barre-de-commande utilisateur.
+Je nomme 'concepteur' les auteurs de gadget. Mais ce sont aussi de simples utilisateurs. 
+Image 1 : ce que voit l'utilisateur final, qui utilise la gadget "incrustation vidéo"
+- une zone de travail classique, et une barre-d'édition sur la droite.
+Image 2 : le sous-groupe dans lequel le concepteur constitue la barre de commande
+- ajoute des pièces "comme les autres" (note il peut même placer des gadgets d'autres concepteurs)
+- programme les script qui agiront dans l'éditeur. 
+```
+### **4ème prompt**
 
 * inscrire : 
 ```
@@ -53,7 +66,7 @@ Est-ce que ce design peut faciliter le traitement de l'IA ?
 
 ```
 
-### **4ème prompt**
+### **5ème prompt**
 
 * inscrire : 
 ```

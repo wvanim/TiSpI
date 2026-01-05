@@ -6,7 +6,7 @@ QUESTIONNER l'IA
 ---
 ### **1er prompt pour votre Intelligence Artificielle**
 
-* placer les 2 images im31.png (schémaa de l'arbre) et im32.png (schéma de pièce/barre-de-temps/pistes)
+* placer les 2 images im31.png (schéma de l'arbre) et im32.png (schéma de pièce/barre-de-temps/pistes)
 
 * inscrire :
 ```

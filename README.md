@@ -74,6 +74,20 @@ Est-ce que ce format comme standard pour échanger le HTML avec l'IA serait une 
 1 - convertir React en TiSpI avant de le transmettre au prompt
 2 - utiliser un script traditionnel et une IA locale.
 ```
+
+### **5ème prompt**
+
+* inscrire : 
+```
+Peux tu évaluer un ordre d'économie pour les conversion de react et HTML en TiSpi pour prompt ?
+Note, calcule avec des formats réact, HTML, et TiSpI optimsé.
+```
+
+### Addendum
+
+Ceci est une introduction. E-anim/WvAnim évolue depuis 25ans dans une structure inchangée depuis l'origine. 
+Aussi, ces prompts ne sont pas une liste exhaustive des optimisations fondamentales de TiSpI issues de la rigueur du modèle. 
+
 ---
 DESCRIPTION
 ---

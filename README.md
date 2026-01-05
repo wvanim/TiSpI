@@ -86,7 +86,9 @@ Note, calcule avec des formats réact, HTML, et TiSpI optimsé.
 ### Addendum
 
 Ceci est une introduction. E-anim/WvAnim évolue depuis 25ans dans une structure inchangée depuis l'origine. 
+
 Aussi, ces prompts ne sont pas une liste exhaustive des optimisations fondamentales de TiSpI issues de la rigueur du modèle. 
+
 
 ---
 DESCRIPTION

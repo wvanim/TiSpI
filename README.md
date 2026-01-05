@@ -102,6 +102,16 @@ Could this format be an interesting solution as a standard for exchanging HTML w
 Can you estimate an order of magnitude for the economy in conversions from React and HTML to TiSpI for prompts?
 Note: calculate with optimized React, HTML, and TiSpI formats.
 ```
+---
+
+### **7th prompt**
+
+* write:
+
+```
+We are observing the emergence of automated HTML page compositions, for selected product catalogs or AI-generated page layouts.
+Could the TiSpI format play a role in this process?
+```
 
 ---
 

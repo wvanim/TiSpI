@@ -10,7 +10,7 @@ Interactive UI and animation standard composed of a dual tree: time / space
 
 ### **1st prompt for your Artificial Intelligence**
 
-* place the 2 images im31.png (tree diagram) and im32.png (room / timeline / tracks diagram)
+* place the 2 images im31.png (tree diagram) and im32.png (piece / timeline / tracks diagram)
 
 * write:
 

@@ -6,7 +6,7 @@
 
 Interactive UI and animation standard based on a dual tree structure: Time / Space.
 
-Developed in the e-anim editor in 1999 (later renamed WvAnim).
+Developed in the e-anim editor in 1999 (later renamed WvAnim). Used continuously for over 25 years, with the core structure remaining unchanged.
 
 To preserve the **structural integrity and consistency** of the format:
 ```

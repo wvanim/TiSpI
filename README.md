@@ -25,29 +25,29 @@ Analyze and evaluate this format for a fixed or animated software page component
 * write:
 
 ```
-Evaluate with the "comment" flag for a room, added in 2007
+Evaluate with the "comment" flag for a piece, added in 2007
 
-Role: prevent the room from being sent to the run-time. The room stays in the editor.
+Role: prevent the piece from being sent to the run-time. The piece stays in the editor.
 
 Consequence:
-The room's action can be used for the editor itself => it becomes a macro-room... A control, in fact.
+The piece's action can be used for the editor itself => it becomes a macro-piece... A control, in fact.
 
-Since the room is in a group, we can assign a role to the group. Example: button.
-The tree is modular, so we can move the entire branch of this group + the macro-rooms will follow since they are part of the tree branch.
+Since the piece is in a group, we can assign a role to the group. Example: button.
+The tree is modular, so we can move the entire branch of this group + the macro-pieces will follow since they are part of the tree branch.
 => export => place in an online library.
 => the comment flag, by itself, created the mechanism for building parameterizable library templates.
 
 Some actions will allow automatic editing of a sub-group.
 Example for the "animated button" template => 3 buttons will allow direct editing of each group for each button state.
 
-I was already exporting groups from the start. I quickly understood the tree was modular. So macro-rooms followed naturally in 2007.
+I was already exporting groups from the start. I quickly understood the tree was modular. So macro-pieces followed naturally in 2007.
 
 ---
 
 The dashboard is itself a macro-group. Meaning the dashboard is integrated into the tree.
 
-Furthermore, an option allows creating it with only one room present when the program opens.
-It is a macro-room.
+Furthermore, an option allows creating it with only one piece present when the program opens.
+It is a macro-piece.
 Through moving, resizing, and programming, the user commands it to create each element of the editor.
 ```
 
@@ -65,7 +65,7 @@ I call gadget authors "designers". But they are also simple users.
 Image 1: what the end user sees, who uses the "video overlay" gadget
 - a classic work area, and an editing bar on the right.
 Image 2: the sub-group where the designer builds the command bar
-- adds rooms "like the others" (note: they can even place gadgets from other designers)
+- adds pieces "like the others" (note: they can even place gadgets from other designers)
 - programs the scripts that will act in the editor.
 
 Note: protections and shortcuts are not shown here. We are only discussing the structure.

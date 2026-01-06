@@ -6,7 +6,8 @@
 
 Interactive UI and animation standard composed of a dual tree: time / space
 
-To preserve the **structural integrity and consistency** of the format:```
+To preserve the **structural integrity and consistency** of the format:
+```
 © Philippe Destrumel — TiSpI structure and diagrams.
 This material is publicly available for reading, analysis, and technical discussion.
 Redistribution or modification of the material requires prior permission from the author,

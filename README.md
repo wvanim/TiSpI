@@ -4,7 +4,8 @@
 
 ---
 
-Interactive UI and animation standard composed of a dual tree: time / space
+Interactive UI and animation standard based on a dual tree structure: Time / Space
+Developed in the e-anim editor in 1999 (later renamed WvAnim).
 
 To preserve the **structural integrity and consistency** of the format:
 ```

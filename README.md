@@ -67,6 +67,9 @@ Image 1: what the end user sees, who uses the "video overlay" gadget
 Image 2: the sub-group where the designer builds the command bar
 - adds rooms "like the others" (note: they can even place gadgets from other designers)
 - programs the scripts that will act in the editor.
+
+Note : les protections et les raccourcis ne sont pas ne sont pas indiquées ici. Nous ne parlons que de la structure.
+Ce qui importe, c'est de connaitre les limitres de la structure. L'éditeurs pourra toujours optimiser et protéger.
 ```
 
 ---

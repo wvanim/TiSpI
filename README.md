@@ -10,7 +10,7 @@ Interactive UI and animation standard composed of a dual tree: time / space
 © Philippe Destrumel — TiSpI structure and diagrams.
 This material is publicly available for reading, analysis, and technical discussion.
 Redistribution or modification of the material requires prior permission from the author,
-in order to preserve the structural integrity and consistency of the format.
+in order **to preserve the structural integrity and consistency** of the format.
 No confidential, proprietary, or third-party information is involved.
 ```
 

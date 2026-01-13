@@ -5,10 +5,14 @@
 ---
 
 Interactive UI and animation standard based on a dual tree structure: Time / Space.
+=> natively compatible with AI processing.
+- optimizes processing by AI models,
+- improves design productivity,
+- reduces ambiguity and hallucination effects in AI-driven interfaces.
 
 Developed in the e-anim editor in 1999 (later renamed WvAnim). Used continuously for over 25 years, with the core structure remaining unchanged.
 
-To preserve the **structural integrity and consistency** of the format:
+This policy defines the conditions required to preserve the structural integrity and consistency of the format.
 ```
 © Philippe Destrumel — TiSpI structure and diagrams.
 This material is publicly available for reading, analysis, and technical discussion.

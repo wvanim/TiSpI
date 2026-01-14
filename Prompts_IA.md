@@ -55,10 +55,11 @@ Through moving, resizing, and programming, the user commands it to create each e
 
 * place the 2 images 'user command bar' and 'command bar construction'
 - User command bar
-![im6](https://github.com/user-attachments/assets/41febcea-7795-4ee6-a5c1-9a613db8bb96)
+![im6](https://github.com/user-attachments/assets/cc239673-4df7-4790-a7aa-cceb214d1f49)
+
 
 - Command bar construction
-![im6](https://github.com/user-attachments/assets/17d952e9-ab25-480b-b36d-2c6c864c966b)
+![im6](https://github.com/user-attachments/assets/60509163-f659-4326-ad63-37702822e386)
 
 * write:
 

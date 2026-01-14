@@ -55,11 +55,12 @@ Through moving, resizing, and programming, the user commands it to create each e
 
 * place the 2 images 'user command bar' and 'command bar construction'
 - User command bar
-[![im6](https://github.com/wvanim/TiSpI/blob/main/im33.png)
-
+[[![im6](https://github.com/wvanim/TiSpI/blob/main/im33.png)
+](https://github.com/wvanim/TiSpI/commit/534c017b1776b7379f83bb843f1115d2e70f8824)
 
 - Command bar construction
-[![im6](https://github.com/wvanim/TiSpI/blob/main/im34.png)
+[[![im6](https://github.com/wvanim/TiSpI/blob/main/im34.png)
+](https://raw.githubusercontent.com/wvanim/TiSpI/refs/heads/main/im34.png)
 
 * write:
 

@@ -3,17 +3,19 @@
 ### **1st prompt for your Artificial Intelligence**
 
 * place the 2 images 'tree diagram' and 'piece / timeline / tracks diagram'
-- Tree diagram
-<img width="1129" height="849" alt="im31" src="https://github.com/user-attachments/assets/bda7f94c-9e48-4de9-80d8-7a34b592fb9d" />
-
-- Piece / timeline / tracks diagram
-<img width="1138" height="753" alt="im32" src="https://github.com/user-attachments/assets/3b44cd8c-ffbc-4a52-bc35-f53ffa33f514" />
 
 * write:
 
 ```
 Analyze and evaluate this format for a fixed or animated software page component.
 ```
+
+- Tree diagram
+<img width="1129" height="849" alt="im31" src="https://github.com/user-attachments/assets/bda7f94c-9e48-4de9-80d8-7a34b592fb9d" />
+
+- Piece / timeline / tracks diagram
+<img width="1138" height="753" alt="im32" src="https://github.com/user-attachments/assets/3b44cd8c-ffbc-4a52-bc35-f53ffa33f514" />
+
 ---
 
 ### **2nd prompt**

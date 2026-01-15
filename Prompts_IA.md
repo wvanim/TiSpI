@@ -1,3 +1,10 @@
+# TiSpI - Time/Space Invariant
+### Arbre strict d'alternance Temps / Espace pour UI prévisibles
+
+Formalisation structurelle des interfaces utilisateur classiques et animées, .
+
+*40 ans d'expérience en machines à états d'interface*
+
 ## QUESTIONING THE AI
 
 ### **1st prompt for your Artificial Intelligence**

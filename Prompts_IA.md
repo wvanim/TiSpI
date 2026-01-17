@@ -1,7 +1,8 @@
 # TiSpI - Time/Space Invariant
 ### Arbre strict d'alternance Temps / Espace pour UI prévisibles
 
-Formalisation structurelle des interfaces utilisateur classiques et animées, .
+TiSpI décrit ce qui apparaît à l’écran et **évolue** avec le temps. 
+Contrairement aux autres approches, tout y suit une logique unique et simple, une horloge et ses rouages.
 
 *40 ans d'expérience en machines à états d'interface*
 

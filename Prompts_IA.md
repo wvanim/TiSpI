@@ -1,12 +1,15 @@
 # TiSpI - Time/Space Invariant
 ### Arbre strict d'alternance Temps / Espace pour UI prévisibles
 
-TiSpI décrit ce qui apparaît à l’écran et **évolue** avec le temps. 
-Contrairement aux autres approches, tout y suit une logique unique et simple, une horloge et ses rouages.
+TiSpI describes what appears on screen and evolves over time.
+Unlike other approaches, everything follows a single, simple logic—like a clock and its gears.
 
-*40 ans d'expérience en machines à états d'interface*
+*40 years of experience in interface state machines.*
 
 ## QUESTIONING THE AI
+
+The first three prompts present TiSpI as interpreted by the AI.
+The next four prompts assess how compatible it is with AI systems.
 
 ### **1st prompt for your Artificial Intelligence**
 

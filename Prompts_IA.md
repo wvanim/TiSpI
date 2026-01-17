@@ -7,9 +7,8 @@ Unlike other approaches, everything follows a single, simple logic—like a cloc
 *40 years of experience in interface state machines.*
 
 ## QUESTIONING THE AI
-
-The first three prompts present TiSpI as interpreted by the AI.
-The next four prompts assess how compatible it is with AI systems.
+- 3 prompts present TiSpI as interpreted by the AI.
+- 4 prompts assess how compatible it is with AI systems.
 
 ### **1st prompt for your Artificial Intelligence**
 

@@ -16,7 +16,9 @@ This strict alternation ensures a clear separation between:
 - **"what"** – the spatial content at a given instant
 
 **Golden Rule of the Interface**
-![alt text](image.png)
+
+<img width="902" height="364" alt="image" src="https://github.com/user-attachments/assets/f6d22719-a88b-45e6-b062-d75b20cdd3bc" />
+
 *Figure 2: The WvAnim editor showing the timeline (Piece) and the spatial editing area (Face-Group)*
 
 The **Piece** = your timeline ("when things change")  

@@ -1,4 +1,4 @@
-Introduction to the documentation of the WvAnim/TiSpI online editor
+Introduction to the documentation of the WvAnim/TiSpI online editor 
 
 ## The Strictly Alternating Time/Space Tree – WvPiece/WvFace
 

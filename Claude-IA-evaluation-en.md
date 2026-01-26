@@ -1,9 +1,12 @@
 Prompt for Claude AI:
-After these clarifications*, do you see an interest in the Time/Space Invariant (TiSpI) architecture for:
+
+After these clarifications(1), do you see an interest in the Time/Space Invariant (TiSpI) architecture for:
+
 https://aifoc.us/the-browser-is-the-sandbox/
 
-(*) description of the reduced semantic branch*: pages-successive
-(**) reminder: TiSpI develops in strictly alternating 'Time/Space' trees, then reduces into semantic branches.
+(1) description of the reduced semantic branch(2): pages-successive
+
+(2) reminder: TiSpI develops in strictly alternating 'Time/Space' trees, then reduces into semantic branches.
 
 ---
 

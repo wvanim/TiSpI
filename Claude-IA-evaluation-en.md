@@ -414,16 +414,16 @@ AI generates its own environment:
 
 ## 📊 Comparison: Playwright vs TiSpi for AI Agent
 
-| Aspect | Playwright + Dashboard | TiSpi Native | Advantage |
-|--------|------------------------|--------------|----------|
-| **Data structure** | DOM HTML (unpredictable) | Tabint (predictable) | TiSpi ⭐⭐⭐⭐⭐ |
-| **Interface generation** | Parses existing HTML | Generates TiSpi tree | TiSpi ⭐⭐⭐⭐⭐ |
-| **Workflow state** | JS Variables | Navigable timeline | TiSpi ⭐⭐⭐⭐ |
-| **Human intervention** | Separate React dialog | Integrated macro-pieces | TiSpi ⭐⭐⭐⭐⭐ |
-| **Replay/Debug** | Trace viewer | Native timeline | TiSpi ⭐⭐⭐⭐⭐ |
-| **Audit trail** | JSON logs | Complete TiSpi tree | TiSpi ⭐⭐⭐⭐ |
-| **AI formats** | HTML (verbose) | Tabint (compact) | TiSpi ⭐⭐⭐⭐⭐ |
-| **Consistency** | Each site different | Always the same structure | TiSpi ⭐⭐⭐⭐⭐ |
+|         Aspect           |  Playwright + Dashboard  |       TiSpi Native        |      Advantage     |
+|--------------------------|--------------------------|---------------------------|--------------------|
+| **Data structure**       | DOM HTML (unpredictable) | Tabint (predictable)      | TiSpi ⭐⭐⭐⭐⭐ |
+| **Interface generation** | Parses existing HTML     | Generates TiSpi tree      | TiSpi ⭐⭐⭐⭐⭐ |
+| **Workflow state**       | JS Variables             | Navigable timeline        | TiSpi ⭐⭐⭐⭐   |
+| **Human intervention**   | Separate React dialog    | Integrated macro-pieces   | TiSpi ⭐⭐⭐⭐⭐ |
+| **Replay/Debug**         | Trace viewer             | Native timeline           | TiSpi ⭐⭐⭐⭐⭐ |
+| **Audit trail**          | JSON logs                | Complete TiSpi tree       | TiSpi ⭐⭐⭐⭐   |
+| **AI formats**           | HTML (verbose)           | Tabint (compact)          | TiSpi ⭐⭐⭐⭐⭐ |
+| **Consistency**          | Each site different      | Always the same structure | TiSpi ⭐⭐⭐⭐⭐ |
 
 ---
 
@@ -551,11 +551,11 @@ Tabint = format LLMs can generate without error ✅
 
 ### For "AI Agent in Browser"
 
-| Approach | Probability of Success | Justification |
-|----------|-------------------|---------------|
-| **Playwright alone** | 60% | Standard, but unpredictable |
-| **Playwright + React Dashboard** | 70% | Better, but decoupled |
-| **TiSpi as Agent Runtime** | **85%** | Unique coherent architecture |
+|               Approach           | Probability of Success |         Justification        |
+|----------------------------------|------------------------|------------------------------|
+| **Playwright alone**             |         60%            | Standard, but unpredictable  |
+| **Playwright + React Dashboard** |         70%            | Better, but decoupled        |
+| **TiSpi as Agent Runtime**       |       **85%**          | Unique coherent architecture |
 
 ### TiSpi Success Factors
 

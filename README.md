@@ -4,6 +4,9 @@
 
 ---
 
+<img width="1101" height="814" alt="im38" src="https://github.com/user-attachments/assets/c1b05151-98d7-42eb-a6b3-de470bfdddb7" />
+
+
 Interactive UI and animation standard based on a dual tree structure: Time / Space.
 => natively compatible with AI processing.
 - optimizes processing by AI models,

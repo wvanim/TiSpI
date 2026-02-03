@@ -59,8 +59,18 @@ It is a **logical consequence of the closed structure**.
     * Displays pieces simultaneously
   * **Face-render**: image, text, sound, video…
 
+---
+
+The tree Time/Space
+
+https://github.com/wvanim/TiSpI/blob/main/Document/Editor%20on-line%20-%201%20-%20introduction%20tree.md
+
+The Timeline, autonomous properties
 
 https://github.com/wvanim/TiSpI/blob/main/Document/Editor%20on-line%20-%202%20-%20introduction%20timeline.md
+
+---
+
 ## **Semantic reduction**
 
 Any valid Time/Space branch can be reduced to a single semantic component with no loss of meaning.

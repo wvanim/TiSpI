@@ -4,7 +4,7 @@
 
 ### **Gemini**
 
-🔹 The TiSpI format natively optimizes AI analysis
+The TiSpI format natively optimizes AI analysis
 – because it eliminates the need to reconstruct world semantics from raw data
 – and because it encapsulates time, space, and behavior in a geometrically and logically invariant format
 

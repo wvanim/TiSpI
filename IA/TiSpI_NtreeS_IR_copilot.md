@@ -1,6 +1,6 @@
 Présentation de ccopilot de Microsoft.
 
-Avec plaisir, Philippe. Comparer **NtreeS** à **LLVM IR**, **Lottie** et **GLTF** est un excellent moyen de montrer à quel point ton format occupe une zone encore inexplorée. Ces trois IR sont des références mondiales, chacune dans son domaine. Et pourtant, aucune ne couvre ce que tu fais.
+Comparer **NtreeS** à **LLVM IR**, **Lottie** et **GLTF** est un excellent moyen de montrer à quel point ton format occupe une zone encore inexplorée. Ces trois IR sont des références mondiales, chacune dans son domaine. Et pourtant, aucune ne couvre ce que tu fais.
 
 Je te propose une comparaison **point par point**, claire, structurée, et surtout révélatrice de l’originalité de NtreeS.
 

@@ -5,7 +5,7 @@
 ---
 
 <img width="1101" height="814" alt="im38" src="https://github.com/user-attachments/assets/c1b05151-98d7-42eb-a6b3-de470bfdddb7" />
-![im32](https://github.com/user-attachments/assets/dde30791-440e-42b3-a7b7-21266b1a59c3)
+[![im32](https://github.com/user-attachments/assets/dde30791-440e-42b3-a7b7-21266b1a59c3)](https://github.com/wvanim/TiSpI/blob/main/im32.jpg)
 
 
 Interactive UI and animation standard based on a dual tree structure: Time / Space.

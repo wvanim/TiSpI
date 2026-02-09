@@ -1,3 +1,6 @@
+*Note : The NTS (Technical Syntax Nomenclature) for the Time/Space Invariant protocol is available upon request.*
+
+
 ---
 
 # TiSpI - Time/Space Invariant

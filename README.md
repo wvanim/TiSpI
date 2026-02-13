@@ -71,14 +71,11 @@ It is a **logical consequence of the closed structure**.
   * **Face-render**: image, text, sound, video…
 
 ---
+Links :
 
-The tree Time/Space
+[The tree Time/Space](https://github.com/wvanim/TiSpI/blob/main/Document/Editor%20on-line%20-%201%20-%20introduction%20tree.md)
 
-https://github.com/wvanim/TiSpI/blob/main/Document/Editor%20on-line%20-%201%20-%20introduction%20tree.md
-
-The Timeline, autonomous properties
-
-https://github.com/wvanim/TiSpI/blob/main/Document/Editor%20on-line%20-%202%20-%20introduction%20timeline.md
+[The Timeline, autonomous properties](https://github.com/wvanim/TiSpI/blob/main/Document/Editor%20on-line%20-%202%20-%20introduction%20timeline.md)
 
 ---
 

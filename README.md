@@ -2,11 +2,11 @@
 
 ---
 
- Ecosystème Temps/Espace-invariant - Tispi - adapté à l'Insterface Utilisateur   
- – un éditeur visuel : e-anim (renommé WvAnim - Web View animation)                                      
- – une structure de données (arbre Temps/Espace)                   
- – un format générique de prompt : le véhicule qui transporte des structures arborescentes, typées et déterministes (Treeia)   
- – un format spécifique dédié à l’UI Temps/Espace Invariant : passager du précédant, il adapte l'arbre Tispi à un prompt.        
+**Time/Space-Invariant Ecosystem - Tispi - Adapted for User Interface**  
+- a visual editor: e-anim (renamed WvAnim - Web View animation)  
+- a data structure (Time/Space tree)  
+- a generic prompt format: the vehicle that transports typed, deterministic tree structures (Treeia)  
+- a specific format dedicated to the Time/Space-Invariant UI: passenger of the former, it adapts the Tispi tree to a prompt.
 
 ---
 

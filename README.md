@@ -1,17 +1,13 @@
 *Note : The NTS (Technical Syntax Nomenclature) for the Time/Space Invariant protocol is available upon request.*
 
-┌───────────────────────────────────────────────────────────────────┐
-│ Position du format Temps/Espace invariant dans l'écosysè Wvanim   │
-│ – un éditeur visuel (WvAnim)                                      │
-│ – une structure de données (arbre Temps/Espace)                   │
-│ – un format générique de prompt : le véhicule qui transporte      │
-│   des structures arborescentes, typées et déterministes (Treeia)  │ 
-│ – un format spécifique dédié à l’UI Temps/Espace Invariant        │
-└───────────────────────────────────────────────────────────────────┘
-
-
-
 ---
+ Position du format Temps/Espace invariant dans l'écosysè Wvanim   
+ – un éditeur visuel (WvAnim)                                      
+ – une structure de données (arbre Temps/Espace)                   
+ – un format générique de prompt : le véhicule qui transporte des structures arborescentes, typées et déterministes (Treeia)   
+ – un format spécifique dédié à l’UI Temps/Espace Invariant        
+---
+
 
 # TiSpI - Time/Space Invariant
 

@@ -2,11 +2,11 @@
 
 ---
 
- Position du format Temps/Espace invariant dans l'écosysè Wvanim   
- – un éditeur visuel (WvAnim)                                      
+ Ecosystème Temps/Espace-invariant - Tispi - adapté à l'Insterface Utilisateur   
+ – un éditeur visuel (WvAnim - Web View animation)                                      
  – une structure de données (arbre Temps/Espace)                   
  – un format générique de prompt : le véhicule qui transporte des structures arborescentes, typées et déterministes (Treeia)   
- – un format spécifique dédié à l’UI Temps/Espace Invariant        
+ – un format spécifique dédié à l’UI Temps/Espace Invariant : passager du précédant, il adapte l'arbre Tispi à un prompt.        
 
 ---
 

@@ -79,11 +79,17 @@ The reduction is purely structural, deterministic, and reversible — no heurist
 
 ---
 
-Links :
+## Links
 
 [The tree Time/Space](https://github.com/wvanim/TiSpI/blob/main/Document/Editor%20on-line%20-%201%20-%20introduction%20tree.md)
 
 [The Timeline, autonomous properties](https://github.com/wvanim/TiSpI/blob/main/Document/Editor%20on-line%20-%202%20-%20introduction%20timeline.md)
 
+## AI feedback
 
-
+Ask an AI to answer a prompt written in a file, without opening the file.
+- enter this prompt into your AI:
+"On the page: https://wvanim.fr/p/prompts3ia.html
+Next: "Answer the 2nd prompt"
+Next:"Answer the 3rd prompt"
+...Up to the 7th.

@@ -88,8 +88,8 @@ The reduction is purely structural, deterministic, and reversible — no heurist
 ## AI feedback
 
 Ask an AI to answer a prompt written in a file, without opening the file.
-- enter this prompt into your AI:
-"On the page: https://wvanim.fr/p/prompts3ia.html
-Next: "Answer the 2nd prompt"
-Next:"Answer the 3rd prompt"
-...Up to the 7th.
+* enter this prompt into your AI: 
+  "On the page: https://wvanim.fr/p/prompts3ia.html answer the first prompt"
+* Next: "Answer the 2nd prompt"
+* Next:"Answer the 3rd prompt"
+* ...Up to the 7th.

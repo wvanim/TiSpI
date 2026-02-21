@@ -2,7 +2,7 @@
 
 ---
 
-# **TiSpI — Introduction (version optimisée pour GitHub)**
+# **TiSpI — Introduction**
 
 ## **Note**  
 The NTS (Technical Syntax Nomenclature) for the Time/Space Invariant protocol is available upon request.

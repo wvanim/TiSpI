@@ -4,7 +4,7 @@
 
 **Time/Space-Invariant Ecosystem - Tispi - Adapted for User Interface**  
 - a visual editor: e-anim (renamed WvAnim - Web View animation)  
-- a data structure (Time/Space tree)  
+- a data structure (Time/Space tree)  https://github.com/wvanim/TiSpI/blob/main/Document/Editor%20on-line%20-%201%20-%20introduction%20tree.md
 - a generic prompt format: the vehicle that transports typed, deterministic tree structures [@wvanim/Treeiaj: Json](https://github.com/wvanim/Treeiaj)  [@wvanim/Treeiat: token](https://github.com/wvanim/Treeiat)  
 - a specific format dedicated to the Time/Space-Invariant UI: passenger of the former, it adapts the Tispi tree to a prompt.
 

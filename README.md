@@ -1,20 +1,32 @@
-*Note : The NTS (Technical Syntax Nomenclature) for the Time/Space Invariant protocol is available upon request.*
+
 
 ---
 
-**Time/Space-Invariant Ecosystem - Tispi - Adapted for User Interface**  
-- a visual editor: e-anim (renamed WvAnim - Web View animation)  
-- a data structure (Time/Space tree)  [documentation](https://github.com/wvanim/TiSpI/tree/main/Document)
-- a generic prompt format: the vehicle that transports typed, deterministic tree structures [@wvanim/Treeiaj: Json](https://github.com/wvanim/Treeiaj)  [@wvanim/Treeiat: token](https://github.com/wvanim/Treeiat)  
-- a specific format dedicated to the Time/Space-Invariant UI: passenger of the former, it adapts the Tispi tree to a prompt.
+# **TiSpI — Introduction (version optimisée pour GitHub)**
+
+## **Note**  
+The NTS (Technical Syntax Nomenclature) for the Time/Space Invariant protocol is available upon request.
 
 ---
 
+# **What is TiSpI?**
 
-# TiSpI - Time/Space Invariant
+TiSpI is an **interactive UI and animation standard** based on a **dual Time/Space tree structure**, originally created in the **e‑anim** editor (later **WvAnim**) in 1999 and used continuously for more than 25 years.  
+Its core structure has remained unchanged and is **natively compatible with AI processing**.
 
+TiSpI provides:
 
-## **Problem Statement (English Version)**
+- a **visual editor** (e‑anim / WvAnim)  [video](https://www.wvanim.fr/p/present_wvanim_philippe_destrumel.mp4)
+- a **structural data model** (Time/Space tree) [documentation](https://github.com/wvanim/TiSpI/tree/main/Document)
+- a **generic prompt format** for typed deterministic trees  
+  - [@wvanim/Treeiaj](https://github.com/wvanim/Treeiaj) (JSON)  
+  - [@wvanim/Treeiat](https://github.com/wvanim/Treeiat) (token)  
+- a **UI‑specific format** adapting the TiSpI tree to prompts  
+- the **Time/Space‑Invariant structural standard** itself  
+
+---
+
+# **Problem Statement**
 
 - Current UI frameworks are imperative and mutable.  
 - AI agents require a deterministic model.  
@@ -24,104 +36,92 @@
 
 ---
 
+# **What TiSpI Provides (AI‑Native UI)**
+
+TiSpI provides a deterministic, declarative, and verifiable UI structure that:
+
+- optimizes processing by AI models  
+- improves design productivity  
+- reduces ambiguity and hallucination in AI‑driven interfaces  
+
+---
+
+# **Structural Foundations**
+
+TiSpI is a **closed structural standard** based on a strict **Time / Space alternation tree**, where **all components and behaviors** are expressed through **deterministic, declarative, and verifiable relationships**, with **no heuristics and no implicit semantics**.
+
+### **Semantic Reduction**
+
+Any branch that conforms to the Time/Space invariant can be reduced to a single semantic component:
+
+- no loss of meaning  
+- no additional rules  
+- purely structural  
+- deterministic  
+- reversible  
+
+Reduction is **not an optimization** — it is a **logical consequence** of the closed structure.
+
+- Without a closed structure → reduction requires heuristics  
+- With TiSpI → reduction is natural and safe  
+
 <img width="1101" height="814" alt="im38" src="https://github.com/user-attachments/assets/c1b05151-98d7-42eb-a6b3-de470bfdddb7" />
-
-Interactive UI and animation standard based on a dual tree structure: Time / Space.
-=> natively compatible with AI processing.
-- optimizes processing by AI models,
-- improves design productivity,
-- reduces ambiguity and hallucination effects in AI-driven interfaces.
-
-Developed in the e-anim editor in 1999 (later renamed WvAnim). Used continuously for over 25 years, with the core structure remaining unchanged.
-
-This policy defines the conditions required to preserve the structural integrity and consistency of the format.
-```
-© Philippe Destrumel — TiSpI structure and diagrams.
-This material is publicly available for reading, analysis, and technical discussion.
-Redistribution or modification of the material requires prior permission from the author,
-No confidential, proprietary, or third-party information is involved.
-```
-
-
----
-DESCRIPTION
 ---
 
-Interactive UI and animation standard composed of a dual tree: time / space
-
-A standard created in the **e-anim** editor (later **WvAnim**) in 1999, with the introduction of **parametric semantic branch evolution** in 2007.
-
-TiSpI is a **closed structural standard** based on a **strict Time / Space alternation tree**, in which **all components and behaviors are expressed without exception** through **deterministic, declarative, and verifiable relationships**, with **no heuristics and no implicit semantics**.
-
-In TiSpI, **any branch that conforms to the Time / Space invariant can be reduced to an equivalent semantic component**, with **no loss of meaning and no additional rules**.
-This reduction is **purely structural, deterministic, and reversible**.
-
-Branch reduction is **not an optional optimization**.
-It is a **logical consequence of the closed structure**.
-
-* Without a closed structure → reduction is impossible without heuristics.
-* With TiSpI → reduction is natural and safe.
-
----
+# **Property Decomposition**
 
 In TiSpI, every property of an element is decomposed into two independent aspects:
 
-- **behavior** — what the UI *does*  
-- **decoration** — how the UI *looks*  
+- **behavior** — what the UI does  
+- **decoration** — how the UI looks  
 
-This separation is fundamental to the model:
+This separation is fundamental:
 
 - behavior and decoration must remain strictly separated  
 - decoration must never influence business logic  
 - cloud logic must never directly touch the UI  
 - the model must remain canonical and deterministic  
 
+---
+
+# **Concise Functional Description**
+
+### **Time = Piece**  
+Timeline, event, formula, function…  
+Displays **faces sequentially**.
+
+### **Space = Face**  
+Visual and/or audio representation at a given time.
+
+### **Face‑group**  
+Elements distributed in the workspace.  
+Displays **pieces simultaneously**.
+
+### **Face‑render**  
+Image, text, sound, video…
 
 ---
 
-## **Concise functional description**
-
-**Time = Piece**: timeline, event, formula, function…
-
-* Displays faces sequentially
-
-**Space = Face**
-
-* Visual and/or audio representation at a given time
-
-  * **Face-group**: elements distributed in the workspace
-
-    * Displays pieces simultaneously
-  * **Face-render**: image, text, sound, video…
-
----
-
-## **Semantic reduction**
-
-Any valid Time/Space branch can be reduced to a single semantic component with no loss of meaning.
-The reduction is purely structural, deterministic, and reversible — no heuristics, no added rules.
-
-
-## **Example: Declarative Button Model Using TA + State Machine + TISPI**
+# **Example: Declarative Button Model Using TA + State Machine + TISPI**
 
 <img width="830" height="584" alt="im2" src="https://github.com/user-attachments/assets/635ab6b2-f5e1-4f89-ab4b-13e724153764" />
 
 This diagram illustrates how a simple button can be represented using the proposed architecture:
 
-### **1. Structure (TA)**
-The button is a *Piece* containing several *Faces*.  
+### **1. Structure (TA)**  
+The button is a Piece containing several Faces.  
 Each Face corresponds to a visual frame (NORMAL, OVER, PUSHED).
 
-### **2. Behavior (State Machine)**
+### **2. Behavior (State Machine)**  
 The button has an explicit state graph:
 
 - NORMAL → OVER (on mouse over)  
 - OVER → PUSHED (on mouse down)  
-- PUSHED → NORMAL (on mouse up)
+- PUSHED → NORMAL (on mouse up)  
 
 Each transition is declarative and deterministic.
 
-### **3. Decoration (TISPI)**
+### **3. Decoration (TISPI)**  
 Each Face is rendered through tracks:
 
 - Track Face: which frame to display  
@@ -129,22 +129,22 @@ Each Face is rendered through tracks:
 
 Tracks are neutral; the attached property defines their meaning.
 
+---
 
+# **Links**
 
+- The Time/Space tree  
+- The Timeline and autonomous properties  
 
 ---
 
-## Links
-
-[The tree Time/Space](https://github.com/wvanim/TiSpI/blob/main/Document/Editor%20on-line%20-%201%20-%20introduction%20tree.md)
-
-[The Timeline, autonomous properties](https://github.com/wvanim/TiSpI/blob/main/Document/Editor%20on-line%20-%202%20-%20introduction%20timeline.md)
-
-## AI feedback
+# **AI Feedback Experiment**
 
 Ask an AI to answer a prompt written in a file, without opening the file.
-* enter this prompt into your AI: 
-  "On the page: https://wvanim.fr/p/prompts3ia.html answer the first prompt"
-* Next: "Answer the 2nd prompt"
-* Next:"Answer the 3rd prompt"
-* ...Up to the 7th.
+
+Enter this prompt into your AI:  
+“On the page: https://wvanim.fr/p/prompts3ia.html answer the first prompt.”  
+Then: “Answer the 2nd prompt.”  
+… up to the 7th.
+
+---

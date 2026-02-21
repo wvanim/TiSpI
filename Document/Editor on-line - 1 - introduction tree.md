@@ -1,11 +1,35 @@
 Introduction to the documentation of the WvAnim/TiSpI online editor 
 
+### **Why this model is needed**
+
+Modern UI frameworks (DOM, XAML, MAUI, WinUI) mix structure, behavior, and decoration.  
+They are imperative, mutable, and difficult for AI agents to reason about.
+
+TISPI introduces a clean separation:
+
+- **Tree (TA)** → spatial structure  
+- **TISPI** → time/space decoration  
+- **State Machine** → behavior emerging from TISPI  
+
+This creates a deterministic, declarative, agent‑friendly UI model.
+
+
 ## The Strictly Alternating Time/Space Tree – WvPiece/WvFace
 
 Like a clockwork mechanism, WvAnim alternates temporal wheels (WvPiece) and spatial plates (WvFace), each level meshing with the next to create a fluid and predictable machine.
 <img width="1129" height="849" alt="image" src="https://github.com/user-attachments/assets/6e730e7d-9ba1-4dff-b197-b392a8ac7aec" />
 
 *Figure 1: Visualization of the alternating tree – purple (Time/WvPiece) and green (Space/WvFace)*
+
+### **How the State Machine emerges**
+
+Each frame in TISPI corresponds to a visual state.  
+Each transition corresponds to a behavioral arc.  
+Effects remain purely decorative.
+
+The State Machine is not an extra system:  
+it is the behavioral interpretation of the Time/Space structure.
+
 
 **WvAnim organizes components according to a tree with alternating levels:**
 - **Odd levels:** WvPiece (temporal dimension)

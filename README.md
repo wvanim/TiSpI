@@ -130,14 +130,6 @@ Each Face is rendered through tracks:
 - Track Action: visual effects applied during transitions  
 
 Tracks are neutral; the attached property defines their meaning.
-
----
-
-# **Links**
-
-- The Time/Space tree  
-- The Timeline and autonomous properties  
-
 ---
 
 # **AI Feedback Experiment**

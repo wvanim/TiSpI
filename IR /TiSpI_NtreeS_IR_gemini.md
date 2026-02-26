@@ -43,6 +43,3 @@ Tispi acts as a domain-specific IR. Just as LLVM IR bridges high-level code to m
 * **Figure 3 (Règles de l'Arbre)** : [im43.jpg] Illustre l'alternance obligatoire Temps/Espace.
 * **Figure 4 (Tracks & Keys)** : [im32.jpg] Explique la décomposition du mouvement en pistes indépendantes.
 
----
-
-**Souhaitez-vous que je prépare également une version courte pour r/Compilers, en insistant davantage sur l'aspect "Intermediate Representation" et la comparaison avec LLVM ?**

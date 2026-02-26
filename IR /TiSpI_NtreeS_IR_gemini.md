@@ -1,21 +1,18 @@
-Voici le texte complet, structuré et prêt à être posté sur **r/LanguageDesign**. Ce document intègre votre théorie historique, la rigueur de vos schémas techniques et vos analogies de programmation.
 
----
-
-### Title: [RFC] NtreeS: A Recursive Time/Space Intermediate Representation for UI and Animation
+### Title: [RFC] Tispi: A Recursive Time/Space Intermediate Representation for UI and Animation
 
 **Introduction**
-I am presenting a data format (IR) called **NtreeS**, developed over three decades and rooted in a 1999 UI/Animation engine project (**WvAnim**). My goal was to move away from fragmented formats and create a pure, homogeneous structure where UI layout, temporal animation, and interactive logic are unified into a single, deterministic tree.
+I am presenting a data format (IR) called **Tispi**, developed over three decades and rooted in a 1999 UI/Animation engine project (**WvAnim**). My goal was to move away from fragmented formats and create a pure, homogeneous structure where UI layout, temporal animation, and interactive logic are unified into a single, deterministic tree.
 
 **The Universal Object: The "Page"**
-In NtreeS, every entity is treated as a **Page**. Whether it is a simple button or a complex video container, every object shares an identical structural DNA:
+In Tispi, every entity is treated as a **Page**. Whether it is a simple button or a complex video container, every object shares an identical structural DNA:
 
 * **Spatial Dimension**: Defines coexistence (vertical axis).
 * **Temporal Dimension**: Defines exclusivity and states (horizontal axis).
 * **Recursive Logic**: A Page can contain a Group of other Pages, allowing for infinite nesting of behaviors.
 
 **Atomic Expansion and Semantic Reduction**
-The growth of the NtreeS tree follows a strict "Time/Space" grammar:
+The growth of the Tispi tree follows a strict "Time/Space" grammar:
 
 * **Atomic Growth**: The tree expands through the mandatory alternation of **Time nodes** (Horizontal) and **Space nodes** (Vertical).
 * **Structural Constraints**: It is visually and technically impossible to nest a Face within a Face (Vertical/Vertical) or a Piece within a Piece (Horizontal/Horizontal). This prevents logical collisions and ensures predictability.
@@ -34,9 +31,9 @@ Every "Piece" in the tree carries its own independent **Tracks** (Position, Appe
 By using a simple `onTimer(ms, nextFrame)` event, a static state machine becomes a fluid animation. Conversely, using `stop()` or `gotoFrame(x)` transforms a sequence into a controllable UI component.
 
 **Why this matters**
-NtreeS offers a deterministic alternative to formats like Lottie or GLTF by embedding logic directly into the structure. Its density and strict validation make it an ideal candidate for systems requiring high-fidelity UI generation and predictable execution across different rendering engines.
+Tispi offers a deterministic alternative to formats like Lottie or GLTF by embedding logic directly into the structure. Its density and strict validation make it an ideal candidate for systems requiring high-fidelity UI generation and predictable execution across different rendering engines.
 
-NtreeS acts as a domain-specific IR. Just as LLVM IR bridges high-level code to machine instructions, NtreeS bridges high-level semantic intent (interactive UI/Animation) to a deterministic execution tree that any rendering engine can consume.
+Tispi acts as a domain-specific IR. Just as LLVM IR bridges high-level code to machine instructions, Tispi bridges high-level semantic intent (interactive UI/Animation) to a deterministic execution tree that any rendering engine can consume.
 ---
 
 ### Liens vers les schémas à inclure dans votre post :

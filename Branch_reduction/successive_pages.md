@@ -1,10 +1,13 @@
 # Managing Successive Pages in WvAnim
 
-**To simplify page navigation, WvAnim presents a two-level structure to the user.
 To simplify page navigation, WvAnim presents a two-level structure to the user.
+
 Internally, however, the system is implemented using three levels.
+
 This internal organization reflects the underlying time/space structure.
+
 The following figures illustrate the difference between the user view and the internal structure.
+
 ---
 
 # Légende du premier schéma
@@ -20,6 +23,8 @@ Each page contains its own navigation button.*
 # Légende du second schéma
 
 **Figure 2 – Internal structure: three levels**
+
+Each frame contains one page.
 <img width="839" height="382" alt="im66" src="https://github.com/user-attachments/assets/2014d9a4-fc1f-4d33-84de-280e7a245a4a" />
 
 

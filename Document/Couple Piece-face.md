@@ -117,14 +117,14 @@ Traduction anglaise :
 
 ## 1. Principle of Indivisibility
 
-The **Piece / Face** pair is not an association of two separate objects, but the dual definition of a **single component**. It is impossible to isolate a Piece from its Faces without breaking the integrity of the system.
+The **Piece / Face** pair is not an association of two separate objects, but the Bipolar definition of a **single component**. It is impossible to isolate a Piece from its Faces without breaking the integrity of the system.
 
 ### The Constitutive Duality
 
 Every interface element is a single entity possessing two complementary dimensions:
 
 1. **The Piece (Being):**
-   It represents the existence of the component: its logical anchor, its “life”, and its interface with the outside world. It constitutes the logical core.
+   It represents the existence of the component: its logical anchor, its “life”, and its interface with the outside world. It constitutes the Decision-making center.
 
 2. **The Face (Appearance):**
    It is the material manifestation or rendering state. It exists only because it is carried by a Piece.
@@ -137,7 +137,7 @@ A component is structurally defined as a **Piece** containing a set of **Faces**
   There is only one Piece per component. It guarantees the unity of identity of the system, regardless of the number of aspects it may take.
 
 * **Multiplicity through the Face:**
-  A Face is a **rendering mode**. A single component can therefore change appearance (switch between F₀ and F₁) without changing identity (the Piece remains the same).
+  A Face is a **Rendering type**. A single component can therefore change appearance (switch between F₀ and F₁) without changing identity (the Piece remains the same).
 
 ### Technical Synthesis
 
@@ -215,7 +215,7 @@ In other words:
 
 **the Face depends on the Piece, but the Piece does not depend on the Face.**
 
-The relationship is asymmetric.
+This is asymmetric.
 
 ---
 

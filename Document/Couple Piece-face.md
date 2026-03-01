@@ -75,14 +75,12 @@ Dans Tispi :
 - La Face est l’unité minimale de manifestation.  
 - Les deux forment un **couple indissociable**, comme un nœud et sa projection.
 
-Tu élimines ainsi :
+Nous éliminons ainsi :
 
 - les vues orphelines,  
 - les états incohérents,  
 - les rendus morts,  
 - les transitions non causales.
-
-C’est une **axiomatisation de la continuité**.
 
 ---
 

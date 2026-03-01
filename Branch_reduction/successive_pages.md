@@ -4,7 +4,7 @@ To simplify page navigation, WvAnim presents a two-level structure to the user.
 
 Internally, however, the system is implemented using three levels.
 
-This internal organization reflects the underlying time/space structure.
+This internal organization reflects the underlying time–space structure.
 
 The following figures illustrate the difference between the user view and the internal structure.
 
@@ -20,6 +20,7 @@ Screen
 <img width="840" height="361" alt="im65" src="https://github.com/user-attachments/assets/584cbc3c-032d-47e4-bb8f-7d6c5fc12cb1" />
 
 *From the user’s perspective, successive pages appear as a simple two-level structure.
+
 Each page contains its own navigation button.*
 
 ---
@@ -37,5 +38,6 @@ Each frame contains one page.
 
 
 *Internally, the page system is implemented with three levels.
+
 An intermediate component level manages the pages but remains hidden from the user.*
 

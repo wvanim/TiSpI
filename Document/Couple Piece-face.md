@@ -117,7 +117,7 @@ Traduction anglaise :
 
 ## 1. Principle of Indivisibility
 
-The **Piece / Face** pair is not an association of two separate objects, but the Bipolar definition of a **single component**. It is impossible to isolate a Piece from its Faces without breaking the integrity of the system.
+The **Piece / Face** pair is not an association of two separate objects, but the bipolar definition of a **single component**. It is impossible to isolate a Piece from its Faces without breaking the integrity of the system.
 
 ### The Constitutive Duality
 

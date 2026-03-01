@@ -8,7 +8,7 @@ Le couple **Pièce / Face** n'est pas une association de deux objets distincts, 
 
 Tout élément d'interface est une entité unique possédant deux dimensions complémentaires :
 
-1. **La Pièce (L'Être) :** Elle représente l'existence même du composant. C'est son ancrage logique, sa "vie", et son interface avec l'extérieur. Elle est le centre décisionnel.
+1. **La Pièce (L'Être) :** Elle représente l'existence du composant : son ancrage logique, sa "vie", et son interface avec l'extérieur. Elle constitue le centre décisionnel.
 2. **La Face (Le Paraître) :** Elle est la manifestation matérielle ou l'état de rendu. Elle n'existe que parce qu'elle est portée par une Pièce.
 
 ### Structure Formelle du Composant
@@ -98,7 +98,7 @@ C'est asymétrique.
 
 ### Synthèse
 
-Une Face sans Pièce est impossible dans un système cohérent, car elle n'a ni identité, ni cycle de vie, ni causalité.
+Une Face sans Pièce est impossible dans un système cohérent : elle n'aurait ni identité, ni cycle de vie, ni causalité.
 Une Pièce sans Face est non seulement possible, mais structurellement utile.
 
 

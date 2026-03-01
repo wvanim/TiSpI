@@ -13,6 +13,10 @@ The following figures illustrate the difference between the user view and the in
 # Légende du premier schéma
 
 **Figure 1 – User view: two levels**
+```text
+Screen
+   └ Pages
+```
 <img width="840" height="361" alt="im65" src="https://github.com/user-attachments/assets/584cbc3c-032d-47e4-bb8f-7d6c5fc12cb1" />
 
 *From the user’s perspective, successive pages appear as a simple two-level structure.
@@ -23,7 +27,11 @@ Each page contains its own navigation button.*
 # Légende du second schéma
 
 **Figure 2 – Internal structure: three levels**
-
+```
+Screen
+   └ Component (hidden)
+        └ Pages
+```
 Each frame contains one page.
 <img width="839" height="382" alt="im66" src="https://github.com/user-attachments/assets/2014d9a4-fc1f-4d33-84de-280e7a245a4a" />
 

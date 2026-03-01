@@ -1,89 +1,99 @@
-# Loi 2 — Séparation Tispi / Métier
+# Law 2 — Separation Between Tispi and Business Logic
 
-Tispi se concentre exclusivement sur l'interface utilisateur — sa structure, ses états, ses rendus. Il ne prend aucune décision, n'effectue aucun calcul conditionnel, et ne possède pas d'initiative propre. Son rôle est de **recevoir**, **manifester** et **notifier**.
+Tispi focuses exclusively on the **user interface**—its structure, states, and rendering. It makes no decisions, performs no conditional computations, and has no initiative of its own. Its role is to **receive**, **render**, and **notify**.
 
-Le métier reste extérieur à Tispi. C'est lui qui **déclenche**, **calcule** et **décide**. La causalité réside toujours dans la couche métier.
-
----
-
-## Le contrat d'interface
-
-La relation est bidirectionnelle et formellement définie.
-
-### Métier → Tispi
-
-- **Balises d'état**
-  Le métier envoie une commande qui modifie l'état interne d'une Pièce. Ces commandes sont analogues à des `gotoState` ou `gotoFrame` externes : elles ordonnent un changement sans que la Pièce ait à décider quoi que ce soit. Exemples : `mode = "edit"`, `animation = "jouer"`, `visible = true`.
-
-- **Keys**
-  Le métier écrit des valeurs dans les pistes de données. Chaque key est associée à une **propriété** qui décrit comment cette valeur se traduit en effet sur les Faces (couleur, position, texte, rotation, etc.).
-  Le système de propriétés est **extensible** : le contenu d'une key n'est pas contraint (nombre, chaîne, vecteur, fonction, etc.), seule l'interprétation par la propriété importe. Ainsi, on peut définir de nouveaux comportements de rendu sans modifier le noyau de Tispi.
-
-### Tispi → Métier
-
-- **Événements structurels**
-  Tispi notifie le métier de faits purement mécaniques : fin d'une séquence, fin d'une animation, collision détectée, changement de direction, atteinte d'une borne, etc. Ces événements sont des **constats** émis par les modules internes ou les pistes actives. Le métier les reçoit et décide de la suite à donner.
-  Tispi ne réagit jamais directement à ses propres événements — il se contente de les signaler.
+Business logic remains external to Tispi. It is responsible for **triggering**, **computing**, and **deciding**. Causality always resides in the business layer.
 
 ---
 
-## Principe de séparation mécanique / décisionnel
+## The Interface Contract
 
-Tispi distingue deux catégories de réactions internes :
+The relationship is bidirectional and formally defined.
 
-**La décoration** regroupe tout comportement visuel ou sonore autonome, déterministe et indépendant du contexte métier. Le rebond d'une balle, un clignotement, un dégradé animé, un rollover — Tispi les gère entièrement sans consulter le métier. Ces comportements sont des **règles mécaniques préprogrammées** : elles produisent toujours le même résultat pour les mêmes conditions initiales, et peuvent s'appliquer à n'importe quelle piste — position, couleur, opacité, son, etc.
+### Business → Tispi
 
-La décoration peut notifier le métier — fin de rebond, collision, changement de direction — mais elle n'attend rien de lui pour fonctionner.
+* **State Tags**
+  The business layer sends a command that modifies the internal state of a Piece. These commands are analogous to external `gotoState` or `gotoFrame` instructions: they order a change without the Piece having to decide anything.
+  Examples: `mode = "edit"`, `animation = "play"`, `visible = true`.
 
-**Le comportement** implique une décision contextuelle dépendante d'une règle métier, d'un état applicatif ou d'une donnée externe. Tispi ne décide jamais — il exécute ce que le métier lui commande via les balises d'état et les keys.
+* **Keys**
+  The business layer writes values into data tracks. Each key is associated with a **property** that defines how this value translates into an effect on Faces (color, position, text, rotation, etc.).
 
-La frontière est donc :
-
-```
-Décoration   → Tispi gère seul. Déterministe, autonome, notifie si utile.
-Comportement → Le métier décide. Tispi exécute.
-```
-
-Cette organisation garantit que Tispi reste une mécanique prévisible, tandis que le métier demeure l'unique orchestrateur des choix applicatifs.
+  The property system is **extensible**: the content of a key is not constrained (number, string, vector, function, etc.); only its interpretation by the property matters.
+  This makes it possible to define new rendering behaviors without modifying the Tispi core.
 
 ---
 
-## Comparaison avec le backend
+### Tispi → Business
 
-La relation Tispi / métier est structurellement identique à la relation table / logique backend.
+* **Structural Events**
+  Tispi notifies the business layer of purely mechanical facts: end of a sequence, end of an animation, detected collision, change of direction, boundary reached, etc.
+
+  These events are **observations** emitted by internal modules or active tracks. The business layer receives them and decides what to do next.
+
+  Tispi never reacts directly to its own events—it only reports them.
+
+---
+
+## Principle of Mechanical / Decision Separation
+
+Tispi distinguishes between two categories of internal reactions.
+
+**Decoration** includes any autonomous visual or audio behavior that is deterministic and independent of business context. A ball bouncing, a blinking light, an animated gradient, a rollover—Tispi manages these entirely without consulting the business layer.
+
+These behaviors are **preprogrammed mechanical rules**: they always produce the same result given the same initial conditions and can apply to any track—position, color, opacity, sound, etc.
+
+Decoration may notify the business layer—bounce finished, collision detected, direction change—but it requires nothing from it to operate.
+
+**Behavior** involves a contextual decision dependent on a business rule, an application state, or external data. Tispi never decides—it executes what the business layer commands via state tags and keys.
+
+The boundary is therefore:
 
 ```
-Table backend           Tispi
+Decoration   → Tispi manages it alone. Deterministic, autonomous, notifies if useful.
+Behavior     → The business layer decides. Tispi executes.
+```
+
+This organization ensures that Tispi remains a predictable mechanism, while the business layer remains the sole orchestrator of application-level decisions.
+
+---
+
+## Comparison with the Backend
+
+The Tispi / business relationship is structurally identical to the relationship between a database table and backend logic.
+
+```
+Backend table           Tispi
 ──────────────────      ──────────────────
-colonnes                keys (avec propriétés)
-triggers entrants       balises d'état
-UPDATE/INSERT           écriture métier
-triggers sortants       événements structurels
-rendu SQL               rendu UI
+columns                 keys (with properties)
+incoming triggers       state tags
+UPDATE / INSERT         business writes
+outgoing triggers       structural events
+SQL rendering           UI rendering
 ```
 
-Les tables ne calculent pas — elles contiennent et notifient. Le SQL et les scripts forment la logique. De même, Tispi ne décide pas — il structure, manifeste et notifie. Le métier forme la logique applicative.
+Tables do not compute—they store and notify. SQL and scripts form the logic. Likewise, Tispi does not decide—it structures, renders, and notifies. Business logic forms the application logic.
 
 ---
 
-## Avantages de ce choix formel
+## Advantages of This Formal Choice
 
-**Testabilité indépendante.**
-Tispi peut être validé sans métier : on vérifie que les états s'affichent correctement, que les keys reçoivent les valeurs, que les animations se déclenchent et que les événements sont émis. Le métier peut être testé sans Tispi : on vérifie que les calculs sont justes et que les commandes sont émises au bon moment.
+**Independent testability.**
+Tispi can be validated without business logic: one verifies that states render correctly, that keys receive values, that animations trigger, and that events are emitted. Business logic can be tested without Tispi: one verifies that computations are correct and that commands are issued at the right time.
 
-**Remplaçabilité.**
-Le moteur de rendu peut changer sans toucher au métier. La logique métier peut évoluer sans modifier la structure Tispi. Les deux mondes sont étanches.
+**Replaceability.**
+The rendering engine can change without touching the business logic. Business logic can evolve without modifying the Tispi structure. The two domains are isolated.
 
-**Lisibilité.**
-Un développeur métier n'a pas besoin de comprendre la structure interne de Tispi — il connaît les balises, les keys et les événements. Un concepteur Tispi n'a pas besoin de connaître la logique métier — il connaît les points de contact.
+**Readability.**
+A business developer does not need to understand Tispi’s internal structure—they only need to know the tags, keys, and events. A Tispi designer does not need to know the business logic—they only need to know the contact points.
 
-**Stabilité.**
-La structure Tispi ne change pas quand la logique métier évolue. C'est une propriété rare dans le frontend actuel où un changement de règle métier entraîne souvent une réécriture de composants.
+**Stability.**
+The Tispi structure does not change when business logic evolves. This is a rare property in modern frontend development, where a change in a business rule often triggers a rewrite of components.
 
-**Réutilisabilité.**
-Une structure Tispi peut être connectée à des métiers différents sans modification. C'est la même table — avec des scripts différents.
+**Reusability.**
+A Tispi structure can be connected to different business logics without modification. It is the same table—with different scripts.
 
-**Extensibilité.**
-Le système de propriétés associé aux keys permet d'enrichir les capacités de rendu sans toucher au cœur de Tispi, en ajoutant de nouvelles interprétations pour les valeurs.
+**Extensibility.**
+The property system associated with keys allows rendering capabilities to be expanded without modifying the Tispi core, simply by adding new interpretations for values.
 
----
+

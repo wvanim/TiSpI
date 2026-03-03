@@ -1,5 +1,13 @@
 # Law 1: The Atomic Unit — Piece / Face
 
+ Rooted in the principles of object-oriented programming, our component model draws from the reality of tangible objects.
+
+ An object in the real world possesses an identity that persists over time: its “life,” its continuity — this serves as the **Piece**.
+
+At any given instant, this object presents an aspect: this is its **Face**. The Face is not merely an image attached to the Piece; it is the Piece as it makes itself visible and audible at a given moment.
+
+Thus, we decompose any interface component along two fundamental axes: **the axis of time**, which carries its identity and logic (the Piece), and **the axis of space**, which carries its instantaneous manifestations (the Faces).
+
 ## 1. Principle of Indivisibility
 
 The **Piece / Face** pair is not an association of two separate objects, but the bipolar definition of a **single component**. It is impossible to isolate a Piece from its Faces without breaking the integrity of the system.

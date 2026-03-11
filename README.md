@@ -50,6 +50,11 @@ TiSpI provides a deterministic, declarative, and verifiable UI structure that:
 
 TiSpI is a **closed structural standard** based on a strict **Time / Space alternation tree**, where **all components and behaviors** are expressed through **deterministic, declarative, and verifiable relationships**, with **no heuristics and no implicit semantics**.
 
+---
+
+<img width="1101" height="814" alt="im38" src="https://github.com/user-attachments/assets/c1b05151-98d7-42eb-a6b3-de470bfdddb7" />
+---
+
 ### **Semantic Reduction**
 
 Any branch that conforms to the Time/Space invariant can be reduced to a single semantic component:
@@ -64,11 +69,6 @@ Reduction is **not an optimization** — it is a **logical consequence** of the 
 
 - Without a closed structure → reduction requires heuristics  
 - With TiSpI → reduction is natural and safe  
-
----
-
-<img width="1101" height="814" alt="im38" src="https://github.com/user-attachments/assets/c1b05151-98d7-42eb-a6b3-de470bfdddb7" />
----
 
 # **Property Decomposition**
 

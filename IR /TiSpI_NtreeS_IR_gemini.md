@@ -39,6 +39,7 @@ Tispi acts as a domain-specific IR. Just as LLVM IR bridges high-level code to m
 ### Liens vers les schémas à inclure dans votre post :
 
 * **Figure 1 (Interface WvAnim)** : [im33.jpg] Montre l'unité de l'objet (avion, texte, bouton) dans l'éditeur.
+https://github.com/wvanim/TiSpI/blob/fa19458069262bc73b9b87f97174541713ac0a19/images/im33.png
 * **Figure 2 (Hiérarchie)** : [im34.jpg] Montre la structure de l'arbre et les sous-groupes (control_bar).
 * **Figure 3 (Règles de l'Arbre)** : [im43.jpg] Illustre l'alternance obligatoire Temps/Espace.
 * **Figure 4 (Tracks & Keys)** : [im32.jpg] Explique la décomposition du mouvement en pistes indépendantes.

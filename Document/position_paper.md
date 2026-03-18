@@ -158,4 +158,5 @@ Destrumel, P. (2025). TiSpI — Time Space Interface. https://github.com/wvanim/
 
 ---
 
-
+*Note — L'auteur, dyslexique, a utilisé une assistance IA pour la rédaction de ce document. 
+Les idées, le modèle, les exemples et les validations sont entièrement de son fait.*

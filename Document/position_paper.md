@@ -82,6 +82,8 @@ L'invariant Piece/Face génère naturellement une structure dérivée. Lorsqu'un
 
 Ces branches sémantiques constituent la matière première des bibliothèques de templates paramétrables. Déposées dans une bibliothèque en ligne, elles deviennent des objets réutilisables, instanciables à la demande, partageables entre concepteurs. Le modèle Tispi fournit ainsi non seulement une structure d'organisation des interfaces, mais le fondement d'un écosystème de composants.
 
+Une page HTML traditionnelle est un cas particulier de Tispi : un arbre dont toutes les Pieces n'ont qu'une seule Face. La structure est identique — seule la richesse temporelle diffère. Tispi ne rompt pas avec HTML — il le généralise. C'est en ce sens qu'il révèle une capacité latente du HTML restée jusqu'ici inexploitée.
+
 ---
 
 ## 4. Ce que ça change

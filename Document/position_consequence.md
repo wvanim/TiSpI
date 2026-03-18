@@ -74,6 +74,9 @@ La réduction minimale de l'arbre Tispi est le cas d'une Piece ne possédant qu'
 
 Cette propriété éclaire rétrospectivement la relation entre Tispi et HTML. Une page HTML traditionnelle a exactement la même structure en Tispi et en HTML traditionnel : c'est un arbre de PieceFaces — des Pieces n'ayant chacune qu'une seule Face. Le HTML traditionnel est donc un cas dégénéré de Tispi, où la dimension temporelle n'est pas exploitée. Tispi ne rompt pas avec HTML — il révèle ce que HTML aurait pu être si le temps avait été traité comme un substrat structurel dès l'origine.
 
+*Figure 3 — Temps/espace inscrit dans une page HTML.*
+<img width="904" height="611" alt="im54" src="https://github.com/user-attachments/assets/138e45c0-743b-4363-a0e2-cef0a81c2507" />
+
 ---
 
 ## 3. Protections induites par la séparation Temps/Espace
@@ -90,7 +93,7 @@ Un ajout dans le niveau temporel — une nouvelle track, une nouvelle key — ne
 
 **Démonstration par la pratique**
 
-*Figure 3 — Éditeur de décoration et de mouvement développé par un non-informaticien sur six mois.*
+*Figure 4 — Éditeur de décoration et de mouvement développé par un non-informaticien sur six mois.*
 <img width="1447" height="788" alt="im72" src="https://github.com/user-attachments/assets/d280e9cc-d2c6-494a-b240-40762645c869" />
 
 

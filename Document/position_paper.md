@@ -158,5 +158,12 @@ Destrumel, P. (2025). TiSpI — Time Space Interface. https://github.com/wvanim/
 
 ---
 
+*Ce document est le premier d'une série de deux. Le second explore les conséquences 
+structurelles et les propriétés avancées du modèle :*
+*Tispi : conséquences structurelles et propriétés avancées*
+https://github.com/wvanim/TiSpI/blob/main/Document/position_consequence.md
+
+---
+
 *Note — L'auteur, dyslexique, a utilisé une assistance IA pour la rédaction de ce document. 
 Les idées, le modèle, les exemples et les validations sont entièrement de son fait.*

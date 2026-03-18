@@ -65,6 +65,12 @@ Ce nœud réduit possède une étiquette — son nom sémantique — et des para
 
 L'arbre Tispi est alors composé de deux entités de nature distincte : l'unité Piece/Faces, élément atomique du modèle, et l'objet branche sémantique, unité définie par le concepteur. Ces branches sémantiques constituent la matière première des bibliothèques de templates paramétrables. Déposées dans une bibliothèque en ligne, elles deviennent des objets réutilisables, instanciables à la demande, partageables entre concepteurs.
 
+**Réduction minimale : le nœud PieceFace**
+
+La réduction minimale de l'arbre Tispi est le cas d'une Piece ne possédant qu'une seule Face. Dans ce cas, Piece et Face peuvent être fusionnées en un nœud unique — **PieceFace** — qui conserve les deux parties séparées à l'intérieur d'un même objet. Cette réduction est réversible : la PieceFace peut être développée en Piece et Face distinctes à tout moment, suivant le besoin. Elle est naturellement déductible des réductions de branche, et constitue le cas limite de la simplification de l'arbre — en dessous, l'invariant Piece/Face ne peut plus être respecté.
+
+Cette propriété éclaire rétrospectivement la relation entre Tispi et HTML. Une page HTML traditionnelle a exactement la même structure en Tispi et en HTML traditionnel : c'est un arbre de PieceFaces — des Pieces n'ayant chacune qu'une seule Face. Le HTML traditionnel est donc un cas dégénéré de Tispi, où la dimension temporelle n'est pas exploitée. Tispi ne rompt pas avec HTML — il révèle ce que HTML aurait pu être si le temps avait été traité comme un substrat structurel dès l'origine.
+
 ---
 
 ## 3. Protections induites par la séparation Temps/Espace
@@ -89,7 +95,38 @@ Cette propriété a une implication pratique importante : elle rend le modèle *
 
 ---
 
-## 4. Perspectives
+## 4. Compatibilité avec les systèmes de raisonnement
+
+Stuart Russell formule ainsi l'exigence fondamentale des systèmes de raisonnement :
+
+*"Reasoning systems require explicit representations of states, actions, and their effects."*
+
+Tispi satisfait cette exigence structurellement :
+
+* Les **états** sont les Faces
+* Les **actions** sont les tracks et les keys
+* Les **effets** sont les propriétés décrites par les tracks
+
+Et l'arbre Tispi est une représentation **explicite** — pas implicite, pas dispersée dans du code, pas reconstruite à l'exécution. Elle est structurelle, lisible, traversable.
+
+**Évaluation expérimentale**
+
+Cette compatibilité a été évaluée expérimentalement. Des systèmes d'IA soumis au modèle Tispi ont produit, en moins de 30 minutes d'apprentissage, des compositions correctes et complexes : roll-overs imbriqués, groupes paginés, boutons, pop-ups.
+
+La rapidité de cet apprentissage n'est pas seulement une performance — c'est la conséquence directe de la non-ambiguïté du modèle. Une structure régulière, explicite, sans cas particuliers, est naturellement assimilable par un système de raisonnement.
+
+**Perspectives**
+
+Cette propriété ouvre une direction nouvelle : Tispi comme langage d'interface lisible par les IA — une représentation que les systèmes de raisonnement peuvent non seulement apprendre, mais générer, vérifier, et manipuler.
+
+Un système d'IA disposant du modèle Tispi pourrait :
+
+* lire un arbre Tispi et en comprendre les états possibles
+* raisonner sur les transitions entre Faces
+* générer des arbres Tispi valides comme représentation d'interfaces
+* vérifier la cohérence temporelle d'une interface
+
+## 5. Perspectives
 
 L'invariant Piece/Face génère naturellement une structure dérivée : l'arbre sémantique.
 
@@ -101,7 +138,7 @@ Cette analogie ouvre une direction de recherche explicite : Tispi comme grammair
 
 ---
 
-## 5. Références
+## 6. Références
 
 Harel, D. (1987). Statecharts: A visual formalism for complex systems. *Science of Computer Programming*, 8(3), 231–274.
 

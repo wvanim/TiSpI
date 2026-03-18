@@ -59,6 +59,8 @@ Cet invariant est absolu. Une Piece ne contient jamais directement une autre Pie
 
 Cette structure minimale suffit à décrire n'importe quelle interface — des composants visuels les plus simples aux compositions les plus complexes, synchronisées dans le temps.
 
+<img width="1129" height="751" alt="tispi001" src="https://github.com/user-attachments/assets/b76bb231-5d49-4954-b8ed-3a375658f66e" />
+
 **Les tracks**
 
 Chaque Piece porte un ensemble de tracks. Une track est le script intégral d'une propriété de la Piece — sa valeur initiale, ses évolutions, ses transitions, jusqu'à son état final. Il n'y a pas de comportement dispersé dans des gestionnaires externes : tout ce que vit une propriété est décrit en un seul endroit, sur sa track.
@@ -68,6 +70,8 @@ Une track est composée de keys. Chaque key peut définir une valeur, une transi
 Les propriétés décrites par les tracks couvrent toutes les dimensions de la Piece : la Face active, la position, la transformation, la couleur, les actions, les événements. Chaque dimension a sa track propre — elles sont toutes synchronisées sur la timeline de la Piece.
 
 Les valeurs et les effets peuvent être exprimés en variables, ce qui rend le modèle paramétrique : une track ne décrit pas un comportement unique, elle peut décrire une famille de comportements.
+
+<img width="1138" height="702" alt="tispi002" src="https://github.com/user-attachments/assets/59d0d6dc-090c-45ff-925a-126509e64fa5" />
 
 **La Piece horloge**
 

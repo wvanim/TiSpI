@@ -3,7 +3,7 @@
 **Philippe Destrumel**
 2025 — Preprint — https://github.com/wvanim/TiSpI
 
-*Ce document suppose que le lecteur a lu le position paper : Tispi : faire du temps le substrat structurel de l'interface.*
+*Ce document suppose que le lecteur a lu le position paper : Tispi : [faire du temps le substrat structurel de l'interface.](https://github.com/wvanim/TiSpI/blob/main/Document/position_paper.md)*
 
 ---
 
@@ -30,6 +30,8 @@ Cette propriété permet de constituer des bibliothèques de templates paramétr
 **Exemple : incrustation d'animation sur une vidéo**
 
 *Figure 1 — Template d'incrustation d'animation sur une vidéo. Les commandes de lecture pilotent la vidéo — l'animation s'ajuste automatiquement.*
+<img width="949" height="742" alt="im52" src="https://github.com/user-attachments/assets/59d2599c-df47-49ca-96bb-af59f99392c4" />
+
 
 Un template d'incrustation définit la structure de l'animation — positions, comportements, transitions — indépendamment de la vidéo sur laquelle elle s'applique. La vidéo est le contenu variable : elle change, le template s'adapte. Les commandes de lecture pilotent la vidéo — lecture, pause, goto — et l'animation s'ajuste automatiquement, sans intervention supplémentaire.
 
@@ -44,6 +46,7 @@ La régularité de l'arbre Tispi — l'alternance stricte Piece/Face à chaque n
 Cette régularité permet au concepteur de définir, pour chaque Piece, deux contextes de comportement distincts : celui du groupe en cours d'édition, et celui d'un sous-groupe. Ces deux contextes exposent des propriétés différentes de la même Piece.
 
 *Figure 2 — Autorisation de modification des propriétés d'une Piece selon son contexte : groupe courant (gauche) et sous-groupe (droite).*
+<img width="371" height="375" alt="im75" src="https://github.com/user-attachments/assets/23a3e47f-5c5c-4153-8913-9cb70ad98ec9" />
 
 Dans Wvanim, ce cadre de propriétés est explicite : une Piece peut être éditable, draggable, resizable, avec rotation et couleur modifiables dans son groupe courant — et n'exposer qu'un sous-ensemble de ces propriétés lorsqu'elle est observée depuis un sous-groupe. Le concepteur définit ce qui est accessible selon le niveau d'observation.
 
@@ -88,6 +91,8 @@ Un ajout dans le niveau temporel — une nouvelle track, une nouvelle key — ne
 **Démonstration par la pratique**
 
 *Figure 3 — Éditeur de décoration et de mouvement développé par un non-informaticien sur six mois.*
+<img width="1447" height="788" alt="im72" src="https://github.com/user-attachments/assets/d280e9cc-d2c6-494a-b240-40762645c869" />
+
 
 Wvanim a été utilisé et étendu par un non-informaticien pendant six mois, au gré de son imagination, en ajoutant progressivement des fonctionnalités de décoration, de mouvement, de bordures, de gradients, d'animations et de perspectives. Aucune interférence structurelle n'est apparue au cours de ce développement. Ce résultat n'est pas le fruit d'une discipline particulière — il est la conséquence directe de la séparation Temps/Espace garantie par l'invariant Piece/Face.
 

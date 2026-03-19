@@ -17,6 +17,7 @@ Analyze and evaluate this format for a fixed or animated software page component
 
 
 
+
 **L'arbre WvAnim — une structure alternée Temps / Espace**
 
 Imaginez un arbre informatique classique, qui se déploie de haut en bas. Sa particularité : les nœuds alternent *strictement* et *sans exception* entre deux types, à chaque niveau.
@@ -66,6 +67,59 @@ La séparation des responsabilités est nette : la **Timeline** gère le *commen
 TiSpi autorise des optimisations non destructrices. L'optimisation minimale consiste à réunir une Piece et sa Face dans un même nœud, lorsque la Piece ne comporte qu'une seule Face. Ce nœud conserve une séparation stricte entre la Piece et la Face — la fusion est réversible, les deux nœuds pouvant être reconstitués à tout moment si nécessaire.
 
 Cette optimisation rapproche l'arbre WvAnim des structures classiques organisées en Pieces-simples et Pieces à états, offrant deux avantages principaux : la compatibilité avec les usages courants, et la possibilité de reconstituer les deux nœuds distincts si le besoin évolue.
+
+**Exemple**
+
+Alternance de Pièces et de Faces.
+
+Piece
+  Face-Group
+    Piece
+      Face-Group
+        Piece
+          Simple Face
+
+
+Note P_F est un noeud Piece+Face. C'est une optimisation réversible.
+
+{
+  "type": "Piece",
+  "name": "like-button",
+  "horloge": {
+    "type": "event-driven",
+    "piste-evenement": [
+      [0, "default"],
+      [1, "hover"],
+      [2, "pushed"]
+    ]
+  },
+  "children": [
+    {
+      "type": "Face",
+      "frame": 0,
+      "children": [
+        { "type": "P_F", "component": "heart", "props": { "filled": "{isLiked}" } },
+        { "type": "P_F", "component": "count", "props": { "value": "{likesCount}" } }
+      ]
+    },
+    {
+      "type": "Face",
+      "frame": 1,
+      "children": [
+        { "type": "P_F", "component": "heart", "props": { "filled": "{isLiked}", "scale": 1.15 } },
+        { "type": "P_F", "component": "count", "props": { "value": "{likesCount}" } }
+      ]
+    },
+    {
+      "type": "Face",
+      "frame": 2,
+      "children": [
+        { "type": "P_F", "component": "heart", "props": { "filled": true, "scale": 0.85 } },
+        { "type": "P_F", "component": "count", "props": { "value": "{likesCount}" } }
+      ]
+    }
+  ]
+}
 
 
 **A suivre**

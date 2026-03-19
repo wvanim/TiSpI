@@ -12,21 +12,68 @@ Unlike other approaches, everything follows a single, simple logic—like a cloc
 
 ### **1st prompt for your Artificial Intelligence**
 
-* place the 2 images 'tree diagram' and 'piece / timeline / tracks diagram'
-
-* write:
-
 ```
 Analyze and evaluate this format for a fixed or animated software page component.
+
+
+
+**L'arbre WvAnim — une structure alternée Temps / Espace**
+
+Imaginez un arbre informatique classique, qui se déploie de haut en bas. Sa particularité : les nœuds alternent *strictement* et *sans exception* entre deux types, à chaque niveau.
+
+**Au sommet de l'arbre** se trouve toujours une **Piece** — nœud de temps, élément actif. Elle traite et envoie l'information. Elle est pilotée par une Timeline (ou tout autre producteur : événement, formule, programme). Elle contient un ou plusieurs **Face-Groups**.
+
+**Un Face-Group** est un nœud d'espace — élément passif, conteneur. Il reçoit de l'information mais n'agit pas. Il contient à son tour une ou plusieurs **Pieces**.
+
+
+On alterne ainsi jusqu'aux feuilles de l'arbre, appelées **Simple Faces** : ce sont les éléments terminaux, visibles ou audibles — une image, un texte, une forme, un son, un gradient.
+
+**La règle d'affichage est fondamentale :**
+- Dans une Piece, **une seule Face est visible à la fois**
+- Dans un Face-Group, **toutes les Pieces sont visibles simultanément**
+Note : Les Pieces d'un groupe sont synchronisées.
+
+**L'entité — unité conceptuelle minimale**
+
+L'entité est l'élément conceptuel le plus petit de l'arbre : une Piece accompagnée de ses Faces, ou une Piece seule sans Face. C'est une notion théorique — pas un objet instancié dans le code. Une Face n'existe que par rapport à la Piece qui la définit ; cette dépendance se reflète directement dans l'écriture : tout nœud débute obligatoirement par la Piece. La syntaxe n'est pas une convention arbitraire, elle est la traduction directe de la structure conceptuelle.
+
+Cette notion facilite significativement le traitement par une IA : elle lui fournit une unité d'analyse non ambiguë, une contrainte syntaxique vérifiable, et une façon naturelle de segmenter l'arbre sans jamais couper une relation fondamentale entre une Piece et ses Faces.
+
+**Une géométrie 4D réduite à 2D**
+
+La structure de l'arbre n'est pas seulement une convention informatique — c'est une projection géométrique rigoureuse. Le temps (t) occupe l'axe horizontal : la Timeline se déroule de gauche à droite, faisant du temps une dimension géométrique visible et mesurable. Les trois dimensions de l'espace (x, y, z) occupent l'axe vertical : l'imbrication progressive des Pieces et des Face-Groups encode la totalité des relations spatiales en descendant vers les feuilles.
+
+Ces deux axes sont **strictement orthogonaux** — temps et espace ne se mélangent jamais. Un espace 4D est ainsi projeté sur un plan 2D sans perte d'information, grâce à la séparation ontologique des deux natures : le temps est un continu, l'espace est une hiérarchie.
+
+C'est cette décision d'architecture de données, pensée dès 1999, qui donne à l'arbre sa cohérence et sa capacité à accueillir n'importe quel concept d'animation — UI, FX, motion design — sans conflit structurel.
+
+**La Piece-horloge**
+
+La Piece-horloge est une Piece ordinaire par sa structure, mais distincte par son rôle : elle coordonne le temps des Pieces au sein d'un Face-Group. 
+
+Elle synchronise les Pieces du groupe, gère les stops et redémarrages, et vérifie régulièrement le synchronisme. Elle peut également être subordonnée à une source externe : une autre Piece-horloge parente ou globale, un événement (souris, load...), une time-bar, un son, une vidéo, ou un curseur.
+
+Cela crée une gradation claire :
+
+- **Sans Piece-horloge** : chaque Piece du groupe est autonome, il n'y a pas de synchronisation entre elles
+- **Avec Piece-horloge** : les Pieces du groupe sont coordonnées — stops, redémarrages et synchronisme sont gérés
+- **Avec Piece-horloge subordonnée** : ce temps coordonné est lui-même piloté par une source externe
+
+La séparation des responsabilités est nette : la **Timeline** gère le *comment* du temps — la courbe entre deux états (ease, accélération, ralentissement) — tandis que la **Piece-horloge** gère le *flux* du temps — synchronisation, stops et redémarrages.
+
+**L'optimisation non destructrice**
+
+TiSpi autorise des optimisations non destructrices. L'optimisation minimale consiste à réunir une Piece et sa Face dans un même nœud, lorsque la Piece ne comporte qu'une seule Face. Ce nœud conserve une séparation stricte entre la Piece et la Face — la fusion est réversible, les deux nœuds pouvant être reconstitués à tout moment si nécessaire.
+
+Cette optimisation rapproche l'arbre WvAnim des structures classiques organisées en Pieces-simples et Pieces à états, offrant deux avantages principaux : la compatibilité avec les usages courants, et la possibilité de reconstituer les deux nœuds distincts si le besoin évolue.
+
+
+**A suivre**
+
+La décoration sera traitée dans une autre présentation. 
+Elle recouvre deux aspects : les transitions entre deux keys — c'est-à-dire les courbes de comportement (ease, bounce, linear...) qui définissent comment une Piece évolue entre deux états clés — et les pistes parallèles au sein d'une même Piece, autres que la Face : son, transformation géométrique, opacité, et ainsi de suite. 
+Ces éléments n'affectent pas la structure de l'arbre décrite ici — ils l'enrichissent.
 ```
-
-- Tree diagram
-<img width="1129" height="849" alt="im31" src="https://github.com/user-attachments/assets/bda7f94c-9e48-4de9-80d8-7a34b592fb9d" />
-
-- Piece / timeline / tracks diagram
-<img width="1138" height="753" alt="im32" src="https://github.com/user-attachments/assets/3b44cd8c-ffbc-4a52-bc35-f53ffa33f514" />
-
----
 
 ### **2nd prompt**
 

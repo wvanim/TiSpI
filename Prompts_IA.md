@@ -1,4 +1,5 @@
 # TiSpI - Time/Space Invariant
+
 ### Arbre strict d'alternance Temps / Espace pour UI prévisibles
 
 TiSpI describes what appears on screen and evolves over time.
@@ -16,9 +17,11 @@ Unlike other approaches, everything follows a single, simple logic—like a cloc
 Analyze and evaluate this format for a fixed or animated software page component.
 
 
+# Orgnisation des composants d'une Interface utilisateur
+
+## **L'arbre WvAnim — une structure alternée Temps / Espace**
 
 
-**L'arbre WvAnim — une structure alternée Temps / Espace**
 
 Imaginez un arbre informatique classique, qui se déploie de haut en bas. Sa particularité : les nœuds alternent *strictement* et *sans exception* entre deux types, à chaque niveau.
 
@@ -29,7 +32,7 @@ Imaginez un arbre informatique classique, qui se déploie de haut en bas. Sa par
 
 On alterne ainsi jusqu'aux feuilles de l'arbre, appelées **Simple Faces** : ce sont les éléments terminaux, visibles ou audibles — une image, un texte, une forme, un son, un gradient.
 
-**La règle d'affichage est fondamentale :**
+## **La règle d'affichage est fondamentale :**
 - Dans une Piece, **une seule Face est visible à la fois**
 - Dans un Face-Group, **toutes les Pieces sont visibles simultanément**
 Note : Les Pieces d'un groupe sont synchronisées.
@@ -40,7 +43,7 @@ L'entité est l'élément conceptuel le plus petit de l'arbre : une Piece accomp
 
 Cette notion facilite significativement le traitement par une IA : elle lui fournit une unité d'analyse non ambiguë, une contrainte syntaxique vérifiable, et une façon naturelle de segmenter l'arbre sans jamais couper une relation fondamentale entre une Piece et ses Faces.
 
-**Une géométrie 4D réduite à 2D**
+## **Une géométrie 4D réduite à 2D**
 
 La structure de l'arbre n'est pas seulement une convention informatique — c'est une projection géométrique rigoureuse. Le temps (t) occupe l'axe horizontal : la Timeline se déroule de gauche à droite, faisant du temps une dimension géométrique visible et mesurable. Les trois dimensions de l'espace (x, y, z) occupent l'axe vertical : l'imbrication progressive des Pieces et des Face-Groups encode la totalité des relations spatiales en descendant vers les feuilles.
 
@@ -48,7 +51,7 @@ Ces deux axes sont **strictement orthogonaux** — temps et espace ne se mélang
 
 C'est cette décision d'architecture de données, pensée dès 1999, qui donne à l'arbre sa cohérence et sa capacité à accueillir n'importe quel concept d'animation — UI, FX, motion design — sans conflit structurel.
 
-**La Piece-horloge**
+## **La Piece-horloge**
 
 La Piece-horloge est une Piece ordinaire par sa structure, mais distincte par son rôle : elle coordonne le temps des Pieces au sein d'un Face-Group. 
 
@@ -62,13 +65,13 @@ Cela crée une gradation claire :
 
 La séparation des responsabilités est nette : la **Timeline** gère le *comment* du temps — la courbe entre deux états (ease, accélération, ralentissement) — tandis que la **Piece-horloge** gère le *flux* du temps — synchronisation, stops et redémarrages.
 
-**L'optimisation non destructrice**
+## **L'optimisation non destructrice**
 
 TiSpi autorise des optimisations non destructrices. L'optimisation minimale consiste à réunir une Piece et sa Face dans un même nœud, lorsque la Piece ne comporte qu'une seule Face. Ce nœud conserve une séparation stricte entre la Piece et la Face — la fusion est réversible, les deux nœuds pouvant être reconstitués à tout moment si nécessaire.
 
 Cette optimisation rapproche l'arbre WvAnim des structures classiques organisées en Pieces-simples et Pieces à états, offrant deux avantages principaux : la compatibilité avec les usages courants, et la possibilité de reconstituer les deux nœuds distincts si le besoin évolue.
 
-**Exemple**
+## **Exemple**
 
 Alternance de Pièces et de Faces.
 
@@ -121,12 +124,37 @@ Note P_F est un noeud Piece+Face. C'est une optimisation réversible.
   ]
 }
 
+## **Les pistes d'une Piece**
 
-**A suivre**
+Toute évolution d'une Piece est portée par des pistes. Chaque piste est spécialisée dans une dimension de variation indépendante, exprimée dans le temps : faces successives, positions, actions au clic, actions immédiates, couleur du composant, arrière-plan...
 
-La décoration sera traitée dans une autre présentation. 
-Elle recouvre deux aspects : les transitions entre deux keys — c'est-à-dire les courbes de comportement (ease, bounce, linear...) qui définissent comment une Piece évolue entre deux états clés — et les pistes parallèles au sein d'une même Piece, autres que la Face : son, transformation géométrique, opacité, et ainsi de suite. 
-Ces éléments n'affectent pas la structure de l'arbre décrite ici — ils l'enrichissent.
+### **Les pistes**
+
+Une Piece peut posséder plusieurs pistes parallèles, chacune indépendante :
+
+- PISTE-FACE : définit la séquence des faces affichées — quelle Face est visible à chaque instant. Elle peut contenir des transitions visuelles entre deux faces (fade, 3D, shear...) — ces transitions sont décoratives.
+- PISTE-POSITION : définit les évolutions de position dans l'espace
+- PISTE-ACTION-CLIC : définit les actions déclenchées par un clic
+- PISTE-BACKGROUND : définit les évolutions de l'arrière-plan
+
+Les stops suspendent le déroulement du temps à un instant précis — la Piece attend une instruction externe pour reprendre.
+
+Toutes les pistes d'une Piece sont synchronisées entre elles, et toutes les Pieces d'un même groupe sont également synchronisées — c'est la cohérence temporelle du groupe.
+
+### ***Les keys**
+Chaque piste est composée de keys. Chaque key contient soit une transition précédant la key soit une valeur, soit les deux. Chaque piste représente le script complet d'une classe d'évolution de la Piece.
+
+### **Exemple**
+{
+  "face": [
+    {"frame": 0, "face": 2, "transition": {"ease": "easeout", "effect": "fade", "duration": "2s"}},
+    {"frame": 5, "face": 0, "transition": {"ease": "easein", "effect": "3D", "duration": "0.5s"}}
+  ],
+  "position": [
+    {"frame": 0, "css": {"left": "50%", "top": "100px"}, "transition": {"ease": "easeout", "effect": "fade", "duration": "2s"}}
+  ]
+}
+Note : cet exemple est en développé. Il sera optimisé ultérieurement
 ```
 
 ### **2nd prompt**

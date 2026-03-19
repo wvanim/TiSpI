@@ -19,17 +19,15 @@ Analyze and evaluate this format for a fixed or animated software page component
 
 # Orgnisation des composants d'une Interface utilisateur
 
+Les composants de l'Interface Utilisateur sont placés dans un arbre qui alterne le Temps et l'Espace.
+Cet arbre est un stockage de données. Il est utilisé dans l'éditeur. Il sera ensuite adapté et exporté pour répondre aux besoins des différents exécutables.
+
 ## **L'arbre WvAnim — une structure alternée Temps / Espace**
-
-
 
 Imaginez un arbre informatique classique, qui se déploie de haut en bas. Sa particularité : les nœuds alternent *strictement* et *sans exception* entre deux types, à chaque niveau.
 
 **Au sommet de l'arbre** se trouve toujours une **Piece** — nœud de temps, élément actif. Elle traite et envoie l'information. Elle est pilotée par une Timeline (ou tout autre producteur : événement, formule, programme). Elle contient un ou plusieurs **Face-Groups**.
-
 **Un Face-Group** est un nœud d'espace — élément passif, conteneur. Il reçoit de l'information mais n'agit pas. Il contient à son tour une ou plusieurs **Pieces**.
-
-
 On alterne ainsi jusqu'aux feuilles de l'arbre, appelées **Simple Faces** : ce sont les éléments terminaux, visibles ou audibles — une image, un texte, une forme, un son, un gradient.
 
 ## **La règle d'affichage est fondamentale :**

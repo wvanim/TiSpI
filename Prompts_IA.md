@@ -8,12 +8,14 @@ Unlike other approaches, everything follows a single, simple logic—like a cloc
 *40 years of experience in interface state machines.*
 
 ## QUESTIONING THE AI
-- 3 prompts present TiSpI as interpreted by the AI.
+- 4 prompts present TiSpI as interpreted by the AI.
 
 ### **1st prompt for your Artificial Intelligence**
 
 ```
 Analyze and evaluate this format for a fixed or animated software page component.
+
+---
 
 # **Organization of Components in a User Interface**
 
@@ -197,6 +199,8 @@ Note: this example is expanded form and will be optimized later.
 ```
 Evaluate with the "comment" flag for a piece, added in 2007
 
+---
+
 Role: prevent the piece from being sent to the run-time. The piece stays in the editor.
 
 Consequence:
@@ -226,7 +230,11 @@ Through moving, resizing, and programming, the user commands it to create each e
 
 ```
 
-## Tispi Principle
+Evaluate the "TiSpI DOM compatibility"
+
+---
+
+## TiSpI DOM compatibility
 
 Tispi does not propose a new technology — it observes that **any HTML div can naturally behave as a Piece**, without modifying the existing structure.
 
@@ -255,6 +263,47 @@ The strict depth alternation of the div tree is:
 ### Summary
 
 Tispi reveals that HTML natively possesses a spatiotemporal management capability. Space is managed by the nesting of divs, time by the switching of visible children. Both dimensions coexist in a perfectly ordinary div structure.
+
+```
+
+
+### **4th prompt**
+
+```
+Evaluate the "progressive adoption" de Tispi
+
+---
+
+# Progressive Adoption of the Time/Space Model (TiSpI)
+
+## The TypeScript Library
+Develop a TypeScript library for Time/Space processing.  
+This library provides tools for CSS authoring and execution.  
+Adapt these classes to modern editing frameworks such as React.  
+
+Motion is delegated to CSS.  
+The runtime “triggers” CSS operations and waits for events in return.  
+Example: `--state: hover`, `--progress: 0.7`.
+
+## The Online Visual Editor
+Develop a visual editor that can be imported and/or integrated into browsers.  
+The simplicity of the core enables on-demand loading within the browser.  
+
+The editor is intended for desktop and tablet devices.
+
+## AI Compatibility
+Define a data exchange format with AI systems.  
+
+### Preprocessing  
+A preprocessing step simplifies the tree by selecting only the “behavior” and/or “decoration” parts required for AI processing.  
+
+### Data Structure  
+Full JSON compatibility.  
+The TiSpI library includes bidirectional parsers **JSON → CSS** and **CSS → JSON** (key for automatic export and AI interactions).
+
+## W3C Standard
+The W3C standard is not required for the development or usage of these tools: TiSpI is layered on top of HTML without modifying it.  
+The Time/Space invariant tree is a layer on top of HTML/CSS, without redefining the DOM.
 
 ```
 

@@ -152,7 +152,7 @@ Chaque piste est composée de keys. Chaque key contient soit une transition pré
     {"frame": 0, "css": {"left": "50%", "top": "100px"}, "transition": {"ease": "easeout", "effect": "fade", "duration": "2s"}}
   ]
 }
-Note : cet exemple est en développé. Il sera optimisé ultérieurement
+Note : cet exemple est écrit en développé. Il sera optimisé ultérieurement
 ```
 
 ### **2nd prompt**
@@ -184,81 +184,8 @@ The dashboard is itself a macro-group. Meaning the dashboard is integrated into 
 Furthermore, an option allows creating it with only one piece present when the program opens.
 It is a macro-piece.
 Through moving, resizing, and programming, the user commands it to create each element of the editor.
-```
-
----
-
-### **3rd prompt**
-
-* place the 2 images 'user command bar' and 'command bar construction'
-- User command bar
-[[![im6](https://github.com/wvanim/TiSpI/blob/main/im33.png)
-](https://github.com/wvanim/TiSpI/commit/534c017b1776b7379f83bb843f1115d2e70f8824)
-
-- Command bar construction
-[[![im6](https://github.com/wvanim/TiSpI/blob/main/im34.png)
-](https://raw.githubusercontent.com/wvanim/TiSpI/refs/heads/main/im34.png)
-
-* write:
 
 ```
-Example of a user command bar.
-I call gadget authors "designers". But they are also simple users.
-Image 1: what the end user sees, who uses the "video overlay" gadget
-- a classic work area, and an editing bar on the right.
-Image 2: the sub-group where the designer builds the command bar
-- adds pieces "like the others" (note: they can even place gadgets from other designers)
-- programs the scripts that will act in the editor.
-
-Note: protections and shortcuts are not shown here. We are only discussing the structure.
-What matters is understanding the limits of the structure. The editor can always optimize and apply protections.
-```
-
----
-
-### **4th prompt**
-
-* write:
-
-```
-The description format is a tabint tree accompanied by the string table (assembler model).
-Could this design facilitate AI processing?
-```
-
----
-
-### **5th prompt**
-
-* write:
-
-```
-Could this format be an interesting solution as a standard for exchanging HTML with the AI?
-1 - convert React to TiSpI before sending it to the prompt
-2 - use a traditional script and a local AI.
-```
-
----
-
-### **6th prompt**
-
-* write:
-
-```
-Can you estimate an order of magnitude for the economy in conversions from React and HTML to TiSpI for prompts?
-Note: calculate with optimized React, HTML, and TiSpI formats.
-```
----
-
-### **7th prompt**
-
-* write:
-
-```
-We are observing the emergence of automated HTML page compositions, for selected product catalogs or AI-generated page layouts.
-Could the TiSpI format play a role in this process?
-```
-
----
 
 ### Addendum
 

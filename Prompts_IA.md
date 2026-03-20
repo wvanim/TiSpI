@@ -9,7 +9,6 @@ Unlike other approaches, everything follows a single, simple logic—like a cloc
 
 ## QUESTIONING THE AI
 - 3 prompts present TiSpI as interpreted by the AI.
-- 4 prompts assess how compatible it is with AI systems.
 
 ### **1st prompt for your Artificial Intelligence**
 
@@ -195,8 +194,6 @@ Note: this example is expanded form and will be optimized later.
 
 ### **2nd prompt**
 
-* write:
-
 ```
 Evaluate with the "comment" flag for a piece, added in 2007
 
@@ -222,6 +219,42 @@ The dashboard is itself a macro-group. Meaning the dashboard is integrated into 
 Furthermore, an option allows creating it with only one piece present when the program opens.
 It is a macro-piece.
 Through moving, resizing, and programming, the user commands it to create each element of the editor.
+
+```
+
+### **3rd prompt**
+
+```
+
+## Tispi Principle
+
+Tispi does not propose a new technology — it observes that **any HTML div can naturally behave as a Piece**, without modifying the existing structure.
+
+**FaceGroup** is a classic div containing sub-divs.  
+**FaceRender** is the final audio or visual content. It does not contain any sub-divs.
+
+The strict depth alternation of the div tree is:  
+- `divPiece` → `divFaceGroup` → `divPiece` → `divFaceGroup` → ... → `divPiece` → `divFaceRender`
+
+---
+
+### What the principle shows
+
+**A div becomes a Piece** simply by hiding all its children except one. No transformation, no additional wrapper — the div is already a Piece in potentia.
+
+**The natural depth alternation** is the core of the system. Going down the HTML tree, we systematically find:
+- a `Piece` (which chooses what to show among its children)
+- its children are `FaceGroup` (which organize the space)
+- each `FaceGroup` contains new `Piece`…
+- Final nodes : `Piece` → `FaceRender`
+
+**Tispi maps onto the existing structure.** It does not restructure HTML; it superimposes itself on an ordinary div tree. An already written HTML structure is, without knowing it, already a potential Tispi structure.
+
+---
+
+### Summary
+
+Tispi reveals that HTML natively possesses a spatiotemporal management capability. Space is managed by the nesting of divs, time by the switching of visible children. Both dimensions coexist in a perfectly ordinary div structure.
 
 ```
 

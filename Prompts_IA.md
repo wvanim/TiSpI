@@ -30,7 +30,8 @@ Imagine a conventional computer tree that unfolds from top to bottom. Its defini
 
 **A Face-Group** is a space node — a passive element, a container. It receives information but does not act. It, in turn, contains one or more **Pieces**.
 
-This alternation continues down to the leaves of the tree, called **Simple Faces**: these are the terminal elements, visual or audible — an image, text, a shape, a sound, a gradient.
+This alternation continues down to the leaves of the tree, called *FaceRenders**: these are the terminal elements, visual or audible — an image, text, a shape, a sound, a gradient.
+A Face-render can handle any format. The tree controls the when and the where — never the what.
 
 ## **The Display Rule is Fundamental**
 

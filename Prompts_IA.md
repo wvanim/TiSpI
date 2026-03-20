@@ -16,62 +16,88 @@ Unlike other approaches, everything follows a single, simple logic—like a cloc
 ```
 Analyze and evaluate this format for a fixed or animated software page component.
 
+# **Organization of Components in a User Interface**
 
-# Orgnisation des composants d'une Interface utilisateur
+The components of the User Interface are arranged in a tree that alternates between Time and Space.
+This tree is a data storage structure. It is used in the editor, and is later adapted and exported to meet the needs of different runtimes.
 
-Les composants de l'Interface Utilisateur sont placés dans un arbre qui alterne le Temps et l'Espace.
-Cet arbre est un stockage de données. Il est utilisé dans l'éditeur. Il sera ensuite adapté et exporté pour répondre aux besoins des différents exécutables.
+## **The WvAnim Tree — an Alternating Time / Space Structure**
 
-## **L'arbre WvAnim — une structure alternée Temps / Espace**
+Imagine a conventional computer tree that unfolds from top to bottom. Its defining characteristic: nodes alternate *strictly* and *without exception* between two types at each level.
 
-Imaginez un arbre informatique classique, qui se déploie de haut en bas. Sa particularité : les nœuds alternent *strictement* et *sans exception* entre deux types, à chaque niveau.
+**At the top of the tree** is always a **Piece** — a time node, an active element. It processes and emits information. It is driven by a Timeline (or any other producer: event, formula, program). It contains one or more **Face-Groups**.
 
-**Au sommet de l'arbre** se trouve toujours une **Piece** — nœud de temps, élément actif. Elle traite et envoie l'information. Elle est pilotée par une Timeline (ou tout autre producteur : événement, formule, programme). Elle contient un ou plusieurs **Face-Groups**.
-**Un Face-Group** est un nœud d'espace — élément passif, conteneur. Il reçoit de l'information mais n'agit pas. Il contient à son tour une ou plusieurs **Pieces**.
-On alterne ainsi jusqu'aux feuilles de l'arbre, appelées **Simple Faces** : ce sont les éléments terminaux, visibles ou audibles — une image, un texte, une forme, un son, un gradient.
+**A Face-Group** is a space node — a passive element, a container. It receives information but does not act. It, in turn, contains one or more **Pieces**.
 
-## **La règle d'affichage est fondamentale :**
-- Dans une Piece, **une seule Face est visible à la fois**
-- Dans un Face-Group, **toutes les Pieces sont visibles simultanément**
-Note : Les Pieces d'un groupe sont synchronisées.
+This alternation continues down to the leaves of the tree, called **Simple Faces**: these are the terminal elements, visual or audible — an image, text, a shape, a sound, a gradient.
 
-**L'entité — unité conceptuelle minimale**
+## **The Display Rule is Fundamental**
 
-L'entité est l'élément conceptuel le plus petit de l'arbre : une Piece accompagnée de ses Faces, ou une Piece seule sans Face. C'est une notion théorique — pas un objet instancié dans le code. Une Face n'existe que par rapport à la Piece qui la définit ; cette dépendance se reflète directement dans l'écriture : tout nœud débute obligatoirement par la Piece. La syntaxe n'est pas une convention arbitraire, elle est la traduction directe de la structure conceptuelle.
+* In a Piece, **only one Face is visible at a time**
+* In a Face-Group, **all Pieces are visible simultaneously**
 
-Cette notion facilite significativement le traitement par une IA : elle lui fournit une unité d'analyse non ambiguë, une contrainte syntaxique vérifiable, et une façon naturelle de segmenter l'arbre sans jamais couper une relation fondamentale entre une Piece et ses Faces.
+Note: Pieces within a group are synchronized.
 
-## **Une géométrie 4D réduite à 2D**
+---
 
-La structure de l'arbre n'est pas seulement une convention informatique — c'est une projection géométrique rigoureuse. Le temps (t) occupe l'axe horizontal : la Timeline se déroule de gauche à droite, faisant du temps une dimension géométrique visible et mesurable. Les trois dimensions de l'espace (x, y, z) occupent l'axe vertical : l'imbrication progressive des Pieces et des Face-Groups encode la totalité des relations spatiales en descendant vers les feuilles.
+## **The Entity — Minimal Conceptual Unit**
 
-Ces deux axes sont **strictement orthogonaux** — temps et espace ne se mélangent jamais. Un espace 4D est ainsi projeté sur un plan 2D sans perte d'information, grâce à la séparation ontologique des deux natures : le temps est un continu, l'espace est une hiérarchie.
+The entity is the smallest conceptual element of the tree: a Piece together with its Faces, or a standalone Piece without Faces. It is a theoretical notion — not an instantiated object in code.
 
-C'est cette décision d'architecture de données, pensée dès 1999, qui donne à l'arbre sa cohérence et sa capacité à accueillir n'importe quel concept d'animation — UI, FX, motion design — sans conflit structurel.
+A Face exists only in relation to the Piece that defines it; this dependency is directly reflected in the syntax: every node must begin with a Piece. The syntax is not an arbitrary convention — it is a direct translation of the conceptual structure.
 
-## **La Piece-horloge**
+This notion significantly facilitates processing by an AI: it provides a non-ambiguous unit of analysis, a verifiable syntactic constraint, and a natural way to segment the tree without ever breaking the fundamental relationship between a Piece and its Faces.
 
-La Piece-horloge est une Piece ordinaire par sa structure, mais distincte par son rôle : elle coordonne le temps des Pieces au sein d'un Face-Group. 
+---
 
-Elle synchronise les Pieces du groupe, gère les stops et redémarrages, et vérifie régulièrement le synchronisme. Elle peut également être subordonnée à une source externe : une autre Piece-horloge parente ou globale, un événement (souris, load...), une time-bar, un son, une vidéo, ou un curseur.
+## **A 4D Geometry Reduced to 2D**
 
-Cela crée une gradation claire :
+The tree structure is not merely a software convention — it is a rigorous geometric projection.
 
-- **Sans Piece-horloge** : chaque Piece du groupe est autonome, il n'y a pas de synchronisation entre elles
-- **Avec Piece-horloge** : les Pieces du groupe sont coordonnées — stops, redémarrages et synchronisme sont gérés
-- **Avec Piece-horloge subordonnée** : ce temps coordonné est lui-même piloté par une source externe
+Time (t) occupies the horizontal axis: the Timeline unfolds from left to right, making time a visible and measurable geometric dimension.
 
-La séparation des responsabilités est nette : la **Timeline** gère le *comment* du temps — la courbe entre deux états (ease, accélération, ralentissement) — tandis que la **Piece-horloge** gère le *flux* du temps — synchronisation, stops et redémarrages.
+The three spatial dimensions (x, y, z) occupy the vertical axis: the progressive nesting of Pieces and Face-Groups encodes all spatial relationships as one descends toward the leaves.
 
-## **L'optimisation non destructrice**
+These two axes are **strictly orthogonal** — time and space never mix.
 
-TiSpi autorise des optimisations non destructrices. L'optimisation minimale consiste à réunir une Piece et sa Face dans un même nœud, lorsque la Piece ne comporte qu'une seule Face. Ce nœud conserve une séparation stricte entre la Piece et la Face — la fusion est réversible, les deux nœuds pouvant être reconstitués à tout moment si nécessaire.
+Thus, a 4D space is projected onto a 2D plane without loss of information, thanks to the ontological separation of the two domains: time is continuous, space is hierarchical.
 
-Cette optimisation rapproche l'arbre WvAnim des structures classiques organisées en Pieces-simples et Pieces à états, offrant deux avantages principaux : la compatibilité avec les usages courants, et la possibilité de reconstituer les deux nœuds distincts si le besoin évolue.
+This data architecture decision, conceived as early as 1999, gives the tree its coherence and its ability to accommodate any animation concept — UI, FX, motion design — without structural conflict.
 
-## **Exemple**
+---
 
-Alternance de Pièces et de Faces.
+## **The Clock-Piece**
+
+The Clock-Piece is structurally a regular Piece, but distinct in its role: it coordinates the timing of Pieces within a Face-Group.
+
+It synchronizes the Pieces in the group, manages stops and restarts, and regularly checks synchronization. It may also be subordinated to an external source: another parent or global Clock-Piece, an event (mouse, load...), a time-bar, audio, video, or a cursor.
+
+This creates a clear hierarchy:
+
+* **Without a Clock-Piece**: each Piece in the group is autonomous, with no synchronization
+* **With a Clock-Piece**: Pieces are coordinated — stops, restarts, and synchronization are managed
+* **With a subordinated Clock-Piece**: this coordinated time is itself driven by an external source
+
+Responsibility separation is explicit:
+
+* The **Timeline** manages *how* time evolves — interpolation between states (easing, acceleration, deceleration)
+* The **Clock-Piece** manages the *flow* of time — synchronization, stops, and restarts
+
+---
+
+## **Non-Destructive Optimization**
+
+TiSpi allows non-destructive optimizations.
+
+The minimal optimization consists of merging a Piece and its Face into a single node when the Piece contains only one Face. This node maintains a strict separation between Piece and Face — the merge is reversible, and both nodes can be reconstructed at any time if needed.
+
+This optimization brings the WvAnim tree closer to conventional structures organized as simple Pieces and stateful Pieces, offering two main advantages: compatibility with common practices, and the ability to reconstruct the two distinct nodes if requirements evolve.
+
+---
+
+## **Example**
+
+Alternation of Pieces and Faces:
 
 Piece
   Face-Group
@@ -80,9 +106,9 @@ Piece
         Piece
           Simple Face
 
+Note: P_F is a Piece+Face node. It is a reversible optimization.
 
-Note P_F est un noeud Piece+Face. C'est une optimisation réversible.
-
+json
 {
   "type": "Piece",
   "name": "like-button",
@@ -122,27 +148,36 @@ Note P_F est un noeud Piece+Face. C'est une optimisation réversible.
   ]
 }
 
-## **Les pistes d'une Piece**
+---
 
-Toute évolution d'une Piece est portée par des pistes. Chaque piste est spécialisée dans une dimension de variation indépendante, exprimée dans le temps : faces successives, positions, actions au clic, actions immédiates, couleur du composant, arrière-plan...
+## **Tracks of a Piece**
 
-### **Les pistes**
+Any evolution of a Piece is carried by tracks. Each track is specialized in an independent dimension of variation expressed over time: successive faces, positions, click actions, immediate actions, component color, background, etc.
 
-Une Piece peut posséder plusieurs pistes parallèles, chacune indépendante :
+### **Tracks**
 
-- PISTE-FACE : définit la séquence des faces affichées — quelle Face est visible à chaque instant. Elle peut contenir des transitions visuelles entre deux faces (fade, 3D, shear...) — ces transitions sont décoratives.
-- PISTE-POSITION : définit les évolutions de position dans l'espace
-- PISTE-ACTION-CLIC : définit les actions déclenchées par un clic
-- PISTE-BACKGROUND : définit les évolutions de l'arrière-plan
+A Piece may have multiple parallel tracks, each independent:
 
-Les stops suspendent le déroulement du temps à un instant précis — la Piece attend une instruction externe pour reprendre.
+* **FACE-TRACK**: defines the sequence of displayed faces — which Face is visible at each moment. It may include visual transitions between faces (fade, 3D, shear...), which are decorative.
+* **POSITION-TRACK**: defines spatial position changes
+* **CLICK-ACTION-TRACK**: defines actions triggered by a click
+* **BACKGROUND-TRACK**: defines background evolution
 
-Toutes les pistes d'une Piece sont synchronisées entre elles, et toutes les Pieces d'un même groupe sont également synchronisées — c'est la cohérence temporelle du groupe.
+Stops suspend the progression of time at a given instant — the Piece waits for an external instruction to resume.
 
-### ***Les keys**
-Chaque piste est composée de keys. Chaque key contient soit une transition précédant la key soit une valeur, soit les deux. Chaque piste représente le script complet d'une classe d'évolution de la Piece.
+All tracks within a Piece are synchronized with each other, and all Pieces within a group are also synchronized — ensuring temporal coherence at the group level.
 
-### **Exemple**
+---
+
+### **Keys**
+
+Each track is composed of keys. A key contains either a transition preceding the key, a value, or both. Each track represents the complete script of one class of evolution of the Piece.
+
+---
+
+## **Example**
+
+json
 {
   "face": [
     {"frame": 0, "face": 2, "transition": {"ease": "easeout", "effect": "fade", "duration": "2s"}},
@@ -152,7 +187,10 @@ Chaque piste est composée de keys. Chaque key contient soit une transition pré
     {"frame": 0, "css": {"left": "50%", "top": "100px"}, "transition": {"ease": "easeout", "effect": "fade", "duration": "2s"}}
   ]
 }
-Note : cet exemple est écrit en développé. Il sera optimisé ultérieurement
+
+
+Note: this example is expanded form and will be optimized later.
+
 ```
 
 ### **2nd prompt**

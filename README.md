@@ -41,7 +41,6 @@ TiSpI provides:
 TiSpI provides a deterministic, declarative, and verifiable UI structure that:
 
 - optimizes processing by AI models  
-- improves design productivity  
 - reduces ambiguity and hallucination in AI‑driven interfaces  
 
 ---
@@ -50,7 +49,31 @@ TiSpI provides a deterministic, declarative, and verifiable UI structure that:
 
 TiSpI is a **closed structural standard** based on a strict **Time / Space alternation tree**, where **all components and behaviors** are expressed through **deterministic, declarative, and verifiable relationships**, with **no heuristics and no implicit semantics**.
 
----
+### Structure — L'arbre temps/espace invariant
+
+1. L'arbre est une alternance stricte Temps (Piece) / Espace (Face), de profondeur arbitraire.
+2. Une "entité" est le couple de type Piece/Face. La Pièce est indispensable, contenant la ou les Faces.
+3. Une Piece ne sélectionne qu'une seule Face courante à chaque instant.
+4. FaceGroup et FaceRender sont des spécialisations de Face — ils n'ajoutent pas de niveau dans l'alternance.
+5. Un FaceGroup affiche toutes ses Pieces simultanément. Ses Pieces sont synchronisées.
+
+### Temps
+
+1. Toutes les pistes de toutes les Pieces sont synchronisées.
+2. La vie de chaque canal est totalement décrite dans sa piste : succession de valeurs et de transformations.
+
+### Exemple
+
+```
+Piece                        // racine
+    Face                     // FaceGroup : contient des Pieces
+        Piece
+            Face (image)
+            Face (texte : Hello)
+        Piece
+            Face (texte : word)
+    Face (oval)              // FaceRender
+```
 
 <img width="1101" height="814" alt="im38" src="https://github.com/user-attachments/assets/c1b05151-98d7-42eb-a6b3-de470bfdddb7" />
 ---

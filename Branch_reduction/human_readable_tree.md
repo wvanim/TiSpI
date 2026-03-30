@@ -121,7 +121,7 @@ Les groupe et les faces de rendus sont désignés par le type F.
 Règle : toute pièce apparaissant dans une face-groupe constitue un domaine temporel distinct.
 
 ### Pages-successives placée dans un groupe
-
+```
 P(root          // Piece racine
   F(0           // Groupe principal - affichage dans fenêtre
     P(page_successives  // Piece affichant les pages successives
@@ -138,9 +138,9 @@ P(root          // Piece racine
     )
   )
 )
-
+```
 ### Pages-successives affichée après une image.
-
+```
 P(root     // Piece racine
   F(0      // Groupe principal - affichage dans fenêtre
     P(présentation  // Pièce affichant successivement une image puis des pages successives 
@@ -158,7 +158,7 @@ P(root     // Piece racine
     )
   )
 )
-
+```
 
 ### Bouton
 

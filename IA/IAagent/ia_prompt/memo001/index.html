@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+Test pour téléchagement de fichier texte + placer dans le preesse -papier
+
+Préparation :
+Placez les fichiers dans votre dosseir sur serveur
+- index.html : Page HTML comportant les boutons pour télécharger les fichiers
+- DownloadTextFile.js : requète PHP pour télécharger un fichier texte, puis le placer dans le presse papier
+- download_textfile.php : backend pour lire le fichier text et le retourner au frontend 
+- les fichiers textes dans un sous dossier 'data'
+
+Usage :
+Créez une page HTML avec les bouton de requète
+Ajoutez ceci dans cette page
+- placer les préfixes de fichier dans chaque bouton : data-id="prefixe_text_file"
+- 
+-->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Test boutons</title>
+
+    <style>
+        <!-- TODO copier cette portion de style daans votre fichier HTML -->
+        #status {
+            margin-top: 20px;
+            font-family: sans-serif;
+        }
+
+        .loading {
+            color: blue;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 2px solid #ccc;
+            border-top: 2px solid #333;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-right: 6px;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+        button:disabled {
+            opacity: 0.5;
+        }
+        <!-- Fin de copy de style -->
+    </style>
+</head>
+<body>
+
+<h2>Choisir un texte</h2>
+
+<!-- TODO ajouter data-id="prefixe_file_text"> dans chque bouton de votre fichier HTML -->
+<button data-id="aa">aa</button>
+<button data-id="2">Texte 2</button>
+<button data-id="3">Texte 3</button>
+
+<!-- TODO copier cette portion requète dans votre fichier HTML -->
+<div id="status"></div>
+
+<script src="DownloadTextFile.js"></script>
+<!-- Fin de copy de requète -->
+
+</body>
+</html>

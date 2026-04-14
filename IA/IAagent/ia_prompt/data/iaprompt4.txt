@@ -1,0 +1,34 @@
+Evaluate the "progressive adoption" de Tispi
+
+---
+
+# Progressive Adoption of the Time/Space Model (TiSpI)
+
+## The TypeScript Library
+Develop a TypeScript library for Time/Space processing.  
+This library provides tools for CSS authoring and execution.  
+Adapt these classes to modern editing frameworks such as React.  
+
+Motion is delegated to CSS.  
+The runtime “triggers” CSS operations and waits for events in return.  
+Example: `--state: hover`, `--progress: 0.7`.
+
+## The Online Visual Editor
+Develop a visual editor that can be imported and/or integrated into browsers.  
+The simplicity of the core enables on-demand loading within the browser.  
+
+The editor is intended for desktop and tablet devices.
+
+## AI Compatibility
+Define a data exchange format with AI systems.  
+
+### Preprocessing  
+A preprocessing step simplifies the tree by selecting only the “behavior” and/or “decoration” parts required for AI processing.  
+
+### Data Structure  
+Full JSON compatibility.  
+The TiSpI library includes bidirectional parsers **JSON → CSS** and **CSS → JSON** (key for automatic export and AI interactions).
+
+## W3C Standard
+The W3C standard is not required for the development or usage of these tools: TiSpI is layered on top of HTML without modifying it.  
+The Time/Space invariant tree is a layer on top of HTML/CSS, without redefining the DOM.

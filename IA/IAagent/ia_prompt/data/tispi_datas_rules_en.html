@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tispi Syntax Highlighter</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 30px;
+            line-height: 1.5;
+        }
+
+        pre {
+            background-color: #FFFFD0;
+            margin: 20px 20px;
+            white-space: pre; /* Preserve spaces and indentation */
+        }
+
+        /* Blue: structural data */
+        .structural {
+            color: #0000FF;
+        }
+        /* Green: spatial data */
+        .spatial {
+            color: #00A000;
+        }
+
+        /* Purple: decorative data */
+        .decorative {
+            color: #C060FF;
+        }
+    </style>
+</head>
+<body>
+This page shows how Tispi data can be decomposed into actionable roles (structural, spatial, decorative). <br>
+Structure learning. <a href="ia_learn.md" target="_blank" rel="noopener noreferrer">View ia_learn.md</a>
+<br><br>
+<pre>
+<span class="structural">Piece root duration:200
+  Track face[0:f0,<span class="decorative">[easeout, fade]</span>; 100:f1,<span class="decorative">[fade]</span>]
+  <span class="spatial">Track pos[0:f0,<span class="decorative">[ease, slide]</span>; 50:f1,<span class="decorative">[slide]</span>]</span>
+  <span class="decorative">Track color[100:yellow,[ease, slide]; 150:red,[slide]]</span>
+  Face f0 image "myImage" <span class="spatial">w:800 h:400</span>
+  Face f1 text "Hello word" <span class="spatial">w:200 h:30</span></span>
+</pre>
+<br>  
+Tispi separates animation data into distinct roles:<br>
+<span class="structural">Blue: structural data</span><br>
+<span class="spatial">Green: spatial data</span><br>
+<span class="decorative">Purple: decorative data</span><br>
+<br>
+Advantage:<br>
+Roles are position-based, making them automatically identifiable.<br>
+Escape mechanisms can alter the role of a section.<br>
+Example: a spatial element can become structural.<br>
+
+---
+If you have understood this breakdown, respond only: "OK"
+Otherwise respond: "Pending"
+Then add to your response: proceed to prompt #2
+
+</body>
+</html>

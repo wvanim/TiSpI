@@ -1,0 +1,419 @@
+Important : vous devez avoir lu "ia_learn.md" avant d'analyser cette structure.
+
+
+## Bibliothèsque de module
+
+P moduleButton
+  doc "three-state button."         
+  tags "MOUSE_OUT, MOUSE_OVER, MOUSE_PUSHED, MOUSE_CLICK"  // informational
+  contract(timeline_isolated = true)
+  params(
+    func --click,
+    F --mouse-out,
+    F --mouse-over,
+    F --mouse-pushed
+  )
+P moduleRollover
+  doc "Rollover. Ce module isole le roll-over dans un sous-groupe de synchronisation"         
+  tags "MOUSE_OUT, MOUSE_OVER"  // informational
+  contract(timeline_isolated = true)
+  params(
+    F --mouse-out,
+    F --mouse-over
+  )
+
+P modulePages
+  doc "Cadre paginé. Ce module isole les pages dans un sous-groupe de synchronisation"         
+  tags "PAGE-N"  // informational
+  contract(timeline_isolated = true)
+  params(
+    F --page-N
+  )
+
+
+
+## structure 
+
+P root
+  F f0 group
+
+    P modulePages
+      --page-0 = F group
+        P header
+          F f0 group
+            P moduleButton
+              --mouse-out    = F text "Accueil"
+              --mouse-over   = F text "Accueil •"
+              --mouse-pushed = F text "Accueil •"
+              --click        = (e) => { gotoFrame(PAGE0); }
+            P moduleButton
+              --mouse-out    = F text "Galerie"
+              --mouse-over   = F text "Galerie •"
+              --mouse-pushed = F text "Galerie •"
+              --click        = (e) => { gotoFrame(PAGE1); }
+            P moduleButton
+              --mouse-out    = F text "Contact"
+              --mouse-over   = F text "Contact •"
+              --mouse-pushed = F text "Contact •"
+              --click        = (e) => { gotoFrame(PAGE2); }
+
+      --page-1 = F group
+
+        P header
+          F f0 group
+            P moduleButton
+              --mouse-out    = F text "Accueil"
+              --mouse-over   = F text "Accueil •"
+              --mouse-pushed = F text "Accueil •"
+              --click        = (e) => { gotoFrame(PAGE0); }
+            P moduleButton
+              --mouse-out    = F text "Galerie"
+              --mouse-over   = F text "Galerie •"
+              --mouse-pushed = F text "Galerie •"
+              --click        = (e) => { gotoFrame(PAGE1); }
+            P moduleButton
+              --mouse-out    = F text "Contact"
+              --mouse-over   = F text "Contact •"
+              --mouse-pushed = F text "Contact •"
+              --click        = (e) => { gotoFrame(PAGE2); }
+
+        P zoneProduct
+          F f0 group
+
+            P modulePages
+              --page-0 = F group
+
+                P isolationZoom
+                  F f0 group
+                    P zoom
+                      T tag[0,MOUSE_OUT ; 1,MOUSE_OVER]
+                      T stop[0]
+                      T face[0,fOut ; 1,fOver]
+                      T pos[0: 0 0 ; 1: -50 -50]
+                      T size[0: 400 300 ; 1: 500 375]
+                      F fOut  image "product1_main.png"
+                      F fOver image "product1_main.png"
+
+                P vignettes
+                  F f0 group
+                    P moduleButton
+                      --mouse-out    = F image "product1_thumb1.png"
+                      --mouse-over   = F image "product1_thumb1_over.png"
+                      --mouse-pushed = F image "product1_thumb1_over.png"
+                      --click        = (e) => { gotoFrame(PAGE0); }
+                    P moduleButton
+                      --mouse-out    = F image "product1_thumb2.png"
+                      --mouse-over   = F image "product1_thumb2_over.png"
+                      --mouse-pushed = F image "product1_thumb2_over.png"
+                      --click        = (e) => { gotoFrame(PAGE1); }
+                    P moduleButton
+                      --mouse-out    = F image "product1_thumb3.png"
+                      --mouse-over   = F image "product1_thumb3_over.png"
+                      --mouse-pushed = F image "product1_thumb3_over.png"
+                      --click        = (e) => { gotoFrame(PAGE2); }
+
+                P modulePages
+                  --page-0 = F group
+                    PF desc : text "Produit 1 — Vue 1"
+                  --page-1 = F group
+                    PF desc : text "Produit 1 — Vue 2"
+                  --page-2 = F group
+                    PF desc : text "Produit 1 — Vue 3"
+
+                P moduleButton
+                  --mouse-out    = F image "btn_panier_out.png"
+                  --mouse-over   = F image "btn_panier_over.png"
+                  --mouse-pushed = F image "btn_panier_pushed.png"
+                  --click        = (e) => { addToCart("product1"); }
+
+              --page-1 = F group
+
+                P isolationZoom
+                  F f0 group
+                    P zoom
+                      T tag[0,MOUSE_OUT ; 1,MOUSE_OVER]
+                      T stop[0]
+                      T face[0,fOut ; 1,fOver]
+                      T pos[0: 0 0 ; 1: -50 -50]
+                      T size[0: 400 300 ; 1: 500 375]
+                      F fOut  image "product2_main.png"
+                      F fOver image "product2_main.png"
+
+                P vignettes
+                  F f0 group
+                    P moduleButton
+                      --mouse-out    = F image "product2_thumb1.png"
+                      --mouse-over   = F image "product2_thumb1_over.png"
+                      --mouse-pushed = F image "product2_thumb1_over.png"
+                      --click        = (e) => { gotoFrame(PAGE0); }
+                    P moduleButton
+                      --mouse-out    = F image "product2_thumb2.png"
+                      --mouse-over   = F image "product2_thumb2_over.png"
+                      --mouse-pushed = F image "product2_thumb2_over.png"
+                      --click        = (e) => { gotoFrame(PAGE1); }
+                    P moduleButton
+                      --mouse-out    = F image "product2_thumb3.png"
+                      --mouse-over   = F image "product2_thumb3_over.png"
+                      --mouse-pushed = F image "product2_thumb3_over.png"
+                      --click        = (e) => { gotoFrame(PAGE2); }
+
+                P modulePages
+                  --page-0 = F group
+                    PF desc : text "Produit 2 — Vue 1"
+                  --page-1 = F group
+                    PF desc : text "Produit 2 — Vue 2"
+                  --page-2 = F group
+                    PF desc : text "Produit 2 — Vue 3"
+
+                P moduleButton
+                  --mouse-out    = F image "btn_panier_out.png"
+                  --mouse-over   = F image "btn_panier_over.png"
+                  --mouse-pushed = F image "btn_panier_pushed.png"
+                  --click        = (e) => { addToCart("product2"); }
+
+              --page-2 = F group
+
+                P isolationZoom
+                  F f0 group
+                    P zoom
+                      T tag[0,MOUSE_OUT ; 1,MOUSE_OVER]
+                      T stop[0]
+                      T face[0,fOut ; 1,fOver]
+                      T pos[0: 0 0 ; 1: -50 -50]
+                      T size[0: 400 300 ; 1: 500 375]
+                      F fOut  image "product3_main.png"
+                      F fOver image "product3_main.png"
+
+                P vignettes
+                  F f0 group
+                    P moduleButton
+                      --mouse-out    = F image "product3_thumb1.png"
+                      --mouse-over   = F image "product3_thumb1_over.png"
+                      --mouse-pushed = F image "product3_thumb1_over.png"
+                      --click        = (e) => { gotoFrame(PAGE0); }
+                    P moduleButton
+                      --mouse-out    = F image "product3_thumb2.png"
+                      --mouse-over   = F image "product3_thumb2_over.png"
+                      --mouse-pushed = F image "product3_thumb2_over.png"
+                      --click        = (e) => { gotoFrame(PAGE1); }
+                    P moduleButton
+                      --mouse-out    = F image "product3_thumb3.png"
+                      --mouse-over   = F image "product3_thumb3_over.png"
+                      --mouse-pushed = F image "product3_thumb3_over.png"
+                      --click        = (e) => { gotoFrame(PAGE2); }
+
+                P modulePages
+                  --page-0 = F group
+                    PF desc : text "Produit 3 — Vue 1"
+                  --page-1 = F group
+                    PF desc : text "Produit 3 — Vue 2"
+                  --page-2 = F group
+                    PF desc : text "Produit 3 — Vue 3"
+
+                P moduleButton
+                  --mouse-out    = F image "btn_panier_out.png"
+                  --mouse-over   = F image "btn_panier_over.png"
+                  --mouse-pushed = F image "btn_panier_pushed.png"
+                  --click        = (e) => { addToCart("product3"); }
+
+      --page-2 = F group
+        P header
+          F f0 group
+            P moduleButton
+              --mouse-out    = F text "Accueil"
+              --mouse-over   = F text "Accueil •"
+              --mouse-pushed = F text "Accueil •"
+              --click        = (e) => { gotoFrame(PAGE0); }
+            P moduleButton
+              --mouse-out    = F text "Galerie"
+              --mouse-over   = F text "Galerie •"
+              --mouse-pushed = F text "Galerie •"
+              --click        = (e) => { gotoFrame(PAGE1); }
+            P moduleButton
+              --mouse-out    = F text "Contact"
+              --mouse-over   = F text "Contact •"
+              --mouse-pushed = F text "Contact •"
+              --click        = (e) => { gotoFrame(PAGE2); }
+        PF contact : text "Page Contact"
+
+    P footer
+      F f0 group
+        PF footerText : text "© 2025 Ma Boutique"
+        P moduleRollover
+          --mouse-out  = F text "Nous contacter"
+          --mouse-over = F text "Nous contacter →"
+          
+          
+          
+________________________________________________________________________
+________________________________________________________________________
+________________________________________________________________________
+________________________________________________________________________
+
+
+
+
+
+P root
+  F f0 group
+
+    P pages_root M modulePages
+      --page-0 = F group
+        P header
+          F f0 group
+            P btn_home M moduleButton
+              --mouse-out    = F text "Accueil"
+              --mouse-over   = F text "Accueil •"
+              --mouse-pushed = F text "Accueil •"
+              --click        = (e) => { gotoFrame(PAGE0); }
+            P btn_gallery M moduleButton
+              --mouse-out    = F text "Galerie"
+              --mouse-over   = F text "Galerie •"
+              --mouse-pushed = F text "Galerie •"
+              --click        = (e) => { gotoFrame(PAGE1); }
+            P btn_contact M moduleButton
+              --mouse-out    = F text "Contact"
+              --mouse-over   = F text "Contact •"
+              --mouse-pushed = F text "Contact •"
+              --click        = (e) => { gotoFrame(PAGE2); }
+
+      --page-1 = F group
+
+        P header
+          F f0 group
+            P btn_home M moduleButton
+              --mouse-out    = F text "Accueil"
+              --mouse-over   = F text "Accueil •"
+              --mouse-pushed = F text "Accueil •"
+              --click        = (e) => { gotoFrame(PAGE0); }
+            P btn_gallery M moduleButton
+              --mouse-out    = F text "Galerie"
+              --mouse-over   = F text "Galerie •"
+              --mouse-pushed = F text "Galerie •"
+              --click        = (e) => { gotoFrame(PAGE1); }
+            P btn_contact M moduleButton
+              --mouse-out    = F text "Contact"
+              --mouse-over   = F text "Contact •"
+              --mouse-pushed = F text "Contact •"
+              --click        = (e) => { gotoFrame(PAGE2); }
+
+        P zoneProduct
+          F f0 group
+
+            P products_pages M modulePages
+              --page-0 = F group
+
+                P isolationZoom
+                  F f0 group
+                    P zoom
+                      T tag[0,MOUSE_OUT ; 1,MOUSE_OVER]
+                      T stop[0]
+                      T face[0,fOut ; 1,fOver]
+                      T pos[0: 0 0 ; 1: -50 -50]
+                      T size[0: 400 300 ; 1: 500 375]
+                      F fOut  image "product1_main.png"
+                      F fOver image "product1_main.png"
+
+                P vignettes
+                  F f0 group
+                    P thumb1 M moduleButton
+                      --mouse-out    = F image "product1_thumb1.png"
+                      --mouse-over   = F image "product1_thumb1_over.png"
+                      --mouse-pushed = F image "product1_thumb1_over.png"
+                      --click        = (e) => { gotoFrame(PAGE0); }
+                    P thumb2 M moduleButton
+                      --mouse-out    = F image "product1_thumb2.png"
+                      --mouse-over   = F image "product1_thumb2_over.png"
+                      --mouse-pushed = F image "product1_thumb2_over.png"
+                      --click        = (e) => { gotoFrame(PAGE1); }
+                    P thumb3 M moduleButton
+                      --mouse-out    = F image "product1_thumb3.png"
+                      --mouse-over   = F image "product1_thumb3_over.png"
+                      --mouse-pushed = F image "product1_thumb3_over.png"
+                      --click        = (e) => { gotoFrame(PAGE2); }
+
+                P desc_pages M modulePages
+                  --page-0 = F group
+                    PF desc : text "Produit 1 — Vue 1"
+                  --page-1 = F group
+                    PF desc : text "Produit 1 — Vue 2"
+                  --page-2 = F group
+                    PF desc : text "Produit 1 — Vue 3"
+
+                P add_cart M moduleButton
+                  --mouse-out    = F image "btn_panier_out.png"
+                  --mouse-over   = F image "btn_panier_over.png"
+                  --mouse-pushed = F image "btn_panier_pushed.png"
+                  --click        = (e) => { addToCart("product1"); }
+
+              --page-1 = F group
+                PF placeholder : text "Produit 2"
+
+              --page-2 = F group
+                PF placeholder : text "Produit 3"
+
+      --page-2 = F group
+        P header
+          F f0 group
+            P btn_home M moduleButton
+              --mouse-out    = F text "Accueil"
+              --mouse-over   = F text "Accueil •"
+              --mouse-pushed = F text "Accueil •"
+              --click        = (e) => { gotoFrame(PAGE0); }
+            P btn_gallery M moduleButton
+              --mouse-out    = F text "Galerie"
+              --mouse-over   = F text "Galerie •"
+              --mouse-pushed = F text "Galerie •"
+              --click        = (e) => { gotoFrame(PAGE1); }
+            P btn_contact M moduleButton
+              --mouse-out    = F text "Contact"
+              --mouse-over   = F text "Contact •"
+              --mouse-pushed = F text "Contact •"
+              --click        = (e) => { gotoFrame(PAGE2); }
+
+        PF contact : text "Page Contact"
+
+    P footer
+      F f0 group
+        PF footerText : text "© 2025 Ma Boutique"
+        P footer_rollover M moduleRollover
+          --mouse-out  = F text "Nous contacter"
+          --mouse-over = F text "Nous contacter →"
+          
+          
+________________________________________________________________________
+________________________________________________________________________
+________________________________________________________________________
+________________________________________________________________________
+
+P moduleRequestPhp
+  doc "Generic PHP request module, isolated timeline."
+  tags "REQUEST_PENDING, REQUEST_OK, REQUEST_ERROR"
+  contract(
+    timeline_isolated = true,
+    requires: Tispi.phpRequest(url, params),
+    emit: REQUEST_PENDING, REQUEST_OK, REQUEST_ERROR,
+    emit_data: --message
+  )
+  params(
+    string --url,
+    string --params,
+    P --sender,
+    func --on-success,
+    func --on-error
+  )
+  modele (
+    PF isolation : group
+      P request
+        T tag[1,REQUEST_PENDING ; 2,REQUEST_OK ; 3,REQUEST_ERROR]
+        T stop[0]
+        T face[1,fPending ; 2,fOk ; 3,fError]
+        T action_immediate[
+            0: Tispi.phpRequest(--url, --params) ;
+            2: send(--sender, --on-success, --message) ;
+            3: send(--sender, --on-error, --message)
+        ]
+        F fPending text "Requête en cours…"
+        F fOk      text ""
+        F fError   text ""
+  )

@@ -1,0 +1,11 @@
+Can you write roll-over with a paginated frame in the HOVER state
+And a button on each page
+
+OUT = text
+HOVER = background + image + text
+  + pagined frame 
+     Page 1: the button + rectangle and oval
+     Page 2: the button + 2 texts
+     Page 3: the button + 2 images and a sub roll-over
+
+Note : Expand the buttons, as "F button" does not exist.

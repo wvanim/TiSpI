@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tispi Syntax Highlighter</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 30px;
+            line-height: 1.5;
+        }
+
+        pre {
+            background-color: #FFFFD0;
+            margin: 20px 20px; /* marge verticale */
+            white-space: pre; /* Conserve les espaces et retraits */
+        }
+
+        /* Bleu : Identifiants et dimensions */
+        .structural {
+            color: #0000FF;
+        }
+        /* Vert : Identifiants et dimensions */
+        .spatial {
+            color: #00A000;
+        }
+
+        /* Mauve : Crochets (et contenu), lignes et types d'objets */
+        .decorative {
+            color: #C060FF; /* Un decorative plus foncé pour rester lisible sur fond blanc */
+        }
+    </style>
+</head>
+<body>
+Cette page montre comment les données Tispi complètes se décomposent en rôles exploitables (structure, spatial, décoratif) <br>
+Apprentissage de la structure. <a href="ia_learn.md" target="_blank" rel="noopener noreferrer">Voir ia_learn.md</a>
+<br><br>
+<pre>
+<span class="structural">Piece root duration:200
+  Track face[0:f0,<span class="decorative">[easeout, fade]</span>; 100:f1,<span class="decorative">[fade]</span>]
+  <span class="spatial">Track pos[0:f0,<span class="decorative">[ease, slide]</span>; 50:f1,<span class="decorative">[slide]</span>]</span>
+  <span class="decorative">Track color[100:yellow,[ease, slide]; 150:red,[slide]]</span>
+  Face f0 image "myImage" <span class="spatial">w:800 h:400</span>
+  Face f1 text "Hello word" <span class="spatial">w:200 h:30</span></span>
+</pre>
+<br>  
+Tispi sépare les rôles des datas de l'animation :<br>
+<span class="structural">En bleu : les datas de structure</span><br>
+<span class="spatial">En vert : les data de situation</span><br>
+<span class="decorative">En mauve : les datas de décoration</span><br>
+<br>
+Avantage :<br>
+Le rôles sont positionés, donc repérable automatiquement.<br>
+Des échappement modifie le rôle de la zone. <br>
+Exemple : une situation deviendra struturel.<br>
+
+
+</body>
+</html>

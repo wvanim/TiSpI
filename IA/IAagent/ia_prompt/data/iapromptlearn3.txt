@@ -1,0 +1,11 @@
+Can you write a roll-over?
+OUT = text
+HOVER = background + image + text
+
+Important, structural conséquence :
+- des élements simultanés sont des Pieces
+   P [F ...]; 
+   P [F ...]; 
+   P [F ...]; 
+
+Note : the name of the Piece is "rollover"  

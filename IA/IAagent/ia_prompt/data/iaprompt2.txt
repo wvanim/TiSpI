@@ -1,0 +1,26 @@
+Evaluate with the "comment" flag for a piece, added in 2007
+
+---
+
+Role: prevent the piece from being sent to the run-time. The piece stays in the editor.
+
+Consequence:
+The piece's action can be used for the editor itself => it becomes a macro-piece... A control, in fact.
+
+Since the piece is in a group, we can assign a role to the group. Example: button.
+The tree is modular, so we can move the entire branch of this group + the macro-pieces will follow since they are part of the tree branch.
+=> export => place in an online library.
+=> the comment flag, by itself, created the mechanism for building parameterizable library templates.
+
+Some actions will allow automatic editing of a sub-group.
+Example for the "animated button" template => 3 buttons will allow direct editing of each group for each button state.
+
+I was already exporting groups from the start. I quickly understood the tree was modular. So macro-pieces followed naturally in 2007.
+
+---
+
+The dashboard is itself a macro-group. Meaning the dashboard is integrated into the tree.
+
+Furthermore, an option allows creating it with only one piece present when the program opens.
+It is a macro-piece.
+Through moving, resizing, and programming, the user commands it to create each element of the editor.

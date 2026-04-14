@@ -1,0 +1,366 @@
+#Tispi script pour l'apprentissage destiné à l'IA
+
+Ce script est volontairement incomplet, il est destiné à la compréhension de la structure, avec peu de décoration (ex : couleur)
+Donc tout ce qui n'est pas décrit est optionnel.
+
+Ce modèle sert à manipuler la structure de l'arbre.
+ 
+## Definition
+
+The tree strictly alternates Pieces and Faces
+Piece nodes only have Face nodes as children (or 0 Face). Only one Face is visible at a given time. Displaying a Face forces the previous one to disappear.
+Face nodes only have Piece nodes as children (or 0 Piece). All Pieces are displayed simultaneously as soon as the Face is displayed.
+
+Faces are therefore groups, images, text, sounds...
+
+Syntax:
+- Piece is named "P"
+- Face is named "F type"
+   type ::= "group", "image", "text", "rectangle", "oval", "sound", "video"
+
+## actionss
+
+Ce modèle n'intègre pas les actions. 
+
+## tags
+Alias nommé sur le keyframe courant (équivalent GotoFrame(@TAG)).
+Permet au moteur ou à l'extérieur de cibler directement ce keyframe.
+Plusieurs tags peuvent coexister avec un time sur le même state.
+
+### producteur de tag
+In fact, the tag is an event sent by the Tispi engine or event extern
+signature @TAG 
+
+## Optimization
+
+### réduction de noeud
+Les réductions de noeuds sont des réunions de certains noeuds de l'arbre, en conservant la structure.
+Règle : toute réduction de noeud doit pouvoir se développer pour retrouver la structure de l'arbre. 
+
+A Piece that contains only one Face is reduced to a single node: PF
+PF est équivalent à P[ F[ enfants ] ], les enfants sont au niveau P — donc forcément des P ou des PF.
+
+## clock
+
+Pour cet formation pour IA, nous considèrerons que le temps est traité par le moteur de Tispi
+
+//______________________________________________________
+
+## EBNF
+
+script          ::= piece_like+
+
+piece_like      ::= piece_face | piece
+
+(* ── PIECE ── *)
+piece           ::= "P" label flags? timeline? ";"
+
+flags           ::= integer
+// Entier de bits contrôlant le comportement de la pièce
+// (ex: en_commentaire, la pièce sera ignorée dans l'exporte de l'exécution).
+
+timeline        ::= "[" key* "]"
+// Les keys sont ordonnées par temps croissant.
+// Toute valeur (propriété, face active) est permanente jusqu'à
+// sa prochaine modification dans une key ultérieure.
+
+key             ::= ( face | state ) ";"
+// le format face est du sucre syntaxique, car "face" fait partie de "state".
+
+face ::= "F" face_type id_face state face_content?
+// face   : change la face active + met à jour ses propriétés.
+// state  : met à jour des propriétés sans changer la face active.
+
+(* ── PIECE-FACE (optimisation : P avec exactement une Face) ── *)
+piece_face      ::= "PF" face_type "," label flags? face_content?  piece_timeline?  ";"
+// PF est équivalent à P[ F[ … ] ].
+// La partie P peut porter sa propre timeline (piece_timeline).
+// La partie F est décrite par face_content, polymorphe selon face_type.
+// Ces deux blocs sont syntaxiquement distincts et tous deux optionnels.
+
+piece_timeline  ::= "[" key* "]"
+// Même structure que timeline dans piece.
+// Les keys sont ordonnées par temps croissant.
+
+face_content    ::= "{" face_params "}"
+
+face_params     ::= group_children     // si face_type = "group"
+                |   src_param          // si face_type = "image" | "sound" | "video"
+                |   text_params        // si face_type = "text"
+                |   shape_params       // si face_type = "rectangle" | "oval"
+
+group_children  ::= piece_like ( ";" piece_like )*
+// Tous les enfants sont affichés simultanément dès que la Face est active.
+
+src_param       ::= string
+// Chemin ou identifiant de la ressource (image, son, vidéo).
+
+text_params     ::= string ( "," param )*
+// Premier param : contenu textuel. Suivants : style (couleur, taille…).
+
+shape_params    ::= param ( "," param )*
+// Paramètres géométriques et visuels (dimensions, couleur, border…).
+
+(* ── STATE & ATTRIBUTS ── *)
+state           ::= time | time? tag 
+// time seul : repositionne le curseur sans changer d'attribut.
+
+params      ::= ( "," param )+
+attribute       ::= tag? param?
+
+time            ::= numeric_time tag? | tag
+numeric_time    ::= ( "s" | "ms" ) integer
+// Par défaut, temps local au groupe (relatif à l'apparition de la face parente).
+
+tag             ::= "@" UPPERCASE_WORD
+// Alias nommé sur un instant (équivalent gotoFrame).
+// Avec numeric_time : étiquette l'instant explicite.
+// Seul : instant défini par son nom, résolu par le moteur à l'exécution.
+// Un tag est aussi un événement émis par le moteur Tispi.
+
+(* ── FACE TYPE ── *)
+face_type       ::= "text" | "image" | "group" | "sound" | "video"
+                |   "rectangle" | "oval"
+
+(* ── RÉFÉRENCES ── *)
+label           ::= '"' WORD '"'
+id_face         ::= '"f' integer '"'
+id_piece        ::= '"p' integer '"'
+
+(* ── LEXIQUE ── *)
+string          ::= '"' WORD '"'
+integer         ::= [0-9]+
+WORD            ::= [a-zA-Z_][a-zA-Z0-9_]*
+UPPERCASE_WORD  ::= [A-Z][A-Z0-9_]*
+
+## Pouvez-vous relire 2 fois
+Rappel tout ce qui n'est pas décrit est optionnel
+Le rôle de certain composant n'est pas précisé, nous verrons cela à l'usage. L'objectif ici est de comprendre et manipuler la structure.
+______________________________________________________
+______________________________________________________
+______________________________________________________
+
+## Consequence of EBNF
+
+une crocher sera suivi soit par : P F s ms @
+
+
+## Example:
+
+### 
+P "root" [
+    F group [
+        P "libellé" 
+            [F text "pseudo"];
+        P "input"    
+            [F text "<input>"]]]
+ 
+###
+
+
+
+
+
+
+
+### sans optimisation PF
+P "button" [
+    F text "f0", @ETAT_OUT,    green, "Next";
+    F group "f1", @ETAT_HOVER [
+        P image[
+            F image "f0", "next.png"];
+        P texte[
+             F texte "f0", "Next..."]];  // Ici 2 crocher fermant donc le retrait = 2 tabulations
+    F text "f2", @ETAT_PUSHED, black, "Next !"];
+
+Important: No tagging for individual faces within a part. Not necessary since there is no need to change faces.
+
+Note : les crochets définissent la hiérarchie. Mais ils sont inutile visuellement pour l'humain. C'est le retrait qui rend la hiérarchie visible pour l'humain.
+______________________________________________________
+
+Questions :
+
+- id_face ("f0", "f1", "f2", ...) n'est pas utilisé actuellement, mais permettra de désigner la face affichée dans les animations
+
+- dans PF la face n'a pas d'identifiant car "id" sera utilisé par la Piece, et pusiqu'il n'y a qu'une seule face...
+
+- When a Face of type group is activated, all its child Pieces appear at the same time (as a composite)
+Sauf celles qui sont volontairement invisible, mais ceci n'est pas encore traité. 
+
+-  Are the parameters after the tag (like green, "Next"). Pure décoration pour les tests. inutilisé.
+
+- indentation strictly non définie par la spécification. Elle n'est que visuelle pour l'humain.
+
+- Face group can have zero children. Voir l'EBNF
+
+Read twice, please. Is this clear?
+
+Réponse en fr SVP
+
+
+
+
+
+
+
+
+
+
+
+
+______________________________________________________
+______________________________________________________
+______________________________________________________
+______________________________________________________
+
+
+
+
+______________________________________________________
+______________________________________________________
+______________________________________________________
+______________________________________________________
+
+
+
+
+
+
+______________________________________________________
+
+
+Comprends tu ce schéma avec cette documentation ?
+
+## regle de conversion du schéma vers une EBNF
+
+### interprétation
+
+Aucune interprétation, suivre les règles définies ci-dessous.
+
+
+### sens de lecture
+
+- de gauche à droite.
+- le sens vertical défini les tables : tableaaux, structure et variant (séparation ou)
+- les fleches noires indique un nouvel item à produire par le parser
+
+### rôle de chaque format d'item
+
+#### <symbole> : symbole non-terminal ebnf
+
+#### mot (suite de caractères) : à reproduire dans la ebnf
+
+#### 1 (chiffre '1' seul) : <entier> 
+
+#### flèche noir : nouvel item à produire par le parser (déjà vu dans "sens de lecture)
+
+#### xxx? (point d'interrogation après un mot ou un symbole) : opttionnel 
+
+#### Pastilles colorées vides
+
+Repère visuel pour relier un symbole (petite pastille) à sa déclaration (grande pastille)
+
+#### Pastille coloré comportaant un point d'interrogation (?) :
+
+Variant déterminé en fonction d'un symbole "maître"
+Exemple : les propriétés sont différentes suivant le type de face : image, texte, groupe...
+
+#### zones de fond :
+
+Chaque zone colorée (blanche inclue) englobe tout ce qui appartient au composant dont le nom est inscrit à gauche de la zone
+
+Donc :
+Si une zone colorée porte « <face> » → tout ce qui est dans la zone est la définition de <face>.
+C’est une règle d’englobement hiérarchique, exactement comme des blocs { … } mais visuels.
+
+Un repère est inscrite dans le coin haut droit de la zone : balise de cloture </nom>
+
+#### Repère de clôture de zone pour un synbole :
+
+Nous venons de la voir, c'est une balise incrite en haut à droite de chaque zone colorée pour indiquer la fin de la zone dédiée à la définition d'un symbole.
+
+## Les tablleaux
+
+### 1. Le nom du tableau est placé juste avant  [ et le nom de structure est placé juste avant  {
+Donc :
+
+pieces [ signifie : tableau nommé pieces
+
+params { signifie : structure nommé params
+
+Le nom n’est pas dans le bloc, mais devant l’ouverture.
+
+### 2. Les éléments du tableau sont placés entre deux traits verticaux noirs épais
+Ces deux traits verticaux jouent le rôle de délimiteurs visuels du tableau.
+Entre eux, on trouve les items.
+
+``` schema ascii
+--<tab>-[-| item1 |-]--
+          | item2 |
+          | item3 |
+
+### 3. Le séparateur d’items est indiqué dans un rond noir à gauche
+Ce rond noir contient le symbole du séparateur, par exemple :
+
+- séparateur d'items = ','
+- séparateur d'objet = ';'
+
+Ce symbole indique comment les items du tableau s’enchaînent.
+
+### 4. Les deux premiers items sont représentés dans les “barreaux” de l’échelle
+Les barreaux entre les deux traits verticaux noirs montrent :
+item 1
+item 2
+
+Puis la répétition continue en dessous.
+
+- Pour les tableaux les six petits traits en bas indiquent la répétition
+Symbole visuel pour dire :
+“cet élément peut se répéter indéfiniment”.
+C’est l’équivalent graphique de :
+{ item }
+ou ( item )*
+
+``` schema ascii
+--<tab>-[-| item1 |-]--
+          , item2 |     // notez la virgule comme séparateur d'item
+          | item3 |
+          :       :
+          :       :
+          :       :
+```
+
+``` ebnf
+<tab> ::= "[" item? ("," item)* "]"
+```
+
+- Pour les structure { } les six petits traits en bas indiquent "à venir"
+
+``` schema ascii
+--<jeux>-{-| "go"     |-}--
+           | "bridge" |   // notez pas de virgule
+           | "echec"  |
+           :          :
+           :          :
+           :          :
+```
+
+``` ebnf
+<jeux> ::= "go", "bridge", "echec"
+```
+---
+
+## table de variants dans le schéma => qui seront traduit en | (ou) dans la EBNF.
+
+Entourés de double traits verticaux : en double trait à gauche, un double-trait à droite.
+Les bareaus de l'échelle son les différentes possibilités, en EBNF => les items séparés par |
+
+
+--<item>--║-option1-║
+          ║-option2-║
+          ║-option3-║
+
+<item> ::= option1 | option2 | option 3 
+
+
+

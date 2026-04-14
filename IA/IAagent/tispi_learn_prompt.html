@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Séquence de Prompts TiSpI</title>
+
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f0f2f5;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto; /* ✅ centre horizontal */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.libelle {
+    color: #8080FF;
+    margin-bottom: 6px;
+}
+
+
+/* ===== CARTE ===== */
+.prompt-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 12px 16px;
+    border-radius: 10px;
+    position: relative;
+}
+.prompt-item-bg {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 12px 16px;
+    border-radius: 10px;
+}
+.prompt-item-text {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 0px 16px;
+    border-radius: 10px;
+}
+
+.prompt-item:hover {
+    border-color: #3b82f6;
+    background: #f1f5f9;
+}
+.prompt-item-bg:hover {
+    border-color: #3b82f6;
+    background: #f1f5f9;
+}
+
+/* ligne texte + bouton */
+.prompt-row {
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.text-content {
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+/* bouton */
+.button-def {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    width:50px;
+    height:30px;
+}
+
+.button_def:hover {
+    background-color: #2563eb;
+}
+
+.button-right {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    --xpc:100%; --oxpc:100%; --ypx:10px; --oypc:0%; --oxpx:20px; --wpc:0%; --hpc:0%; --wpx:70px; --hpx:30px;
+}
+
+.button-right:hover {
+    background-color: #2563eb;
+}
+
+/* ===== CADRE SYSTEM ===== */
+
+/* conteneur de référence */
+.cadre-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+/* système WvAnim */
+.align {
+    position: absolute;
+
+    left: calc(var(--xpc, 0%) + var(--xpx, 0px));
+    top:  calc(var(--ypc, 0%) + var(--ypx, 0px));
+
+    width:  calc(var(--wpc, 100%) + var(--wpx, 0px));
+    height: calc(var(--hpc, 100%) + var(--hpx, 0px));
+
+    transform: translate(
+        calc(-1 * (var(--oxpc, 0%) + var(--oxpx, 0px))),
+        calc(-1 * (var(--oypc, 0%) + var(--oypx, 0px)))
+    );
+
+    overflow: hidden;
+}
+.align-width {
+    position: relative; /* reste dans le flux */
+
+    /* Position horizontale uniquement */
+    left: calc(var(--xpc, 0%) + var(--xpx, 0px));
+
+    /* Origine horizontale */
+    transform: translateX(
+        calc(-1 * (var(--oxpc, 0%) + var(--oxpx, 0px)))
+    );
+}
+.align-height {
+    position: relative;
+
+    top: calc(var(--ypc, 0%) + var(--ypx, 0px));
+
+    transform: translateY(
+        calc(-1 * (var(--oypc, 0%) + var(--oypx, 0px)))
+    );
+}
+/* alignement */
+.align img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.align-bt{
+     --xpc:100%; --oxpc:100%; --ypx:10px; --oypc:0%; --oxpx:20px; --wpc:0%; --hpc:0%; --wpx:50px; --hpx:30px;
+}
+.center-x { --xpc:50%; --oxpc:50%; }
+.right-x  { --xpc:100%; --oxpc:100%; }
+.left-x   { --xpc:0%; }
+.row {
+    width: 100%;
+    position: relative;
+    font-size: 0; /* supprime l’espace entre inline-block */
+}
+.col50 {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    font-size: initial;
+}
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+.image200{
+  justify-content:center;
+  margin-top:20px;
+  height:200px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+        pre {
+            background-color: #FFFFD0;
+            margin: 5px 5px;
+            white-space: pre; /* Preserve spaces and indentation */
+        }
+
+        /* Blue: structural data */
+        .structural {
+            color: #0000FF;
+        }
+        /* Green: spatial data */
+        .spatial {
+            color: #00A000;
+        }
+
+        /* Purple: decorative data */
+        .decorative {
+            color: #C060FF;
+        }
+
+</style>
+</head>
+<!--__________________________________________________________________________________-->
+<body>
+<h2>Agent AI pour Tispi</h2><br>
+<center><div id="status" style='color:#00C000;'></div></center>
+<br>
+
+<!--__________________________________________________________________________________-->
+<!--__________________________________________________________________________________-->
+<div class="card">
+
+<h3>First prompt</h3>
+
+<p><b>Copy this into your AI’s prompt field:</b></p>
+
+<!-- ===== IMAGES ===== -->
+    <!-- IMAGE 1 et 2 -->
+    <div id='im12' class="row">
+
+        <!-- IMAGE 1 -->
+        <div id="im1" class="col50">
+            <div class="libelle">Image 1 - arbre temps/Espace Invariant : Tispi.</div>  
+            <div id='cadreim1' class="prompt-item">
+                <span class="text-content">Schéma du mécanisme Tispi<br>&nbsp;</span>
+                <button id='btim1' class='button-right align' 
+                    onclick="copyImage('ia_prompt/data/tispi003.png')"
+                    >
+                    Copy
+                </button>
+                <div class="image200" style="background-image: url('ia_prompt/data/tispi003.png');"></div>
+            </div>
+        </div>
+        
+        <!-- IMAGE 2 -->
+        <div id="im2" class="col50 align right-x">
+            <div class="libelle">Image 2 - timeline de la Piece.</div>  
+            <div class="prompt-item">
+                <span class="text-content">Schéma de la timeline :<br>valeur et transformation</span>
+                <button  class='button-right align' onclick="copyImage('ia_prompt/data/tispi002.png')">
+                    Copy
+                </button>
+                <div class="image200" style="background-image: url('./ia_prompt/data/tispi002.png');"></div>
+
+            </div>
+        </div> <!-- im2 -->
+    </div> <!-- im12 -->
+
+    <!-- ===== PROMPTS ===== -->
+    <br>
+    <div class="libelle">Segmentation des rôles des données : <span class='structural'>structural</span>, <span class='spatial'>spatial</span>, <span class='decorative'>decorative</span></div>
+
+    <div class="prompt-item">
+        <div class="prompt-row">
+            <span class="text-content">
+            <pre>
+              
+            <span class="structural">Piece root duration:200
+            Track face[0:f0,<span class="decorative">[easeout, fade]</span>; 100:f1,<span class="decorative">[fade]</span>]
+            <span class="spatial">Track pos[0:f0,<span class="decorative">[ease, slide]</span>; 50:f1,<span class="decorative">[slide]</span>]</span>
+            <span class="decorative">Track color[100:yellow,[ease, slide]; 150:red,[slide]]</span>
+            Face f0 image "myImage" <span class="spatial">w:800 h:400</span>
+            Face f1 text "Hello word" <span class="spatial">w:200 h:30</span></span>
+            </pre>  
+
+            </span>
+            <button class='button-right align' onclick="downloadFileText(this)" data-id="tispi_datas_rules_en.html">
+                Copy
+            </button>
+        </div>
+    </div>
+</div>
+<br>
+
+<!--__________________________________________________________________________________-->
+<!--__________________________________________________________________________________-->
+<div class="card">
+    <h3>second prompt</h3>   
+    <div class="libelle">Apprentissage agent</div>   
+    <div class="prompt-item">
+        <div class="prompt-row">
+            <span class="text-content">
+                Règles et apprentissage progressif de Tispi
+            </span>
+            <button class='button-right align' onclick="downloadFileText(this)" data-id="ia_learn_en.md">
+                Copy
+            </button>
+        </div>
+    </div>
+</div>
+
+<!--__________________________________________________________________________________-->
+<!--__________________________________________________________________________________-->
+<div class="card">
+    <h3>third prompt</h3>   
+    <div class="libelle">1er test</div>   
+    <div class="prompt-item">
+        <div class="prompt-row">
+            <span class="text-content">
+                Composez une page UI qui comporte:
+                - une image
+                - un texte
+                - un bouton et une Roll-over
+            </span>
+            <button class='button-right align' onclick="downloadFileText(this)" data-id="ia_learn_en.md">
+                Copy
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ===== IMAGE BAS ===== -->
+<div class="image200" style="background-image: url('ia_prompt/data/robot1.png');"></div>
+<footer>
+Modèle TiSpI - Apprentissage de l'intelligence artificielle
+</footer>
+
+</div>
+
+<script src="ia_prompt/DownloadTextFile.js"></script>
+<script src="ia_prompt/TispiLearning.js"></script>
+
+</body>
+</html>

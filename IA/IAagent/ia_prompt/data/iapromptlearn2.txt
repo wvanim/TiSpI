@@ -1,0 +1,12 @@
+We add event tags:
+P "root"
+  F group "f0"
+    P "button",
+      F group "f0", MOUSE_OUT, color green, text "Next"
+      F group "f1", MOUSE_HOVER, color yellow, text "Next..."
+      F group "f2", MOUSE_PUSHED, color black, text "Next !"
+
+In fact, the tag is an event sent by the Tispi engine.
+
+Can you place multiple Faces in the hover state of the button: an image and a text?
+Reminder: respect the alternation: Piece-type / Face-type

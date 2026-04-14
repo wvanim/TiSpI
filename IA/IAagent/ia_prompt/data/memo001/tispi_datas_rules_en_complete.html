@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tispi Syntax Highlighter</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 30px;
+            line-height: 1.5;
+        }
+
+        pre {
+            background-color: #FFFFD0;
+            margin: 20px 20px;
+            white-space: pre; /* Preserve spaces and indentation */
+        }
+
+        /* Blue: structural data */
+        .structural {
+            color: #0000FF;
+        }
+        /* Green: spatial data */
+        .spatial {
+            color: #00A000;
+        }
+
+        /* Purple: decorative data */
+        .decorative {
+            color: #C060FF;
+        }
+    </style>
+</head>
+<body>
+This page shows how Tispi data can be decomposed into actionable roles (structural, spatial, decorative). <br>
+Structure learning. <a href="ia_learn.md" target="_blank" rel="noopener noreferrer">View ia_learn.md</a>
+<br><br>
+<pre>
+<span class="structural">Piece root duration:200
+  Track face[0:f0,<span class="decorative">[easeout, fade]</span>; 100:f1,<span class="decorative">[fade]</span>]
+  <span class="spatial">Track pos[0:f0,<span class="decorative">[ease, slide]</span>; 50:f1,<span class="decorative">[slide]</span>]</span>
+  <span class="decorative">Track color[100:yellow,[ease, slide]; 150:red,[slide]]</span>
+  Face f0 image "myImage" <span class="spatial">w:800 h:400</span>
+  Face f1 text "Hello word" <span class="spatial">w:200 h:30</span></span>
+</pre>
+<br>  
+Tispi separates animation data into distinct roles:<br>
+<span class="structural">Blue: structural data</span><br>
+<span class="spatial">Green: spatial data</span><br>
+<span class="decorative">Purple: decorative data</span><br>
+<br>
+
+## The role criterion is therefore **semantic and intrinsic** to the nature of the track:<br>
+
+* **Structural (blue)**: defines the structure of the Time/Space tree and the relationships between elements.<br>
+* **Spatial (green)**: affects the relationship of an element with its external context (position, dimensions, etc.).<br>
+* **Decorative (purple)**: modifies the Face without affecting either the structure or external relationships — and this set of tracks is **finite and enumerable**. Transitions, by nature, are also decorative.<br>
+Roles are position-based, making them automatically identifiable.<br>
+
+## A table lists the tracks for each category.<br>
+
+# escape mechanisms<br>
+Separations are highly consistent, and escape mechanisms are marginal. If they were to become more frequent, different parsing modes would be applied depending on the application.<br>
+For rare cases, an escape mechanism can alter the role of a section.<br>
+Example: a spatial element can become structural.<br>
+
+# preprocessor<br>
+The separation between Structure and Spatial/Decorative aspects is handled during preprocessing.<br>
+Scripts are recomposed programmatically to respect predefined execution orders.<br>
+
+# **système de règles formelles** 
+
+pour éliminer toute ambiguïté dans la classification des tracks.
+
+---
+
+## 1. Principe fondamental
+
+> Une track est classée selon **ce qu’elle modifie dans le modèle**, et non selon son effet visuel.
+
+---
+
+## 2. Règle de décision (arbre déterministe)
+
+Appliquer les règles dans cet ordre strict :
+
+### R1 — Impact sur la structure
+
+> Si la track modifie :
+
+* la sélection de Face
+* la timeline (frames, états, arrêt)
+* les relations entre éléments
+
+→ **Structural**
+
+**Exemples :**
+
+* `face`
+* `tag`
+* `stop`
+
+---
+
+### R2 — Impact sur le référentiel externe
+
+> Si la track modifie :
+
+* la position dans le parent
+* la dimension ou l’emprise spatiale
+* la relation géométrique avec les autres éléments
+
+→ **Spatial**
+
+**Exemples :**
+
+* `pos`
+* `x`, `y`
+* `size`, `width`, `height`
+
+---
+
+### R3 — Sinon
+
+> Si la track :
+
+* ne modifie ni la structure
+* ni le référentiel externe
+
+→ **Decorative**
+
+**Exemples :**
+
+* `color`
+* `opacity`
+* `background`
+* `transition`
+
+---
+
+## 3. Règle d’exclusion stricte
+
+Une track ne peut appartenir qu’à **une seule catégorie**.
+
+> Si une track semble appartenir à plusieurs catégories →
+> ➡ elle est **mal définie** et doit être **refactorée**
+
+---
+
+## 4. Règle de priorité
+
+Si ambiguïté :
+
+```
+Structural > Spatial > Decorative
+```
+
+Exemple :
+
+* Une track qui influence indirectement la structure → **Structural**
+* Une track qui influence la perception spatiale → **Spatial**
+
+---
+
+## 5. Tests formels
+
+### Test S (Structure)
+
+> Si supprimer la track change :
+
+* l’arbre actif
+* les transitions d’état
+
+→ Structural
+
+---
+
+### Test E (External)
+
+> Si supprimer la track change :
+
+* la position relative dans le groupe
+
+→ Spatial
+
+---
+
+### Test V (Visual only)
+
+> Si supprimer la track change uniquement :
+
+* l’apparence interne de la Face
+
+→ Decorative
+
+---
+
+## 6. Cas limites normalisés
+
+### `z-index`
+
+→ **Spatial**
+Car modifie la relation spatiale (ordre de superposition)
+
+---
+
+### `visibility`
+
+→ **Structural (recommandé)**
+Car impacte la présence logique (affiché / non affiché ≠ simple décor)
+
+---
+
+### `opacity`
+
+→ **Decorative**
+Ne change ni structure ni position
+
+---
+
+### `scale`
+
+→ **Spatial** si impact bounding box
+→ sinon **Decorative**
+
+👉 règle :
+
+> si cela modifie l’emprise → Spatial
+
+---
+
+### `rotation`
+
+→ **Decorative** (si purement visuelle)
+→ **Spatial** (si collision / layout impacté)
+
+---
+
+## 7. Règle de conception des nouvelles tracks
+
+Toute nouvelle track doit répondre :
+
+1. Modifie-t-elle l’arbre ou le temps ? → Structural
+2. Modifie-t-elle la relation externe ? → Spatial
+3. Sinon → Decorative
+
+---
+
+## 8. Conséquence moteur (important)
+
+Cette classification permet :
+
+* parsing déterministe
+* séparation des passes :
+
+  * structure → exécution
+  * spatial → layout
+  * décoratif → rendu
+
+---
+
+## 9. Résumé
+
+| Catégorie  | Critère                  |
+| ---------- | ------------------------ |
+| Structural | Modifie arbre / timeline |
+| Spatial    | Modifie relation externe |
+| Decorative | Modifie rendu uniquement |
+
+---
+
+# A qui sert cette séparation de rôles
+
+## Déjà à qui ne sert pas la séparation de rôle ?
+
+Ni  aux concepteurs ni aux programmeurs humain.
+
+Les humains travaillent en toute liberté, dans le cadre de l'aternance Barre-de-temps / Groupe (c'est ainsi qu'ils voient l'alternance Temps/Espace)
+Les concepteurs humains n’ont PAS besoin de connaître les rôles. C'est du reste de la façon dont ils travaillent actuellement.
+
+## Séparation de rôle pour le traitement de l'IA.
+
+Un prétraitement organise et/ou filtre les données par rôle, dans un cadre familier à l'IA.
+
+Ce prétraitement est assez simple à réaliser car les données sont déjà réunies dans un cadre déjà logique.
+
+Un prétrairement est toujours obligatoire si l'on veut laisser de la liberté aux humains et proposer un document structuré à l'IA.
+
+# your answer
+
+Read twice, Please.
+
+If you have understood this breakdown, respond only: "OK"
+Otherwise respond: "Pending"
+Explain the advantages and disadvantages of this segmentation into predictable positions.
+
+Then add to your response: proceed to prompt #2
+
+
+
+
+</body>
+</html>
+
+
+

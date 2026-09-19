@@ -36,7 +36,7 @@ Les pièces d'un plateau sont synchronisées. Comme vous pouvez le constater dan
       alt="Diagramme Piece / Face"
       width="75%"
     ><br>
-    A Piece displays its Faces one after another (click here)
+    Plateau de 2 pièces synchroniées (click here)
   </a>
 </p>
 

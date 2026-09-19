@@ -32,7 +32,7 @@ Les Pieces enfants directs d'un groupe forment un plateau. Le plateau est une no
     <img
       src="https://www.wvanim.fr/_demo/plate_motor.jpg"
       alt="Diagramme Piece / Face"
-      width="65%"
+      width="75%"
     ><br>
     A Piece displays its Faces one after another (click here)
   </a>

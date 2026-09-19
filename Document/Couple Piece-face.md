@@ -4,8 +4,7 @@
  - Time/Space/Time/Space/..
  Here, we present it applied to user interfaces, its original domain.
 
-The model takes its cue from real life. A real-world object changes throughout its life while keeping its identity — in Tispi, the Piece plays the part of the object.
-
+The model takes its cue from real life. A real-world object changes throughout its life while keeping its identity — in Tispi, the Piece plays the part of the object.  
 At any given moment, this object presents an aspect: its Face. The Face is not an image attached to the Piece; it is the Piece itself, in its visible and audible form.
 
 Thus, we decompose any interface component along two fundamental axes: **the axis of time**, which carries its identity and logic (the Piece), and **the axis of space**, which carries its instantaneous manifestations (the Faces).

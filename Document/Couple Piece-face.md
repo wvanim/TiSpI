@@ -9,7 +9,7 @@ At any given moment, this object presents an aspect: its Face. The Face is not a
 
 Thus, we decompose any interface component along two fundamental axes: **the axis of time**, which carries its identity and logic (the Piece), and **the axis of space**, which carries its instantaneous manifestations (the Faces).
 
-Une Piece affiche ses Faces successivement (cliquez sur l'image)
+
 <p align="center">
   <a href="https://www.wvanim.fr/projets_perso/tipsi/doc/tispi_node_animated/html/structure.html">
     <img
@@ -17,6 +17,7 @@ Une Piece affiche ses Faces successivement (cliquez sur l'image)
       alt="Diagramme Piece / Face"
       width="50%"
     >
+   Une Piece affiche ses Faces successivement (cliquez sur l'image)
   </a>
 </p>
 

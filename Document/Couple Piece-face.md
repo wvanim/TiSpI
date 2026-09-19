@@ -30,7 +30,7 @@ Les Pieces enfants directs d'un groupe forment un plateau. Le plateau est une no
 <p align="center">
   <a href="https://www.wvanim.fr/projets_perso/tipsi/doc/tispi_node_animated2/structure1.html">
     <img
-      src="https://www.wvanim.fr/_demo/tispi_piece1.png"
+      src="https://www.wvanim.fr/_demo/plate_motor.jpg"
       alt="Diagramme Piece / Face"
       width="40%"
     ><br>

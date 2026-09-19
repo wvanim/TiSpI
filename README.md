@@ -18,10 +18,6 @@ TiSpI provides:
 
 - a **visual editor** (e‑anim / WvAnim)  [video](https://www.wvanim.fr/p/present_wvanim_philippe_destrumel.mp4)
 - a **structural data model** (Time/Space tree) [documentation](https://github.com/wvanim/TiSpI/tree/main/Document)
-- a **generic prompt format** for typed deterministic trees  
-  - [@wvanim/Treeiaj](https://github.com/wvanim/Treeiaj) (JSON)  
-  - [@wvanim/Treeiat](https://github.com/wvanim/Treeiat) (token)  
-- a **UI‑specific format** adapting the TiSpI tree to prompts  
 - the **Time/Space‑Invariant structural standard** itself  
 
 ---

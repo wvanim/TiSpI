@@ -21,6 +21,31 @@ Thus, we decompose any interface component along two fundamental axes: **the axi
   </a>
 </p>
 
+## 1. le plateau
+
+Les Groupes sont des Faces. L''arbre Tispi peut se présenter ainsi : Piece/Groups/Pieces/Groups/.../Piece/Face
+
+Les Pieces enfants directs d'un groupe forment un plateau. Le plateau est une notion théorique utilisé pour la documentation.
+
+<p align="center">
+  <a href="https://www.wvanim.fr/projets_perso/tipsi/doc/tispi_node_animated/html/structure1.html">
+    <img
+      src="https://www.wvanim.fr/_demo/tispi_piece.png"
+      alt="Diagramme Piece / Face"
+      width="40%"
+    ><br>
+    A Piece displays its Faces one after another (click here)
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
 ## 1. Principle of Indivisibility
 
 The **Piece / Face** pair is not an association of two separate objects, but the bipolar definition of a **single component**. It is impossible to isolate a Piece from its Faces without breaking the integrity of the system.

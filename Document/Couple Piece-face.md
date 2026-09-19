@@ -15,7 +15,7 @@ Thus, we decompose any interface component along two fundamental axes: **the axi
     <img
       src="https://www.wvanim.fr/_demo/tispi_piece.png"
       alt="Diagramme Piece / Face"
-      width="50%"
+      width="40%"
     ><br>
     A Piece displays its Faces one after another (click here)
   </a>

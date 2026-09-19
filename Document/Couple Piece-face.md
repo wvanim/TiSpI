@@ -1,10 +1,11 @@
 # Law 1: The Atomic Unit — Piece / Face
 
- Rooted in the principles of object-oriented programming, our component model draws from the reality of tangible objects.
+ Tispi — Time/Space Interleaved — is an engine that drives a component tree in which time and space strictly alternate.  :  
+ - Time/Space/Time/Space/..
+ Here, we present it applied to user interfaces, its original domain.
 
- An object in the real world possesses an identity that persists over time: its “life,” its continuity — this serves as the **Piece**.
-
-At any given instant, this object presents an aspect: this is its **Face**. The Face is not merely an image attached to the Piece; it is the Piece as it makes itself visible and audible at a given moment.
+The model takes its cue from real life. A real-world object changes throughout its life while keeping its identity — in Tispi, the Piece plays the part of the object.
+At any given moment, this object presents an aspect: its Face. The Face is not an image attached to the Piece; it is the Piece itself, in its visible and audible form.
 
 Thus, we decompose any interface component along two fundamental axes: **the axis of time**, which carries its identity and logic (the Piece), and **the axis of space**, which carries its instantaneous manifestations (the Faces).
 

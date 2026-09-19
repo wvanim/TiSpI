@@ -16,10 +16,10 @@ The **Piece / Face** pair is not an association of two separate objects, but the
   <img
     src="https://media.licdn.com/dms/image/v2/D4D22AQFJVaDiBvDFJA/feedshare-image-high-res/B4DZ5jF6jDHoAU-/0/1779778957036?e=1791417600&v=beta&t=aw8Q8INnE7JsprIgM1O9aKB5Cl20iK13tgyFXXNF1nE"
     alt="Diagramme Piece / Face"
-    width="20%"
+    width="50%"
   >
 </p>
-![Le plateau de Pieces](https://media.licdn.com/dms/image/v2/D4D22AQFJVaDiBvDFJA/feedshare-image-high-res/B4DZ5jF6jDHoAU-/0/1779778957036?e=1791417600&v=beta&t=aw8Q8INnE7JsprIgM1O9aKB5Cl20iK13tgyFXXNF1nE)
+
 
 ### Constitutive Duality
 

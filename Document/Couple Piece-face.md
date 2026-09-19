@@ -27,6 +27,8 @@ Les Groupes sont des Faces. L''arbre Tispi peut se présenter ainsi : Piece/Grou
 
 Les Pieces enfants directs d'un groupe forment un plateau. Le plateau est une notion théorique utilisé pour la documentation.
 
+Les pièces d'un plateau sont synchronisées. Comme vous pouvez le constater dans cette animation en cliquant ci-dessous.
+
 <p align="center">
   <a href="https://www.wvanim.fr/projets_perso/tipsi/doc/tispi_node_animated2/structure1.html">
     <img

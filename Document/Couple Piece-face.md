@@ -9,10 +9,7 @@ At any given moment, this object presents an aspect: its Face. The Face is not a
 
 Thus, we decompose any interface component along two fundamental axes: **the axis of time**, which carries its identity and logic (the Piece), and **the axis of space**, which carries its instantaneous manifestations (the Faces).
 
-## 1. Principle of Indivisibility
-
-The **Piece / Face** pair is not an association of two separate objects, but the bipolar definition of a **single component**. It is impossible to isolate a Piece from its Faces without breaking the integrity of the system.
-
+Une Piece affiche ses Faces successivement (cliquez sur l'image)
 <p align="center">
   <a href="https://www.wvanim.fr/projets_perso/tipsi/doc/tispi_node_animated/html/structure.html">
     <img
@@ -22,6 +19,12 @@ The **Piece / Face** pair is not an association of two separate objects, but the
     >
   </a>
 </p>
+
+## 1. Principle of Indivisibility
+
+The **Piece / Face** pair is not an association of two separate objects, but the bipolar definition of a **single component**. It is impossible to isolate a Piece from its Faces without breaking the integrity of the system.
+
+
 
 ### Constitutive Duality
 

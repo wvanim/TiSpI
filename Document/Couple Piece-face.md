@@ -16,7 +16,7 @@ The **Piece / Face** pair is not an association of two separate objects, but the
 <p align="center">
   <a href="https://www.wvanim.fr/projets_perso/tipsi/doc/tispi_node_animated/html/structure.html">
     <img
-      src="https://www.wvanim.fr/public_html/_demo/tispi_piece.png"
+      src="https://www.wvanim.fr/_demo/tispi_piece.png"
       alt="Diagramme Piece / Face"
       width="50%"
     >

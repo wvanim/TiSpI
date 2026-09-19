@@ -17,7 +17,7 @@ Thus, we decompose any interface component along two fundamental axes: **the axi
       alt="Diagramme Piece / Face"
       width="50%"
     ><br>
-   Une Piece affiche ses Faces successivement (cliquez ici)
+    A Piece displays its Faces one after another (click here)
   </a>
 </p>
 

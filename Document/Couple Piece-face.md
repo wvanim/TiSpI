@@ -49,7 +49,7 @@ Les Pieces et les Faces exposent des tableau orthogonaux : temps | Face
     <img
       src="https://www.wvanim.fr/_demo/tispi003a.png"
       alt="Diagramme Piece / Face"
-      width="75%"
+      width="100%"
     ><br>
     Plateau de 2 pièces synchroniées (click here)
   </a>

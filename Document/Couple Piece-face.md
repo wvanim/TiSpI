@@ -51,7 +51,7 @@ Les Pieces et les Faces exposent des tableau orthogonaux : temps | Face
       alt="Diagramme Piece / Face"
       width="100%"
     ><br>
-    Plateau de 2 pièces synchroniées (click here)
+    Tree Time/Space Interleaved (click here)
   </a>
 </p>
 

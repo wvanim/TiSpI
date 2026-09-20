@@ -40,7 +40,7 @@ Les pièces d'un plateau sont synchronisées. Comme vous pouvez le constater dan
   </a>
 </p>
 
-## L'arbre
+## 2 - L'arbre
 
 Les Pieces et les Faces exposent des tableau orthogonaux : temps | Face
 
@@ -54,6 +54,18 @@ Les Pieces et les Faces exposent des tableau orthogonaux : temps | Face
     Tree Time/Space Interleaved (click here)
   </a>
 </p>
+
+## 3 - les rôle de la barre de temps
+
+### Barre d'états - listener de valeur discrète
+
+### Barre de temps
+
+### Slave d'une valeur master - listener de valeur continue
+
+
+
+
 
 
 

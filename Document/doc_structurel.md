@@ -23,16 +23,16 @@ The model takes its cue from real life. A real-world object changes throughout i
 At any given moment, this object presents an aspect: its Face. The Face is not an image attached to the Piece; it is the Piece itself, in its visible and audible form.
 
 Thus, we decompose any interface component along two fundamental axes: **the axis of time**, which carries its identity and logic (the Piece), and **the axis of space**, which carries its instantaneous manifestations (the Faces).
-<p align="center" style="font-size:6px;">
-  <a href="https://www.wvanim.fr/projets_perso/tipsi/doc/tispi_node_animated/html/structure.html">
+<p align="center"">
+  <a href="https://www.wvanim.fr/projets_perso/tipsi/doc/tispi_node_animated/html/structure.html"  style="font-size:6px;>
     <img
       src="https://www.wvanim.fr/_demo/tispi_piece.png"
       alt="Diagramme Piece / Face"
       width="40%"
     ><br>
-    
+    A Piece displays its Faces one after another (click here)
   </a>
-  A Piece displays its Faces one after another (click here)
+  
 </p>
 
 ## 1. le plateau

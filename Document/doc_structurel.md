@@ -15,7 +15,9 @@ Créé en 1999 pour l'éditeur d'animation e-anim, la structure Time/Space Inter
   </a>
 </p>
 
-# Law 1: The Atomic Unit — Piece / Face
+# Tree Piece / Face Interleaved
+
+## 1. Law 1: The Atomic Unit — Piece / Face
 
  Tispi — Time/Space Interleaved — is an engine that drives a component tree in which time and space strictly alternate.  :  
  - Time/Space/Time/Space/..
@@ -36,7 +38,7 @@ Thus, we decompose any interface component along two fundamental axes: **the axi
   </a>
 </p>
 
-## 1. le plateau
+## 2. le plateau
 
 Les Groupes sont des Faces. L''arbre Tispi peut se présenter ainsi : Piece/Groups/Pieces/Groups/.../Piece/Face
 
@@ -55,7 +57,7 @@ Les pièces d'un plateau sont synchronisées. Comme vous pouvez le constater dan
   </a>
 </p>
 
-## 2 - L'arbre
+## 3. L'arbre
 
 Donc les Pieces et les Faces exposent des tableau orthogonaux : temps | Espace
 
@@ -73,6 +75,27 @@ Donc les Pieces et les Faces exposent des tableau orthogonaux : temps | Espace
 ## 3 - les rôle de la barre de temps
 
 ### Barre d'états - listener de valeur discrète
+
+La préhistoire de e-anim proposait une éditeurs dynamique, avec pages, boutons, roll-over, cadres paginés...
+Ces contrôles étaient pilotés des tables à état.
+Mécaniquement il s'agit d'outils réactifs à des événements sur un nombre défini d'état : un listener de valeur discrètes.
+<p align="center">
+  <a href="https://www.wvanim.fr/projets_perso/tipsi/schema_piece_face.html">
+    <img
+      src="https://www.wvanim.fr/_demo/button_user.png"
+      alt="Diagramme Piece / Face"
+      width="60%"
+    >
+    <img
+      src="https://www.wvanim.fr/_demo/button_motor.png"
+      alt="Diagramme Piece / Face"
+      width="60%"
+    >
+    <br>
+    <sub>Tree Time/Space Interleaved (click image)</sub>
+  </a>
+</p>
+
 
 ### Barre de temps
 

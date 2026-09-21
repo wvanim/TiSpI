@@ -2,13 +2,13 @@
 
 Créé en 1999 pour l'éditeur d'animation e-anim, la structure Time/Space Interleave a exporté les animations en Java, en Flash et actuellement en Html.
 <p align="center">
-  <a href="https://www.wvanim.fr/projets_perso/tipsi/doc/tispi_node_animated/html/structure.html">
+  <a href="https://www.wvanim.fr/">
     <img
       src="https://www.wvanim.fr/_demo/e-anim.png"
       alt="Diagramme Piece / Face"
-      width="40%"
+      width="100%"
     ><br>
-    A Piece displays its Faces one after another (click here)
+    Actuellement en conversion pour s'adapter au traitement IA
   </a>
 </p>
 

@@ -1,3 +1,18 @@
+# Historic
+
+Créé en 1999 pour l'éditeur d'animation e-anim, la structure Time/Space Interleave a exporté les animations en Java, en Flash et actuellement en Html.
+<p align="center">
+  <a href="https://www.wvanim.fr/projets_perso/tipsi/doc/tispi_node_animated/html/structure.html">
+    <img
+      src="https://www.wvanim.fr/_demo/e-anim.png"
+      alt="Diagramme Piece / Face"
+      width="40%"
+    ><br>
+    A Piece displays its Faces one after another (click here)
+  </a>
+</p>
+
+
 # Law 1: The Atomic Unit — Piece / Face
 
  Tispi — Time/Space Interleaved — is an engine that drives a component tree in which time and space strictly alternate.  :  
@@ -8,8 +23,6 @@ The model takes its cue from real life. A real-world object changes throughout i
 At any given moment, this object presents an aspect: its Face. The Face is not an image attached to the Piece; it is the Piece itself, in its visible and audible form.
 
 Thus, we decompose any interface component along two fundamental axes: **the axis of time**, which carries its identity and logic (the Piece), and **the axis of space**, which carries its instantaneous manifestations (the Faces).
-
-
 <p align="center">
   <a href="https://www.wvanim.fr/projets_perso/tipsi/doc/tispi_node_animated/html/structure.html">
     <img

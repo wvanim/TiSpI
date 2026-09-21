@@ -32,7 +32,7 @@ Thus, we decompose any interface component along two fundamental axes: **the axi
     ><br>
     
   </a>
-  <sub></sub>A Piece displays its Faces one after another (click here)</sub>
+  <sub>A Piece displays its Faces one after another (click here)</sub>
 </p>
 
 ## 1. le plateau

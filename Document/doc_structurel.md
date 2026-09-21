@@ -6,7 +6,7 @@ Créé en 1999 pour l'éditeur d'animation e-anim, la structure Time/Space Inter
     <img
       src="https://www.wvanim.fr/_demo/e-anim.png"
       alt="Diagramme Piece / Face"
-      width="100%"
+      width="90%"
     ><br>
     Actuellement en conversion pour s'adapter au traitement IA
   </a>

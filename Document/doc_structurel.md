@@ -57,7 +57,7 @@ Les pièces d'un plateau sont synchronisées. Comme vous pouvez le constater dan
 
 ## 2 - L'arbre
 
-Donc les Pieces et les Faces exposent des tableau orthogonaux : temps | Face
+Donc les Pieces et les Faces exposent des tableau orthogonaux : temps | Espace
 
 <p align="center">
   <a href="https://www.wvanim.fr/projets_perso/tipsi/schema_piece_face.html">

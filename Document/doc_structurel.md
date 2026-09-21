@@ -30,8 +30,9 @@ Thus, we decompose any interface component along two fundamental axes: **the axi
       alt="Diagramme Piece / Face"
       width="40%"
     ><br>
-    A Piece displays its Faces one after another (click here)
+    
   </a>
+  A Piece displays its Faces one after another (click here)
 </p>
 
 ## 1. le plateau

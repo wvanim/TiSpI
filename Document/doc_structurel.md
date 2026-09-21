@@ -8,8 +8,9 @@ Créé en 1999 pour l'éditeur d'animation e-anim, la structure Time/Space Inter
       alt="Diagramme Piece / Face"
       width="60%"
     ><br>
-    Actuellement en conversion pour s'adapter au traitement IA
+    
   </a>
+  <sub>Actuellement en conversion pour s'adapter au traitement IA</sub>
 </p>
 
 
@@ -65,8 +66,9 @@ Donc les Pieces et les Faces exposent des tableau orthogonaux : temps | Face
       alt="Diagramme Piece / Face"
       width="100%"
     ><br>
-    Tree Time/Space Interleaved (click here)
+    
   </a>
+  <sub>Tree Time/Space Interleaved (click here)</sub>
 </p>
 
 ## 3 - les rôle de la barre de temps

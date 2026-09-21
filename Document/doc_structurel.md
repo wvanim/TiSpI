@@ -59,20 +59,28 @@ Les pièces d'un plateau sont synchronisées. Comme vous pouvez le constater dan
 
 ## 3. L'arbre
 
-Donc les Pieces et les Faces exposent des tableau orthogonaux : temps | Espace
+La combinaison du temps et de l'espace est une notion élémentaire de l'interface utilisateur.
+
+<p align="center"><img
+  src="https://www.wvanim.fr/_demo/time_space.png"
+  alt="Temps / Espace"
+  width="50%"
+></p>
+
+Tispi les combine en les **alternant** : la particularité du modèle réside dans l'alternance stricte des Pièces et des Faces. Elles exposent des tableaux orthogonaux : temps | espace
 
 <p align="center">
   <a href="https://www.wvanim.fr/projets_perso/tipsi/schema_piece_face.html">
     <img
       src="https://www.wvanim.fr/_demo/tispi003a.png"
-      alt="Diagramme Piece / Face"
-      width="100%"
+      alt="Diagramme Pièce / Face"
+      width="85%"
     ><br>
     <sub>Tree Time/Space Interleaved (click image)</sub>
   </a>
 </p>
 
-## 3 - les rôle de la barre de temps
+## 4 - les rôle de la barre de temps
 
 ### Barre d'états - listener de valeur discrète
 

@@ -33,7 +33,7 @@ Thus, we decompose any interface component along two fundamental axes: **the axi
     ><br>
     
   </a>
-  <sub>A Piece displays its Faces one after another (click here)</sub>
+  <sub>A Piece displays its Faces one after another (click image)</sub>
 </p>
 
 ## 1. le plateau
@@ -51,7 +51,7 @@ Les pièces d'un plateau sont synchronisées. Comme vous pouvez le constater dan
       alt="Diagramme Piece / Face"
       width="75%"
     ><br>
-    Plateau de 2 pièces synchronisées (click here)
+    Plateau de 2 pièces synchronisées (click image)
   </a>
 </p>
 
@@ -68,7 +68,7 @@ Donc les Pieces et les Faces exposent des tableau orthogonaux : temps | Face
     ><br>
     
   </a>
-  <sub>Tree Time/Space Interleaved (click here)</sub>
+  <sub>Tree Time/Space Interleaved (click image)</sub>
 </p>
 
 ## 3 - les rôle de la barre de temps

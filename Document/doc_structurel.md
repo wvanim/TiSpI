@@ -1,3 +1,6 @@
+Présentation de la partie structurelle, composition et modification, de Time/Space Interleaved - TiSpI. 
+
+
 # Historic
 
 Créé en 1999 pour l'éditeur d'animation e-anim, la structure Time/Space Interleave a exporté les animations en Java, en Flash et actuellement en Html.
@@ -8,11 +11,9 @@ Créé en 1999 pour l'éditeur d'animation e-anim, la structure Time/Space Inter
       alt="Diagramme Piece / Face"
       width="60%"
     ><br>
-    
+    <sub>Actuellement en conversion pour s'adapter au traitement IA</sub>
   </a>
-  <sub>Actuellement en conversion pour s'adapter au traitement IA</sub>
 </p>
-
 
 # Law 1: The Atomic Unit — Piece / Face
 
@@ -31,9 +32,8 @@ Thus, we decompose any interface component along two fundamental axes: **the axi
       alt="Diagramme Piece / Face"
       width="40%"
     ><br>
-    
+    <sub>A Piece displays its Faces one after another (click image)</sub>
   </a>
-  <sub>A Piece displays its Faces one after another (click image)</sub>
 </p>
 
 ## 1. le plateau
@@ -51,7 +51,7 @@ Les pièces d'un plateau sont synchronisées. Comme vous pouvez le constater dan
       alt="Diagramme Piece / Face"
       width="75%"
     ><br>
-    Plateau de 2 pièces synchronisées (click image)
+    <sub>Plateau de 2 pièces synchronisées (click image)</sub>
   </a>
 </p>
 
@@ -66,9 +66,8 @@ Donc les Pieces et les Faces exposent des tableau orthogonaux : temps | Face
       alt="Diagramme Piece / Face"
       width="100%"
     ><br>
-    
+    <sub>Tree Time/Space Interleaved (click image)</sub>
   </a>
-  <sub>Tree Time/Space Interleaved (click image)</sub>
 </p>
 
 ## 3 - les rôle de la barre de temps

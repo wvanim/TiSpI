@@ -3,11 +3,11 @@ Présentation de la partie structurelle, composition et modification, de Time/Sp
 <table align="center"><tr><td>
   <a href="https://www.wvanim.fr/p/tispi_agent_prompt.html">
   <img
-    src="https://www.wvanim.fr/_demo/tree_cristal_robot_part2.png"
+    src="https://www.wvanim.fr/_demo/wvanim_video2.jpg"
     alt="Temps / Espace"
     width="350"
   ><br>
-    <sub>See IA compatibility -> Agentic training (clci image)</sub>
+    <sub>See IA compatibility -> Agentic training (clic image)</sub>
   </a>
 </td></tr></table>
 

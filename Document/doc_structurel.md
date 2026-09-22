@@ -1,9 +1,15 @@
 Présentation de la partie structurelle, composition et modification, de Time/Space Interleaved - TiSpI. 
-<p align="center"><img
-  src="https://www.wvanim.fr/_demo/tree_cristal_robot_part2.png"
-  alt="Temps / Espace"
-  width="30%"
-></p>
+
+<table align="center"><tr><td>
+  <a href="https://www.wvanim.fr/p/tispi_agent_prompt.html">
+  <img
+    src="https://www.wvanim.fr/_demo/tree_cristal_robot_part2.png"
+    alt="Temps / Espace"
+    width="350"
+  ><br>
+    <sub>See IA compatibility -> Agentic training (clci image)</sub>
+  </a>
+</td></tr></table>
 
 
 # Historic

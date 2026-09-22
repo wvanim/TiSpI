@@ -1,4 +1,9 @@
 Présentation de la partie structurelle, composition et modification, de Time/Space Interleaved - TiSpI. 
+<p align="center"><img
+  src="https://www.wvanim.fr/_demo/tree_cristal_robot_part2.png"
+  alt="Temps / Espace"
+  width="50%"
+></p>
 
 
 # Historic

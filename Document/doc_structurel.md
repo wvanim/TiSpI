@@ -108,6 +108,19 @@ Mécaniquement il s'agit d'outils réactifs à des événements sur un nombre d�
 </p>
 
 
-### Barre de temps
+### Barre de temps - animation
+
+<p align="center">
+  <a href="https://www.wvanim.fr/_demo/present/wvanim-2004-en.html">
+    <img
+      src="https://www.wvanim.fr/_demo/present/timebar_wvanim.png"
+      alt="Diagramme Piece / Face"
+      width="40%"
+    ><br>
+    <sub>Plateau de 2 pièces synchronisées (click image)</sub>
+  </a>
+</p>
+
+
 
 ### Slave d'une valeur master - listener de valeur continue

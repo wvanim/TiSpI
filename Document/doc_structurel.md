@@ -19,8 +19,6 @@ TiSpI proposes a formalization of UI processing. Since 1999, it has been impleme
   </a>
 </p>
 
-# Tree Piece / Face Interleaved
-
 ## 1. Law 1: The Atomic Unit — Piece / Face
 
  Tispi — Time/Space Interleaved — is an engine that drives a component tree in which time and space strictly alternate.  :  

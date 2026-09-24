@@ -1,12 +1,12 @@
-Présentation de la partie structurelle de Time/Space Interleaved - TiSpI. 
+# TiSpI — Time/Space Interleaved
 
-Deeply impressed by the logical simplicity of a processor, I sought to structure and simplify the mechanisms underlying user interface processing. At the core of this approach is a tree that strictly alternates time and space (TiSpI — Time/Space Interleaved).  
-The document's data follows this structure, while behavioral rules govern its evolution over time.  
-This simple organization gives rise to capabilities that emerge without being explicitly programmed: the editor itself is built with its own tools.
+This document presents the structural part of TiSpI.
+
+Deeply impressed by the logical simplicity of a processor, I sought to structure and simplify the mechanisms underlying user interface processing. At the core of this approach is a tree that strictly alternates time and space.
+
+The document's data follows this structure, while behavioral rules govern its evolution over time. This simple organization gives rise to capabilities that emerge without being explicitly programmed: the editor itself is built with its own tools.
 
 TiSpI proposes a formalization of UI processing. Since 1999, it has been implemented in Java applets, then in SWF/Flash, and now in HTML.
-
-
 
 <p align="center">
   <a href="https://www.wvanim.fr/p/tispi_agent_prompt.html" >

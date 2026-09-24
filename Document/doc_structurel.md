@@ -30,7 +30,7 @@ At any given moment, this object presents an aspect: its Face. The Face is not a
 
 Thus, we decompose any interface component along two fundamental axes: **the axis of time**, which carries its identity and logic (the Piece), and **the axis of space**, which carries its instantaneous manifestations (the Faces).
 <p align="center">
-  <a href="https://www.wvanim.fr/projets_perso/tipsi/doc/tispi_node_animated/html/structure.html">
+  <a href="https://www.wvanim.fr/projets_perso/tispi/doc/tispi_node_animated/html/structure.html">
     <img
       src="https://www.wvanim.fr/_demo/tispi_piece.png"
       alt="Diagramme Piece / Face"
@@ -49,7 +49,7 @@ Les Pieces enfants directs d'un groupe forment un plateau. Le plateau est une no
 Les pièces d'un plateau sont synchronisées. Comme vous pouvez le constater dans cette animation en cliquant ci-dessous.
 
 <p align="center">
-  <a href="https://www.wvanim.fr/projets_perso/tipsi/doc/tispi_node_animated2/structure1.html">
+  <a href="https://www.wvanim.fr/projets_perso/tispi/doc/tispi_node_animated2/structure1.html">
     <img
       src="https://www.wvanim.fr/_demo/plate_motor.jpg"
       alt="Diagramme Piece / Face"
@@ -72,7 +72,8 @@ La combinaison du temps et de l'espace est une notion élémentaire de l'interfa
 Tispi les combine en les **alternant** : la particularité du modèle réside dans l'alternance stricte des Pièces et des Faces. Elles exposent des tableaux orthogonaux : temps | espace
 
 <p align="center">
-  <a href="https://www.wvanim.fr/projets_perso/tipsi/schema_piece_face.html">
+           
+  <a href="https://www.wvanim.fr/projets_perso/tispi/schema_piece_face.html">
     <img
       src="https://www.wvanim.fr/_demo/tispi003a.png"
       alt="Diagramme Pièce / Face"
@@ -90,7 +91,7 @@ La préhistoire de e-anim proposait une éditeurs dynamique, avec pages, boutons
 Ces contrôles étaient pilotés des tables à état.
 Mécaniquement il s'agit d'outils réactifs à des événements sur un nombre défini d'état : un listener de valeur discrètes.
 <p align="center">
-  <a href="https://www.wvanim.fr/projets_perso/tipsi/schema_piece_face.html">
+  <a href="https://www.wvanim.fr/projets_perso/tispi/schema_piece_face.html">
     <img
       src="https://www.wvanim.fr/_demo/button_user.png"
       alt="Diagramme Piece / Face"

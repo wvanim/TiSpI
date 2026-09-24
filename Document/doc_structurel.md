@@ -19,20 +19,6 @@ TiSpI proposes a formalization of UI processing. Since 1999, it has been impleme
   </a>
 </p>
 
-# Historic
-
-Créé en 1999 pour l'éditeur d'animation e-anim, la structure Time/Space Interleave a exporté les animations en Java, en Flash et actuellement en Html.
-<p align="center">
-  <a href="https://www.wvanim.fr/">
-    <img
-      src="https://www.wvanim.fr/_demo/e-anim.png"
-      alt="Diagramme Piece / Face"
-      width="60%"
-    ><br>
-    <sub>Actuellement en conversion pour s'adapter au traitement IA</sub>
-  </a>
-</p>
-
 # Tree Piece / Face Interleaved
 
 ## 1. Law 1: The Atomic Unit — Piece / Face

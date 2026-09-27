@@ -126,6 +126,26 @@ Les pistes de Tispi décrivent de façon classique les keys, mais il décrit aus
 
 ### Slave d'une valeur master - listener de valeur continue
 
+La barre de temps est pilotée par une valeur externe.  
+C'est un mécanisme fondamentale de Tispi.
+
+Ici la barre de temps de l'animation est assujettie à la timeline de la vidéo.
+La synchro se positionne en listener d'une source. 
+- ici "&synchro @master=face;" force la Pièce à écouter la face
+- et "&videoSynchro" envoie à la Pièce les informations du pilotage et de synchro de la vidéo
+```html
+<!-- ════════════════════════════════════════════════════════════════
+     player : sa face porte la vidéo. &synchro !<face> ne cale pas *player*
+     mais l'HORLOGE DU PLATEAU (ici le <body>) sur la vidéo :
+     requestMasterFromFace → la piste &videoSynchro de la face fournit le
+     TsiVideoClockMasterService. 1 plateau = 1 horloge → toutes les Pièces
+     sœurs (tag…) suivent la vidéo, et se figent quand elle s'arrête.
+     ════════════════════════════════════════════════════════════════ -->
+<tsi-p id="player" data-tsi="&synchro @master=face; 0:; &pos 40,40;">
+  <tsi-f id="screen" data-tsi='&videoSynchro "avion.mp4", controls; &size 640,360;'></tsi-f>
+</tsi-p>
+```
+La synchro pièce serait, de façon identique, pilotée par un pièce parent ou une jauge placée dans la Face.
 <p align="center">
   <a href="https://www.wvanim.fr/video.html">
     <img

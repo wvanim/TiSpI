@@ -11,7 +11,7 @@ TiSpI proposes a formalization of UI processing. Since 1999, it has been impleme
 <p align="center">
   <a href="https://www.wvanim.fr/p/tispi_agent_prompt.html" >
   <img
-    src="https://www.wvanim.fr/_demo/wvanim_video2.jpg"
+    src="https://www.wvanim.fr/_demo/present_tispi.png"
     alt="Temps / Espace"
     width="350"
   ><br>
@@ -110,6 +110,9 @@ Mécaniquement il s'agit d'outils réactifs à des événements sur un nombre d�
 
 ### Barre de temps - animation
 
+Usage traditionnel de la barre-de-temps. Tableau composé de keys et d'intervalles avant, après et entre les keys.
+Les pistes de Tispi décrivent de façon classique les keys, mais il décrit aussi les transformation et les effets d'apparition sur le keys
+
 <p align="center">
   <a href="https://www.wvanim.fr/_demo/present/wvanim-2004-en.html">
     <img
@@ -121,6 +124,15 @@ Mécaniquement il s'agit d'outils réactifs à des événements sur un nombre d�
   </a>
 </p>
 
-
-
 ### Slave d'une valeur master - listener de valeur continue
+
+<p align="center">
+  <a href="https://www.wvanim.fr/video.html">
+    <img
+      src="https://www.wvanim.fr/_demo/video_synchro.png"
+      alt="Diagramme Piece / Face"
+      width="40%"
+    ><br>
+    <sub>Plateau de 2 pièces synchronisées (click image)</sub>
+  </a>
+</p>

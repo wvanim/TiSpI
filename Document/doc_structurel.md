@@ -61,6 +61,8 @@ Les pièces d'un plateau sont synchronisées. Comme vous pouvez le constater dan
 
 ## 3. L'arbre
 
+### Notion élémentaire de l''Interface Utilisateur, mis en évidence dans l'éditeurs.
+
 La combinaison du temps et de l'espace est une notion élémentaire de l'interface utilisateur.
 
 <p align="center"><img
@@ -68,6 +70,8 @@ La combinaison du temps et de l'espace est une notion élémentaire de l'interfa
   alt="Temps / Espace"
   width="50%"
 ></p>
+
+### Le mécanisme de l'activation des branches par le composant temporel (la Piece).
 
 Tispi les combine en les **alternant** : la particularité du modèle réside dans l'alternance stricte des Pièces et des Faces. Elles exposent des tableaux orthogonaux : temps | espace
 
@@ -162,15 +166,18 @@ La synchro pièce serait, de façon identique, pilotée par un pièce parent ou 
 ### Qu'est-ce qu'une propriété ? 
 
 Un composant UI est défini par l'ensemble de ses propriétés et des actions appliquées à ces propriétés.
-Les propriété définissent l'aspect et la situation spatial du composant.
+
+Les propriété définissent l'aspect et la situation spatial du composant.  
 Notemment Son évolution structurelle que nous nommerons "succession de faces".
    par exemple : les ???
-Mais aussi l'aspect géométrique. Traditionnellement : position, échelle, rotation...
+   
+Mais aussi l'aspect géométrique. Traditionnellement : position, échelle, rotation...  
 Et enfin la décoration : couleur, bordure...
 
 ### Une piste par propriété
 
 La barre de temps est divisée en pistes.
+
 Chaque piste prend en charge une propriété 
 
 <p align="center">
@@ -185,10 +192,18 @@ Chaque piste prend en charge une propriété
 </p>
 
 
-### Les rôles des pistes
+### Les 3 rôles des propriétés 
 
+Les propriété sont classées suivant l'étendu de leur influence
+- rôle structurel : modifie la structure active. Par exemple, le changement d'état désactive une branche pour un activer une autre.
+Cette propriété agit au niveau de l'arbre.
+- rôle spatial : pilote des pièces pour organiser l'occupation de l'espace d'affichage ou sonore à l'écran.
+Cette propriété agit au niveau du plateau
+- rôle décoratif : définit l'aspect du rendu.
+Cette propriété agit sur les faces 
 
 #### structuel
+Voir 3. l'arbre / Le mécanisme de l'activation des branches par le composant temporel (la Piece).
 
 #### spatial
 

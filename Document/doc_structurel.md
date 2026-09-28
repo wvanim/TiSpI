@@ -156,3 +156,32 @@ La synchro pièce serait, de façon identique, pilotée par un pièce parent ou 
     <sub>Plateau de 2 pièces synchronisées (click image)</sub>
   </a>
 </p>
+
+## 4 - les pistes
+
+### Une piste par propriété
+[https://www.wvanim.fr/video.html](https://www.wvanim.fr/_demo/tispi002.png)
+<p align="center">
+  <a href="https://www.wvanim.fr/_demo/tispi002.png">
+    <img
+      src="https://www.wvanim.fr/_demo/tispi002.png"
+      alt="Diagramme Piece / Face"
+      width="40%"
+    ><br>
+    <sub>Plateau de 2 pièces synchronisées (click image)</sub>
+  </a>
+</p>
+
+
+### Les rôles des pistes
+
+#### structuel
+
+#### spatial
+
+#### décorative
+
+### La piste &face
+
+### La piste action
+

@@ -160,7 +160,6 @@ La synchro pièce serait, de façon identique, pilotée par un pièce parent ou 
 ## 4 - les pistes
 
 ### Une piste par propriété
-[https://www.wvanim.fr/video.html](https://www.wvanim.fr/_demo/tispi002.png)
 <p align="center">
   <a href="https://www.wvanim.fr/_demo/tispi002.png">
     <img

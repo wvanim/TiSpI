@@ -159,7 +159,20 @@ La synchro pièce serait, de façon identique, pilotée par un pièce parent ou 
 
 ## 4 - les pistes
 
+### Qu'est-ce qu'une propriété ? 
+
+Un composant UI est défini par l'ensemble de ses propriétés et des actions appliquées à ces propriétés.
+Les propriété définissent l'aspect et la situation spatial du composant.
+Notemment Son évolution structurelle que nous nommerons "succession de faces".
+   par exemple : les ???
+Mais aussi l'aspect géométrique. Traditionnellement : position, échelle, rotation...
+Et enfin la décoration : couleur, bordure...
+
 ### Une piste par propriété
+
+La barre de temps est divisée en pistes.
+Chaque piste prend en charge une propriété 
+
 <p align="center">
   <a href="https://www.wvanim.fr/_demo/tispi002.png">
     <img
@@ -173,6 +186,7 @@ La synchro pièce serait, de façon identique, pilotée par un pièce parent ou 
 
 
 ### Les rôles des pistes
+
 
 #### structuel
 

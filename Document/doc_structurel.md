@@ -202,8 +202,20 @@ Cette propriété agit au niveau du plateau
 - rôle décoratif : définit l'aspect du rendu.
 Cette propriété agit sur les faces 
 
-#### structuel
-Voir 3. l'arbre / Le mécanisme de l'activation des branches par le composant temporel (la Piece).
+#### structurel
+
+La structure est pilotée par les pistes de face et les pistes d'actions.
+
+<p align="center">
+  <a href="https://www.wvanim.fr/projets_perso/tispi/schema_piece_face.html">
+    <img
+      src="https://www.wvanim.fr/_demo/tispi004.png"
+      alt="Diagramme Piece / Face"
+      width="60%"
+    ><br>
+    <sub>Idem 3. l'arbre / Le mécanisme de l'activation des branches</sub>
+  </a>
+</p>
 
 #### spatial
 

@@ -167,7 +167,7 @@ La synchro pièce serait, de façon identique, pilotée par un pièce parent ou 
       alt="Diagramme Piece / Face"
       width="40%"
     ><br>
-    <sub>Plateau de 2 pièces synchronisées (click image)</sub>
+    <sub>Piste par propriété, chacune décrit les keys et les intervalle</sub>
   </a>
 </p>
 

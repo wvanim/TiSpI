@@ -185,7 +185,7 @@ Chaque piste prend en charge une propriété
     <img
       src="https://www.wvanim.fr/_demo/tispi002.png"
       alt="Diagramme Piece / Face"
-      width="40%"
+      width="60%"
     ><br>
     <sub>Piste par propriété, chacune décrit les keys et les intervalle</sub>
   </a>
@@ -202,26 +202,38 @@ Cette propriété agit au niveau du plateau
 - rôle décoratif : définit l'aspect du rendu.
 Cette propriété agit sur les faces 
 
-#### structurel
+#### structurel : les pistes &face et &action
 
 La structure est pilotée par les pistes de face et les pistes d'actions.
+
+```html
+<!-- ════════════════════════════════════════════════════════════════ 
+    La piste &face décrit les informations utiles à la structure
+    Pour chaque key : <effet d'apparition> numFrame: faceName;
+    ════════════════════════════════════════════════════════════════-->
+<tsi-p id="myPiece" data-tsi="
+ &synchro 0:stop;
+ &face <60:ease,fade,2> 0:faceOut; <20:easeIn,flash> 1:faceOver; <0:> 2:facePushed; 
+">
+    <tsi-f id="faceOut" > <!-- branche de l'états out --> </tsi>
+    <tsi-f id="faceOver" >  <!-- branche de l'états over -->  </tsi>
+    <tsi-f id="facePushed">  <!-- branche de l'états pushed -->  </tsi>
+</tsi-P>
+```
 
 <p align="center">
   <a href="https://www.wvanim.fr/projets_perso/tispi/schema_piece_face.html">
     <img
       src="https://www.wvanim.fr/_demo/tispi004.png"
       alt="Diagramme Piece / Face"
-      width="60%"
+      width="80%"
     ><br>
     <sub>Idem 3. l'arbre / Le mécanisme de l'activation des branches</sub>
   </a>
 </p>
 
-#### spatial
+#### spatial et décorative
 
-#### décorative
+Seront traitées par ailleurs
 
-### La piste &face
-
-### La piste action
 

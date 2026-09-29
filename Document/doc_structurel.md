@@ -297,18 +297,18 @@ L'éditeur prépare un barre séparée de la zone d'édition pour afficher ce so
     <img
       src="https://www.wvanim.fr/_demo/module_toolbar4.png"
       alt="Jeu de Mahjong parmétrable"
-      width="30%"
-    ><br>
-    <sub>La toolbar utilisateur</sub>
+      width="49%"
+    >
   </a>
   <a href="https://serveur1.archive-host.com/membres/up/1773583014/index/jeu_mahjong/choix_layouts/layouts_deux_colonnes.html">
     <img
       src="https://www.wvanim.fr/_demo/module_toolbar5.png"
       alt="Jeu de Mahjong parmétrable"
-      width="30%"
+      width="49%"
     ><br>
-    <sub>Sous-groupe modèle de la toolbar</sub>
+    
   </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>La toolbar utilisateur</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>Sous-groupe modèle de la toolbar</sub>
 </p>
 
 

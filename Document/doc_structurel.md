@@ -194,15 +194,18 @@ Chaque piste prend en charge une propriété
 
 ### Les 3 rôles des propriétés 
 
-Les propriété sont classées suivant l'étendu de leur influence
-- rôle structurel : modifie la structure active. Par exemple, le changement d'état désactive une branche pour un activer une autre.
-Cette propriété agit au niveau de l'arbre.
-- rôle spatial : pilote des pièces pour organiser l'occupation de l'espace d'affichage ou sonore à l'écran.
-Cette propriété agit au niveau du plateau
-- rôle décoratif : définit l'aspect du rendu.
+Les propriété sont classées suivant l'étendu de leur influence,  
+- rôle structurel : modifie la structure active. Par exemple, le changement d'état désactive une branche pour un activer une autre.  
+Cette propriété modifie la présentation de l'arbre lui-même.
+
+- rôle spatial : pilote des pièces pour organiser l'occupation de l'espace d'affichage ou sonore à l'écran.  
+Cette propriété agit au niveau du plateau.  
+
+- rôle décoratif : définit l'aspect du rendu.  
 Cette propriété agit sur les faces 
 
-Ces rôles seront utiles pour le traitement IA. Certain prompts concernerons un rôle uniquement.
+
+`Ces rôles seront utiles pour le traitement IA. Certain prompts concernerons un rôle uniquement.
 
 #### structurel : les pistes &face et &action
 

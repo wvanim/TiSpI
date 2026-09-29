@@ -291,6 +291,7 @@ Le pièces en commentaire deviennent des contôle comportant des marcros
 ### Du contrôle à la toolbar
 
 Un sous-groupe en commentaire pourra devenir un cadre de contrôles.
+
 L'éditeur prépare un barre séparée de la zone d'édition pour afficher ce sous groupe isolément de l'animation. 
 <p align="center">
   <a href="https://serveur1.archive-host.com/membres/up/1773583014/index/jeu_mahjong/choix_layouts/layouts_deux_colonnes.html">

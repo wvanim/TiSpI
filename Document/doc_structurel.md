@@ -202,6 +202,8 @@ Cette propriété agit au niveau du plateau
 - rôle décoratif : définit l'aspect du rendu.
 Cette propriété agit sur les faces 
 
+Ces rôles seront utiles pour le traitement IA. Certain prompts concernerons un rôle uniquement.
+
 #### structurel : les pistes &face et &action
 
 La structure est pilotée par les pistes de face et les pistes d'actions.
@@ -215,9 +217,9 @@ La structure est pilotée par les pistes de face et les pistes d'actions.
  &synchro 0:stop;
  &face <60:ease,fade,2> 0:faceOut; <20:easeIn,flash> 1:faceOver; <0:> 2:facePushed; 
 ">
-    <tsi-f id="faceOut" > <!-- branche de l'états out --> </tsi>
-    <tsi-f id="faceOver" >  <!-- branche de l'états over -->  </tsi>
-    <tsi-f id="facePushed">  <!-- branche de l'états pushed -->  </tsi>
+    <tsi-f id="faceOut" > <!-- branche de l'états out --> </tsi-f>
+    <tsi-f id="faceOver" >  <!-- branche de l'états over -->  </tsi-f>
+    <tsi-f id="facePushed">  <!-- branche de l'états pushed -->  </tsi-f>
 </tsi-P>
 ```
 
@@ -234,6 +236,17 @@ La structure est pilotée par les pistes de face et les pistes d'actions.
 
 #### spatial et décorative
 
-Seront traitées par ailleurs
+Exemples de pistes :
+- Spatial : &top, &left, &scale, &rotate.
+- décoration : &color, &background, &textSize.
+
+Le traitement spatial et décoratif seront traitées par ailleurs
+
+## 5. La modularité de l'arbre
+
+L'arbre est structurellement modulaire. Chaque branche peut s'isoler ou se copier, puis se replacer ailleurs dans l'arbre.
+
+Notons que des fonctions peuvent traverser les limites hiérarchiques. Celles-ci contraignent alors 2 noeuds et suppriment la modularité.
+Des outils de Tispi permette de composer des noeuds "frontières", protéger un bas à sable. Ils composeront ainsi des branche modulaires sécurisées.  
 
 

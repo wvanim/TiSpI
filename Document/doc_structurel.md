@@ -205,7 +205,7 @@ Cette propriété agit au niveau du plateau.
 Cette propriété agit sur les faces 
 
 
-`Ces rôles seront utiles pour le traitement IA. Certain prompts concernerons un rôle uniquement.
+`Ces rôles seront utiles pour le traitement IA. Certain prompts concernerons un rôle uniquement.`
 
 #### structurel : les pistes &face et &action
 
@@ -270,5 +270,22 @@ Le créateur du module a exporté le groupe, puis placé dans une bibliothèque 
   </a>
 </p>
 
+### La cohérence systémique du modèle
 
-### 6. 
+**Important : ceci émerge naturellement de la structure Tispi. Tout est composé de la même matière : des branches de l'arbre Tispi.** 
+
+## 6. Les outils d'édition
+
+### La Piece en commentaire
+
+L'éditeur propose un flag pour conserver des pièces en commentaire dans l'éditeur. Ces Pièces ne sont pas intégrées à la page produite.  
+A l'origine, Utilisé pour placer des messages utiles à la construction. 
+
+### Du commentaire au contrôle
+
+Nous découvrons que les actions des pièces en commentaires n'ont plus d'objet. Elles sont donc disponibles  
+Nous les utilisons pour inscrire des actions au rayon d'action dans l'éditeur lui-meme.
+
+Le pièces en commentaire deviennent des contôle comportant des marcros
+
+### du contrôle à la toolbar

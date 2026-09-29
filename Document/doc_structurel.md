@@ -292,3 +292,23 @@ Le pièces en commentaire deviennent des contôle comportant des marcros
 
 Un sous-groupe en commentaire pourra devenir un cadre de contrôles.
 L'éditeur prépare un barre séparée de la zone d'édition pour afficher ce sous groupe isolément de l'animation. 
+<p align="center">
+  <a href="https://serveur1.archive-host.com/membres/up/1773583014/index/jeu_mahjong/choix_layouts/layouts_deux_colonnes.html">
+    <img
+      src="https://www.wvanim.fr/_demo/module_toolbar4.png"
+      alt="Jeu de Mahjong parmétrable"
+      width="30%"
+    ><br>
+    <sub>La toolbar utilisateur</sub>
+  </a>
+  <a href="https://serveur1.archive-host.com/membres/up/1773583014/index/jeu_mahjong/choix_layouts/layouts_deux_colonnes.html">
+    <img
+      src="https://www.wvanim.fr/_demo/module_toolbar5.png"
+      alt="Jeu de Mahjong parmétrable"
+      width="30%"
+    ><br>
+    <sub>Sous-groupe modèle de la toolbar</sub>
+  </a>
+</p>
+
+

@@ -226,7 +226,7 @@ La structure est pilotée par les pistes de face et les pistes d'actions.
 <p align="center">
   <a href="https://www.wvanim.fr/projets_perso/tispi/schema_piece_face.html">
     <img
-      src="https://www.wvanim.fr/_demo/arbre_chat001.png"
+      src="https://www.wvanim.fr/_demo/arbre_chat001c.png"
       alt="Diagramme Piece / Face"
       width="80%"
     ><br>
@@ -253,6 +253,9 @@ Des outils de Tispi permette de composer des noeuds "frontières", protéger un 
 
 Ceci produit des modules paramétrables.
 
+Par exemple, le module Mahjong permet de composer de nouveaux plateaux et d'ajouter ses propres tuiles.
+Le créateur du module a exporté le groupe, puis placé dans une bibliothèque online.
+
 <p align="center">
   <a href="https://serveur1.archive-host.com/membres/up/1773583014/index/jeu_mahjong/choix_layouts/layouts_deux_colonnes.html">
     <img
@@ -265,4 +268,4 @@ Ceci produit des modules paramétrables.
 </p>
 
 
-### 
+### 6. 

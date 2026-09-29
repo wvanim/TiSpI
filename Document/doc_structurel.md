@@ -288,4 +288,7 @@ Nous les utilisons pour inscrire des actions au rayon d'action dans l'éditeur l
 
 Le pièces en commentaire deviennent des contôle comportant des marcros
 
-### du contrôle à la toolbar
+### Du contrôle à la toolbar
+
+Un sous-groupe en commentaire pourra devenir un cadre de contrôles.
+L'éditeur prépare un barre séparée de la zone d'édition pour afficher ce sous groupe isolément de l'animation. 

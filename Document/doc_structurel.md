@@ -226,7 +226,7 @@ La structure est pilotée par les pistes de face et les pistes d'actions.
 <p align="center">
   <a href="https://www.wvanim.fr/projets_perso/tispi/schema_piece_face.html">
     <img
-      src="https://www.wvanim.fr/_demo/tispi004.png"
+      src="https://www.wvanim.fr/_demo/arbre_chat001.png"
       alt="Diagramme Piece / Face"
       width="80%"
     ><br>
@@ -249,4 +249,20 @@ L'arbre est structurellement modulaire. Chaque branche peut s'isoler ou se copie
 Notons que des fonctions peuvent traverser les limites hiérarchiques. Celles-ci contraignent alors 2 noeuds et suppriment la modularité.
 Des outils de Tispi permette de composer des noeuds "frontières", protéger un bas à sable. Ils composeront ainsi des branche modulaires sécurisées.  
 
-### La branche peut comporter du paramérage et des . 
+### La branche peut comporter des variables "paramétres" et des noeuds de sorties
+
+Ceci produit des modules paramétrables.
+
+<p align="center">
+  <a href="https://serveur1.archive-host.com/membres/up/1773583014/index/jeu_mahjong/choix_layouts/layouts_deux_colonnes.html">
+    <img
+      src="https://www.wvanim.fr/_demo/mahjong001.png"
+      alt="Jeu de Mahjong parmétrable"
+      width="65%"
+    ><br>
+    <sub>Quelques exemples de composition de plateau à jouer</sub>
+  </a>
+</p>
+
+
+### 

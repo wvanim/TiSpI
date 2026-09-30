@@ -1,6 +1,7 @@
 # TiSpI — Time/Space Interleaved
 
 This document presents the structural part of TiSpI.
+`standard ouvert, déja expérimenté depuis 25 ans dans un éditeur.`
 
 Deeply impressed by the logical simplicity of a processor, I sought to structure and simplify the mechanisms underlying user interface processing. At the core of this approach is a tree that strictly alternates time and space.
 

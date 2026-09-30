@@ -252,7 +252,7 @@ Le traitement spatial et décoratif seront traitées par ailleurs
 L'arbre est structurellement modulaire. Chaque branche peut s'isoler ou se copier, puis se replacer ailleurs dans l'arbre.
 
 Notons que des fonctions peuvent traverser les limites hiérarchiques. Celles-ci contraignent alors 2 noeuds et suppriment la modularité.
-Des outils de Tispi permette de composer des noeuds "frontières", protéger un bas à sable. Ils composeront ainsi des branche modulaires sécurisées.  
+Des outils de Tispi permette de composer des noeuds "frontières", protéger un bac à sable. Ils composeront ainsi des branche modulaires sécurisées.  
 
 ### La branche peut comporter des variables "paramétres" et des noeuds de sorties
 

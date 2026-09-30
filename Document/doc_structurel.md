@@ -65,6 +65,8 @@ Les pièces d'un plateau sont synchronisées. Comme vous pouvez le constater dan
 
 La combinaison du temps et de l'espace est une notion élémentaire de l'interface utilisateur.
 
+Les utilisateurs ignorent cette alternance, elle s'impose naturellement avec la présentation de l'éditeur. 
+
 <p align="center"><img
   src="https://www.wvanim.fr/_demo/time_space.png"
   alt="Temps / Espace"

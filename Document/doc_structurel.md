@@ -49,7 +49,7 @@ Les Pieces enfants directs d'un groupe forment un plateau. Le plateau est une no
 Les pièces d'un plateau sont synchronisées. Comme vous pouvez le constater dans cette animation en cliquant ci-dessous.
 
 <p align="center">
-  <a href="https://www.wvanim.fr/projets_perso/tispi/doc/tispi_node_animated2/structure1.html">
+  <a href="https://www.wvanim.fr/projets_perso/tispi/doc/avec_pistes/structure2.html">
     <img
       src="https://www.wvanim.fr/_demo/plate_motor.jpg"
       alt="Diagramme Piece / Face"

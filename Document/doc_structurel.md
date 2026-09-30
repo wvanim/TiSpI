@@ -75,7 +75,10 @@ Les utilisateurs ignorent cette alternance, elle s'impose naturellement avec la 
 
 ### Le mécanisme de l'activation des branches par le composant temporel (la Piece).
 
-Tispi les combine en les **alternant** : la particularité du modèle réside dans l'alternance stricte des Pièces et des Faces. Elles exposent des tableaux orthogonaux : temps | espace
+Tispi les combine en les **alternant** : la particularité du modèle réside dans l'alternance stricte des Pièces et des Faces.
+
+Elles exposent des tableaux orthogonaux : temps | espace.  
+Ce que nous voyons clairement dans le schéma ci-dessous, le temps est décrit de gauche à droite et l'espace de haut en bas.
 
 <p align="center">
            
